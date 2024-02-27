@@ -27,12 +27,13 @@
         >
           <q-icon
             :name="fabYoutube"
-            color="red"
+            color="white"
             size="28px"
           />
           <q-toolbar-title
             shrink
-            class="text-weight-bold"
+            color="white"
+            class="text-weight-bold text-white-4"
           >
             YouTube
           </q-toolbar-title>
