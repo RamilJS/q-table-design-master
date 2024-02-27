@@ -1,4 +1,10 @@
 <template>
+  <q-breadcrumbs>
+    <q-breadcrumbs-el label="Home" />
+    <q-breadcrumbs-el label="Components" />
+    <q-breadcrumbs-el label="Breadcrumbs" />
+  </q-breadcrumbs>
+
   <div class="row justify-around">
     <div class="q-mt-lg q-ml-lg row text-h3 text-weight-bold">
       <p class="text-primary text-uppercase">
