@@ -1,9 +1,9 @@
 <template>
-  <div class="q-pa-md q-ma-md row wrap items-start q-gutter-md">
-    <q-card class="my-card">
+  <div class="q-pa-md q-ma-md row wrap items-start q-gutter-md cardSize">
+    <q-card class="my-card lorem">
       <img src="https://cdn.quasar.dev/img/mountains.jpg">
       <q-card-section class="">
-        <div class="text-h6 textSpace text-bold q-mb-xs">Управление эффективности</div>
+        <div class="text-h6 textSpace text-bold q-mb-xs">Работа в Outlook</div>
         <div class="text-subtitle2">Департамент персонала</div>
       </q-card-section>
       <q-card-section class="q-pt-none text-body2">
@@ -11,7 +11,7 @@
       </q-card-section>
     </q-card>
 
-    <q-card class="my-card">
+    <q-card class="my-card lorem">
       <img src="https://cdn.quasar.dev/img/parallax2.jpg">
       <q-card-section>
         <div class="text-h6 text-bold textSpace q-mb-xs">Основы Microsoft Excel</div>
@@ -22,7 +22,84 @@
       </q-card-section>
     </q-card>
 
-    <q-card class="my-card">
+    <q-card class="my-card lorem">
+      <img src="https://cdn.quasar.dev/img/mountains.jpg">
+      <q-card-section>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
+        <div class="text-subtitle2">Департамент персонала</div>
+      </q-card-section>
+      <q-card-section class="q-pt-none">
+        {{ lorem }}
+      </q-card-section>
+    </q-card>
+
+    <q-card class="my-card lorem">
+      <img src="https://cdn.quasar.dev/img/mountains.jpg">
+      <q-card-section>
+        <div class="text-h6 text-bold textSpace q-mb-xs text-wrap">Развитие креативности и внимательности</div>
+        <div class="text-subtitle2">Департамент персонала</div>
+      </q-card-section>
+      <q-card-section class="q-pt-none">
+        {{ lorem }}
+      </q-card-section>
+    </q-card>
+
+    <q-card class="my-card lorem">
+      <img src="https://cdn.quasar.dev/img/mountains.jpg">
+      <q-card-section>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Работа в Outlook</div>
+        <div class="text-subtitle2">Департамент персонала</div>
+      </q-card-section>
+      <q-card-section class="q-pt-none">
+        {{ lorem }}
+      </q-card-section>
+    </q-card>
+
+    <q-card class="my-card lorem">
+      <img src="https://cdn.quasar.dev/img/mountains.jpg">
+      <q-card-section>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
+        <div class="text-subtitle2">Департамент персонала</div>
+      </q-card-section>
+      <q-card-section class="q-pt-none">
+        {{ lorem }}
+      </q-card-section>
+    </q-card>
+
+    <q-card class="my-card lorem">
+      <img src="https://cdn.quasar.dev/img/mountains.jpg">
+      <q-card-section>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
+        <div class="text-subtitle2">Департамент персонала</div>
+      </q-card-section>
+      <q-card-section class="q-pt-none">
+        {{ lorem }}
+      </q-card-section>
+    </q-card>
+
+    <q-card class="my-card lorem">
+      <img src="https://cdn.quasar.dev/img/mountains.jpg">
+      <q-card-section>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
+        <div class="text-subtitle2">Департамент персонала</div>
+      </q-card-section>
+      <q-card-section class="q-pt-none">
+        {{ lorem }}
+      </q-card-section>
+    </q-card>
+
+    <q-card class="my-card lorem">
+      <img src="https://cdn.quasar.dev/img/mountains.jpg">
+      <q-card-section>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
+        <div class="text-subtitle2">Департамент персонала</div>
+      </q-card-section>
+      <q-card-section class="q-pt-none">
+        {{ lorem }}
+      </q-card-section>
+    </q-card>
+
+    <q-card class="my-card lorem">
       <img src="https://cdn.quasar.dev/img/mountains.jpg">
       <q-card-section>
         <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
@@ -36,7 +113,7 @@
     <q-card class="my-card">
       <img src="https://cdn.quasar.dev/img/mountains.jpg">
       <q-card-section>
-        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Пожарная безопасность</div>
         <div class="text-subtitle2">Департамент персонала</div>
       </q-card-section>
       <q-card-section class="q-pt-none">
@@ -47,77 +124,29 @@
     <q-card class="my-card">
       <img src="https://cdn.quasar.dev/img/mountains.jpg">
       <q-card-section>
-        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Подкаст</div>
         <div class="text-subtitle2">Департамент персонала</div>
       </q-card-section>
       <q-card-section class="q-pt-none">
         {{ lorem }}
       </q-card-section>
     </q-card>
+
     <q-card class="my-card">
       <img src="https://cdn.quasar.dev/img/mountains.jpg">
       <q-card-section>
-        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Основы информационной безопасности</div>
         <div class="text-subtitle2">Департамент персонала</div>
       </q-card-section>
       <q-card-section class="q-pt-none">
         {{ lorem }}
       </q-card-section>
     </q-card>
+
     <q-card class="my-card">
       <img src="https://cdn.quasar.dev/img/mountains.jpg">
       <q-card-section>
-        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
-        <div class="text-subtitle2">Департамент персонала</div>
-      </q-card-section>
-      <q-card-section class="q-pt-none">
-        {{ lorem }}
-      </q-card-section>
-    </q-card>
-    <q-card class="my-card">
-      <img src="https://cdn.quasar.dev/img/mountains.jpg">
-      <q-card-section>
-        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
-        <div class="text-subtitle2">Департамент персонала</div>
-      </q-card-section>
-      <q-card-section class="q-pt-none">
-        {{ lorem }}
-      </q-card-section>
-    </q-card>
-    <q-card class="my-card">
-      <img src="https://cdn.quasar.dev/img/mountains.jpg">
-      <q-card-section>
-        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
-        <div class="text-subtitle2">Департамент персонала</div>
-      </q-card-section>
-      <q-card-section class="q-pt-none">
-        {{ lorem }}
-      </q-card-section>
-    </q-card>
-    <q-card class="my-card">
-      <img src="https://cdn.quasar.dev/img/mountains.jpg">
-      <q-card-section>
-        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
-        <div class="text-subtitle2">Департамент персонала</div>
-      </q-card-section>
-      <q-card-section class="q-pt-none">
-        {{ lorem }}
-      </q-card-section>
-    </q-card>
-    <q-card class="my-card">
-      <img src="https://cdn.quasar.dev/img/mountains.jpg">
-      <q-card-section>
-        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
-        <div class="text-subtitle2">Департамент персонала</div>
-      </q-card-section>
-      <q-card-section class="q-pt-none">
-        {{ lorem }}
-      </q-card-section>
-    </q-card>
-    <q-card class="my-card">
-      <img src="https://cdn.quasar.dev/img/mountains.jpg">
-      <q-card-section>
-        <div class="text-h6 text-bold textSpace q-mb-xs">Управление эффективности</div>
+        <div class="text-h6 text-bold textSpace q-mb-xs">Основы лизинга (без теста)</div>
         <div class="text-subtitle2">Департамент персонала</div>
       </q-card-section>
       <q-card-section class="q-pt-none">
@@ -141,7 +170,10 @@ export default {
 .my-card
   width: 100%
   max-width: 250px
+  height:100%
+  max-height: 350px
 .textSpace
   line-height: normal
-
+.lorem
+  overflow: hidden
 </style>
