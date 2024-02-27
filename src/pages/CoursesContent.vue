@@ -1,8 +1,20 @@
 <template>
-  <div class="q-mt-lg q-ml-lg row justify-left text-h4 text-weight-bold">
-    <p class="text-primary">
-      Содержание
-    </p>
+  <div class="row justify-around">
+    <div class="q-mt-lg q-ml-lg row text-h3 text-weight-bold">
+      <p class="text-primary text-uppercase">
+        Содержание
+      </p>
+    </div>
+
+    <div class="q-mt-lg q-mr-lg row">
+      <q-avatar>
+        <q-img
+          class="rounded-borders"
+          src="https://cdn.quasar.dev/img/parallax2.jpg"
+          alt="Логотип компании"
+        />
+      </q-avatar>
+    </div>
   </div>
 
   <div class="q-pa-md row items-start q-gutter-md row justify-around wrap content-center">
@@ -66,6 +78,7 @@
           class="q-px-xl q-py-xs"
           color="primary"
           label="Открыть"
+          to="#"
         />
       </q-card-actions>
     </q-card>
