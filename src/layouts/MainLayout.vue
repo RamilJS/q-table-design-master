@@ -25,18 +25,12 @@
           no-wrap
           class="q-ml-xs"
         >
-          <q-icon
-            :name="fabYoutube"
-            color="white"
-            size="28px"
+          <q-img
+            class="rounded-borders"
+            src="/public/icons/logo-vtb-d.png"
+            alt="Логотип компании"
+            style="height: 50px; width: 120px"
           />
-          <q-toolbar-title
-            shrink
-            color="white"
-            class="text-weight-bold text-white-4"
-          >
-            YouTube
-          </q-toolbar-title>
         </q-btn>
 
         <q-space />
