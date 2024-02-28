@@ -1,5 +1,5 @@
 <template>
-  <div class="q-ml-xl q-mt-xl q-gutter-sm">
+  <div class="q-ml-xl q-mt-sm q-gutter-sm row justify-between">
     <q-breadcrumbs
       class="q-mt-lg g-ml-lg text-primary"
     >
@@ -15,22 +15,22 @@
         label="Содержание"
       />
     </q-breadcrumbs>
-  </div>
-
-  <div class="row justify-between">
-    <div class="q-mt-lg q-ml-lg q-pl-lg row text-h3 text-weight-bold text-capitalize">
-      <p class="text-primary ">
-        Содержание
-      </p>
-    </div>
 
     <div class="q-mt-lg q-mr-lg q-pr-lg row">
       <q-img
         class="rounded-borders"
         src="/public/icons/logo-vtb-d.png"
         alt="Логотип компании"
-        style="height: 50px; width: 120px"
+        style="height: 60px; width: 270px"
       />
+    </div>
+  </div>
+
+  <div class="row justify-between">
+    <div class="q-mt-md q-ml-lg q-pl-lg row text-h3 text-weight-bold text-capitalize">
+      <p class="text-primary ">
+        Содержание
+      </p>
     </div>
   </div>
 
@@ -48,7 +48,7 @@
         </q-card-section>
         <q-card-section class="col-5 flex flex-center">
           <q-img
-            class="rounded-borders"
+            class="rounded-borders card-image"
             src="/public/images/people_in_work.jpg"
             alt="Люди в офисе"
           />
@@ -81,9 +81,10 @@
 
         <q-card-section class="col-5 flex flex-center">
           <q-img
-            class="rounded-borders"
+            class="rounded-borders card-image"
             src="/public/images/briefing.jpg"
             alt="Люди в офисе"
+            style="border-radius: 50%; height: 150px; width: 150px;"
           />
         </q-card-section>
       </q-card-section>
@@ -114,7 +115,7 @@
 
         <q-card-section class="col-5 flex flex-center">
           <q-img
-            class="rounded-borders"
+            class="rounded-borders card-image"
             src="/public/images/personal_efficiency.jpg"
             alt="Люди в офисе"
           />
@@ -147,7 +148,7 @@
 
         <q-card-section class="col-5 flex flex-center">
           <q-img
-            class="rounded-borders"
+            class="rounded-borders card-image"
             src="/public/images/efficiency_management.jpg"
             alt="Люди в офисе"
           />
@@ -177,4 +178,8 @@
   height: 100%
   max-height: 250px
   max-width: 500px
+.card-image
+  border-radius: 50%
+  height: 150px
+  width: 150px
 </style>

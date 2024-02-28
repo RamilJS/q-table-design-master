@@ -5,7 +5,7 @@
   >
     <q-header
       elevated
-      class="bg-secondary text-grey-8 q-py-xs"
+      class="bg-white text-grey-8 q-py-xs"
       height-hint="58"
     >
       <q-toolbar>
@@ -29,7 +29,7 @@
             class="rounded-borders"
             src="/public/icons/logo-vtb-d.png"
             alt="Логотип компании"
-            style="height: 50px; width: 120px"
+            style="height: 60px; width: 270px"
           />
         </q-btn>
 
@@ -312,7 +312,7 @@ export default {
 
   &__toolbar-input-container
     min-width: 100px
-    width: 55%
+    width: 15%
 
   &__toolbar-input-btn
     border-radius: 0
