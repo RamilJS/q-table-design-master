@@ -27,7 +27,7 @@
     <div class="q-mt-lg q-mr-lg q-pr-lg row">
       <q-img
         class="rounded-borders"
-        src="https://cdn.quasar.dev/img/parallax2.jpg"
+        src="/public/icons/logo-vtb-d.png"
         alt="Логотип компании"
         style="height: 50px; width: 120px"
       />
