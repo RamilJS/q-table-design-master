@@ -1,8 +1,7 @@
 <template>
   <div class="q-ml-xl q-mt-xl q-gutter-sm">
     <q-breadcrumbs
-      class="q-mt-lg g-ml-lg"
-      style="active-color: secondary"
+      class="q-mt-lg g-ml-lg text-primary"
     >
       <q-breadcrumbs-el
         label="Учебный центр"
@@ -12,7 +11,9 @@
         label="Каталог курсов"
         :to="{ path: 'catalog' }"
       />
-      <q-breadcrumbs-el label="Содержание" />
+      <q-breadcrumbs-el
+        label="Содержание"
+      />
     </q-breadcrumbs>
   </div>
 
