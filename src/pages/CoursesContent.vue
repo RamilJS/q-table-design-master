@@ -1,17 +1,21 @@
 <template>
-  //Хлебные крошки
   <div class="q-ml-xl q-mt-xl q-gutter-sm">
     <q-breadcrumbs
       class="q-mt-lg g-ml-lg"
       style="active-color: secondary"
     >
-      <q-breadcrumbs-el label="Учебный центр" />
-      <q-breadcrumbs-el label="Каталог курсов" />
+      <q-breadcrumbs-el
+        label="Учебный центр"
+        :to="{ path: '/' }"
+      />
+      <q-breadcrumbs-el
+        label="Каталог курсов"
+        :to="{ path: 'catalog' }"
+      />
       <q-breadcrumbs-el label="Содержание" />
     </q-breadcrumbs>
   </div>
 
-  //Содержание и логотип компании
   <div class="row justify-between">
     <div class="q-mt-lg q-ml-lg q-pl-lg row text-h3 text-weight-bold text-capitalize">
       <p class="text-primary ">
@@ -29,8 +33,7 @@
     </div>
   </div>
 
-  //Карточки разделов курсов
-  <div class="q-pa-md row items-start q-gutter-md row justify-around wrap content-center">
+  <div class="q-pa-md row items-start q-gutter-md row justify-evenly wrap content-center">
     <q-card
       class="my-card"
       flat
@@ -44,7 +47,7 @@
         </q-card-section>
         <q-card-section class="col-5 flex flex-center">
           <q-img
-            class="rounded-borders q-pr-lg q-pb-lg"
+            class="rounded-borders"
             src="https://cdn.quasar.dev/img/parallax2.jpg"
             alt="Люди в офисе"
           />
@@ -53,11 +56,12 @@
 
       <q-card-actions>
         <q-btn
-          size="15px"
+          glossy
+          style="border-radius: 15px; width: 120px;"
+          size="13px"
+          color="secondary"
           class="q-px-xl q-py-xs q-ml-lg q-mb-md"
-          color="primary"
           label="Открыть"
-          to="#"
         />
       </q-card-actions>
     </q-card>
@@ -85,11 +89,12 @@
 
       <q-card-actions>
         <q-btn
-          size="15px"
+          glossy
+          style="border-radius: 15px; width: 120px;"
+          size="13px"
           class="q-px-xl q-py-xs q-ml-lg q-mb-md"
-          color="primary"
+          color="secondary"
           label="Открыть"
-          to="#"
         />
       </q-card-actions>
     </q-card>
@@ -117,9 +122,11 @@
 
       <q-card-actions>
         <q-btn
-          size="15px"
+          glossy
+          style="border-radius: 15px; width: 120px;"
+          size="13px"
           class="q-px-xl q-py-xs q-ml-lg q-mb-md"
-          color="primary"
+          color="secondary"
           label="Открыть"
         />
       </q-card-actions>
@@ -148,9 +155,11 @@
 
       <q-card-actions>
         <q-btn
-          size="15px"
+          glossy
+          style="border-radius: 15px; width: 120px;"
+          size="13px"
           class="q-px-xl q-py-xs q-ml-lg q-mb-md"
-          color="primary"
+          color="secondary"
           label="Открыть"
         />
       </q-card-actions>
@@ -164,5 +173,7 @@
 <style lang="sass" scoped>
 .my-card
   width: 100%
+  height: 100%
+  max-height: 250px
   max-width: 500px
 </style>
