@@ -49,7 +49,7 @@
         <q-card-section class="col-5 flex flex-center">
           <q-img
             class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
+            src="/public/images/people_in_work.jpg"
             alt="Люди в офисе"
           />
         </q-card-section>
@@ -82,7 +82,7 @@
         <q-card-section class="col-5 flex flex-center">
           <q-img
             class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
+            src="/public/images/briefing.jpg"
             alt="Люди в офисе"
           />
         </q-card-section>
@@ -115,7 +115,7 @@
         <q-card-section class="col-5 flex flex-center">
           <q-img
             class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
+            src="/public/images/personal_efficiency.jpg"
             alt="Люди в офисе"
           />
         </q-card-section>
@@ -148,7 +148,7 @@
         <q-card-section class="col-5 flex flex-center">
           <q-img
             class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
+            src="/public/images/efficiency_management.jpg"
             alt="Люди в офисе"
           />
         </q-card-section>
