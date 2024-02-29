@@ -24,6 +24,7 @@
           no-caps
           no-wrap
           class="q-ml-xs"
+          :to="{ path: '/' }"
         >
           <q-img
             class="rounded-borders"
@@ -34,7 +35,16 @@
         </q-btn>
 
         <q-space />
-
+        <q-space />
+        <q-space />
+        <q-space />
+        <q-space />
+        <q-space />
+        <q-space />
+        <q-space />
+        <q-space />
+        <q-space />
+        <q-space />
         <div class="YL__toolbar-input-container row no-wrap">
           <q-input
             v-model="search"
@@ -56,16 +66,6 @@
         <q-space />
 
         <div class="q-gutter-sm row items-center no-wrap">
-          <q-btn
-            v-if="$q.screen.gt.sm"
-            round
-            dense
-            flat
-            color="grey-8"
-            icon="video_call"
-          >
-            <q-tooltip>Create a video or post</q-tooltip>
-          </q-btn>
           <q-btn
             v-if="$q.screen.gt.sm"
             round
@@ -106,10 +106,10 @@
             round
             flat
           >
-            <q-avatar size="26px">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+            <q-avatar size="30px">
+              <img src="/public/images/avatar.jpg">
             </q-avatar>
-            <q-tooltip>Account</q-tooltip>
+            <q-tooltip>Иванова Оксана</q-tooltip>
           </q-btn>
         </div>
       </q-toolbar>
@@ -159,78 +159,6 @@
               <q-item-label>{{ link.text }}</q-item-label>
             </q-item-section>
           </q-item>
-
-          <q-separator class="q-mt-md q-mb-xs" />
-
-          <q-item-label
-            header
-            class="text-weight-bold text-uppercase"
-          >
-            More from Youtube
-          </q-item-label>
-
-          <q-item
-            v-for="link in links3"
-            :key="link.text"
-            v-ripple
-            clickable
-          >
-            <q-item-section avatar>
-              <q-icon
-                color="grey"
-                :name="link.icon"
-              />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
-            </q-item-section>
-          </q-item>
-
-          <q-separator class="q-my-md" />
-
-          <q-item
-            v-for="link in links4"
-            :key="link.text"
-            v-ripple
-            clickable
-          >
-            <q-item-section avatar>
-              <q-icon
-                color="grey"
-                :name="link.icon"
-              />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
-            </q-item-section>
-          </q-item>
-
-          <q-separator class="q-mt-md q-mb-lg" />
-
-          <div class="q-px-md text-grey-9">
-            <div class="row items-center q-gutter-x-sm q-gutter-y-xs">
-              <a
-                v-for="button in buttons1"
-                :key="button.text"
-                class="YL__drawer-footer-link"
-                href="javascript:void(0)"
-              >
-                {{ button.text }}
-              </a>
-            </div>
-          </div>
-          <div class="q-py-md q-px-md text-grey-9">
-            <div class="row items-center q-gutter-x-sm q-gutter-y-xs">
-              <a
-                v-for="button in buttons2"
-                :key="button.text"
-                class="YL__drawer-footer-link"
-                href="javascript:void(0)"
-              >
-                {{ button.text }}
-              </a>
-            </div>
-          </div>
         </q-list>
       </q-scroll-area>
     </q-drawer>
@@ -265,8 +193,8 @@ export default {
       toggleLeftDrawer,
 
       links1: [
-        { icon: 'home', text: 'Home' },
-        { icon: 'whatshot', text: 'Trending' },
+        { icon: 'home', text: 'На главную' },
+        { icon: 'whatshot', text: 'Корпоративный портал' },
         { icon: 'subscriptions', text: 'Subscriptions' }
       ],
       links2: [
