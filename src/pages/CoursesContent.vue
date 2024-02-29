@@ -173,6 +173,6 @@
   max-width: 500px
 .card-image
   border-radius: 50%
-  height: 150px
-  width: 150px
+  height: 170px
+  width: 170px
 </style>
