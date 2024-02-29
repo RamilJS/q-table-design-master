@@ -36,8 +36,7 @@
 
   <div class="q-pa-md row items-start q-gutter-md row justify-evenly wrap content-center">
     <q-card
-      class="my-card"
-      flat
+      class="my-card shadow-4"
       bordered
     >
       <q-card-section horizontal>
@@ -54,7 +53,6 @@
           />
         </q-card-section>
       </q-card-section>
-
       <q-card-actions>
         <q-btn
           glossy
@@ -68,8 +66,7 @@
     </q-card>
 
     <q-card
-      class="my-card"
-      flat
+      class="my-card shadow-4"
       bordered
     >
       <q-card-section horizontal>
@@ -102,8 +99,7 @@
     </q-card>
 
     <q-card
-      class="my-card"
-      flat
+      class="my-card shadow-4"
       bordered
     >
       <q-card-section horizontal>
@@ -135,8 +131,7 @@
     </q-card>
 
     <q-card
-      class="my-card"
-      flat
+      class="my-card shadow-4"
       bordered
     >
       <q-card-section horizontal>
@@ -146,7 +141,7 @@
           </div>
         </q-card-section>
 
-        <q-card-section class="col-5 flex flex-center">
+        <q-card-section class="col-5">
           <q-img
             class="rounded-borders card-image"
             src="/public/images/efficiency_management.jpg"
