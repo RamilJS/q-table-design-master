@@ -27,7 +27,7 @@
   </div>
 
   <div class="row justify-between">
-    <div class="q-mt-md q-ml-lg q-pl-lg row text-h3 text-weight-bold text-capitalize">
+    <div class="q-ml-lg q-pl-lg row text-h3 text-weight-bold text-capitalize">
       <p class="text-primary ">
         Содержание
       </p>
@@ -36,7 +36,7 @@
 
   <div class="q-pa-md row items-start q-gutter-md row justify-evenly wrap content-center">
     <q-card
-      class="my-card shadow-4"
+      class="my-card shadow-4 q-mb-lg"
       bordered
     >
       <q-card-section horizontal>
