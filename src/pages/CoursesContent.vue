@@ -44,6 +44,16 @@
           <div class="text-h5 q-mt-sm q-mb-xs text-primary">
             Профессиональные навыки
           </div>
+          <q-card-actions>
+            <q-btn
+              glossy
+              style="border-radius: 15px; width: 120px;"
+              size="13px"
+              color="secondary"
+              class="q-px-sm q-py-xs q-ml-sm q-mb-md"
+              label="Открыть"
+            />
+          </q-card-actions>
         </q-card-section>
         <q-card-section class="col-5 flex flex-center">
           <q-img
@@ -53,16 +63,6 @@
           />
         </q-card-section>
       </q-card-section>
-      <q-card-actions>
-        <q-btn
-          glossy
-          style="border-radius: 15px; width: 120px;"
-          size="13px"
-          color="secondary"
-          class="q-px-xl q-py-xs q-ml-lg q-mb-md"
-          label="Открыть"
-        />
-      </q-card-actions>
     </q-card>
 
     <q-card
@@ -74,6 +74,16 @@
           <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
             Вводные курсы (инструктажи)
           </div>
+          <q-card-actions>
+            <q-btn
+              glossy
+              style="border-radius: 15px; width: 120px;"
+              size="13px"
+              color="secondary"
+              class="q-px-sm q-py-xs q-ml-sm q-mb-md"
+              label="Открыть"
+            />
+          </q-card-actions>
         </q-card-section>
 
         <q-card-section class="col-5 flex flex-center">
@@ -81,21 +91,9 @@
             class="rounded-borders card-image"
             src="/public/images/briefing.jpg"
             alt="Люди в офисе"
-            style="border-radius: 50%; height: 150px; width: 150px;"
           />
         </q-card-section>
       </q-card-section>
-
-      <q-card-actions>
-        <q-btn
-          glossy
-          style="border-radius: 15px; width: 120px;"
-          size="13px"
-          class="q-px-xl q-py-xs q-ml-lg q-mb-md"
-          color="secondary"
-          label="Открыть"
-        />
-      </q-card-actions>
     </q-card>
 
     <q-card
@@ -107,6 +105,16 @@
           <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
             Личная эффективность и развитие
           </div>
+          <q-card-actions>
+            <q-btn
+              glossy
+              style="border-radius: 15px; width: 120px;"
+              size="13px"
+              color="secondary"
+              class="q-px-sm q-py-xs q-ml-sm q-mb-md"
+              label="Открыть"
+            />
+          </q-card-actions>
         </q-card-section>
 
         <q-card-section class="col-5 flex flex-center">
@@ -117,17 +125,6 @@
           />
         </q-card-section>
       </q-card-section>
-
-      <q-card-actions>
-        <q-btn
-          glossy
-          style="border-radius: 15px; width: 120px;"
-          size="13px"
-          class="q-px-xl q-py-xs q-ml-lg q-mb-md"
-          color="secondary"
-          label="Открыть"
-        />
-      </q-card-actions>
     </q-card>
 
     <q-card
@@ -139,9 +136,19 @@
           <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
             Управление эффективности деятельности (УЭД)
           </div>
+          <q-card-actions>
+            <q-btn
+              glossy
+              style="border-radius: 15px; width: 120px;"
+              size="13px"
+              color="secondary"
+              class="q-px-sm q-py-xs q-ml-sm q-mb-md"
+              label="Открыть"
+            />
+          </q-card-actions>
         </q-card-section>
 
-        <q-card-section class="col-5">
+        <q-card-section class="col-5 flex flex-center">
           <q-img
             class="rounded-borders card-image"
             src="/public/images/efficiency_management.jpg"
@@ -149,17 +156,6 @@
           />
         </q-card-section>
       </q-card-section>
-
-      <q-card-actions>
-        <q-btn
-          glossy
-          style="border-radius: 15px; width: 120px;"
-          size="13px"
-          class="q-px-xl q-py-xs q-ml-lg q-mb-md"
-          color="secondary"
-          label="Открыть"
-        />
-      </q-card-actions>
     </q-card>
   </div>
 </template>
@@ -172,6 +168,8 @@
   width: 100%
   height: 100%
   max-height: 250px
+  min-height: 200px
+  min-width: 300px
   max-width: 500px
 .card-image
   border-radius: 50%
