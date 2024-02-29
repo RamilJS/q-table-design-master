@@ -50,7 +50,7 @@
               style="border-radius: 15px; width: 120px;"
               size="13px"
               color="secondary"
-              class="q-px-sm q-py-xs q-ml-sm q-mb-md"
+              class="q-pr-xl q-py-xs q-mr-xl"
               label="Открыть"
             />
           </q-card-actions>
@@ -80,7 +80,7 @@
               style="border-radius: 15px; width: 120px;"
               size="13px"
               color="secondary"
-              class="q-px-sm q-py-xs q-ml-sm q-mb-md"
+              class="q-pr-xl q-py-xs q-mr-xl"
               label="Открыть"
             />
           </q-card-actions>
@@ -111,7 +111,7 @@
               style="border-radius: 15px; width: 120px;"
               size="13px"
               color="secondary"
-              class="q-px-sm q-py-xs q-ml-sm q-mb-md"
+              class="q-pr-xl q-py-xs q-mr-xl"
               label="Открыть"
             />
           </q-card-actions>
@@ -142,7 +142,7 @@
               style="border-radius: 15px; width: 120px;"
               size="13px"
               color="secondary"
-              class="q-px-sm q-py-xs q-ml-sm q-mb-md"
+              class="q-pr-xl q-py-xs q-mr-xl"
               label="Открыть"
             />
           </q-card-actions>
