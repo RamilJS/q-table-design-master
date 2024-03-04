@@ -40,11 +40,12 @@
       </p>
     </div>
 
-    <q-separator
-      color="blue"
-      inset
-      size="15px"
-    />
+    <div class="">
+      <q-separator
+        color="secondary"
+        style="height: 15px; width: 70px; background-color: #00AAFF;"
+      />
+    </div>
 
     <div class="">
       <ul>
@@ -125,5 +126,6 @@
 <style scoped>
 .underline-text {
   text-decoration: underline;
+  font-size: 20px;
 }
 </style>
