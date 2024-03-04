@@ -41,7 +41,9 @@
     >
       <q-card-section horizontal>
         <q-card-section class="q-pt-lg">
-          <div class="text-h5 q-mt-sm q-mb-xs text-primary">
+          <div
+            class="text-h5 q-mt-sm q-mb-xs text-primary"
+          >
             Профессиональные навыки
           </div>
           <q-card-actions>
@@ -52,6 +54,7 @@
               color="secondary"
               class="q-pr-xl q-py-xs q-mr-xl"
               label="Открыть"
+              :to="{ path: '/content-items' }"
             />
           </q-card-actions>
         </q-card-section>
