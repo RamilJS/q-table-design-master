@@ -39,12 +39,18 @@
         Профессиональные навыки
       </p>
     </div>
-    <div>
+
+    <q-separator
+      color="blue"
+      inset
+      size="15px"
+    />
+
+    <div class="">
       <ul>
         <li style="list-style-type: none">
           <p
-            class="text-body1 text-primary text-weight-bold"
-            style="text-decoration: underline;"
+            class="text-body1 text-primary text-weight-bold underline-text"
           >
             Основы лизинга
           </p>
@@ -55,57 +61,57 @@
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Параметры сделки
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Этапы сделки
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             CRM. Знакомство
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Работа в CRM (инструкции)
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Основы делового письма
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Создание письма в Outlook
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Работа в Outlook
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Видеокурс Microsoft Excel 2010
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Microsoft Excel 2013 "2-й уровень-продвинутый пользователь"
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Microsoft Excel 2013 "3-й уровень-опытный пользователь"
           </p>
         </li>
         <li style="list-style-type: none">
-          <p class="text-body1 text-primary text-weight-bold">
+          <p class="text-body1 text-primary text-weight-bold underline-text">
             Microsoft Excel 2013 "4-й уровень-эксперт"
           </p>
         </li>
@@ -116,7 +122,8 @@
 
 <script></script>
 
-<style lang="sass" scoped>
-.underline-text
-  text-decoration: underline
+<style scoped>
+.underline-text {
+  text-decoration: underline;
+}
 </style>
