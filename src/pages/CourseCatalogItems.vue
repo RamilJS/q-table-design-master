@@ -47,40 +47,64 @@
           </p>
         </li>
         <li style="list-style-type: none">
-          <p>Продукты Автолизинга</p>
+          <p class="text-body1 text-primary">
+            Продукты Автолизинга
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Параметры сделки</p>
+          <p class="text-body1 text-primary">
+            Параметры сделки
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Этапы сделки</p>
+          <p class="text-body1 text-primary">
+            Этапы сделки
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>CRM. Знакомство</p>
+          <p class="text-body1 text-primary">
+            CRM. Знакомство
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Работа в CRM (инструкции)</p>
+          <p class="text-body1 text-primary">
+            Работа в CRM (инструкции)
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Основы делового письма</p>
+          <p class="text-body1 text-primary">
+            Основы делового письма
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Создание письма в Outlook</p>
+          <p class="text-body1 text-primary">
+            Создание письма в Outlook
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Работа в Outlook</p>
+          <p class="text-body1 text-primary">
+            Работа в Outlook
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Видеокурс Microsoft Excel 2010</p>
+          <p class="text-body1 text-primary">
+            Видеокурс Microsoft Excel 2010
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Microsoft Excel 2013 "2-й уровень-продвинутый пользователь"</p>
+          <p class="text-body1 text-primary">
+            Microsoft Excel 2013 "2-й уровень-продвинутый пользователь"
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Microsoft Excel 2013 "3-й уровень-опытный пользователь"</p>
+          <p class="text-body1 text-primary">
+            Microsoft Excel 2013 "3-й уровень-опытный пользователь"
+          </p>
         </li>
         <li style="list-style-type: none">
-          <p>Microsoft Excel 2013 "4-й уровень-эксперт"</p>
+          <p class="text-body1 text-primary">
+            Microsoft Excel 2013 "4-й уровень-эксперт"
+          </p>
         </li>
       </ul>
     </div>
