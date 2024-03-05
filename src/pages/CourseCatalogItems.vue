@@ -62,7 +62,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-lg"
@@ -84,7 +84,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -104,7 +104,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -124,7 +124,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -144,7 +144,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -164,7 +164,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -184,7 +184,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -204,7 +204,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -224,7 +224,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -244,7 +244,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -264,7 +264,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -284,7 +284,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
@@ -304,7 +304,7 @@
               <div>
                 <q-btn
                   glossy
-                  style="border-radius: 15px; width: 100px;"
+                  style="border-radius: 15px; width: 110px;"
                   size="10px"
                   color="secondary"
                   class="q-ml-xl"
