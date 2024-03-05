@@ -26,20 +26,20 @@
     </div>
   </div>
 
-  <div class="column justify-between">
+  <div class="column justify-between q-mb-md">
     <div class="q-ml-lg q-pl-lg row text-h3 text-weight-bold text-capitalize">
       <p class="text-primary ">
         Каталог электронных курсов
       </p>
     </div>
 
-    <div class="q-ml-xl toolbar-input-container row">
+    <div class="q-ml-xl q-mt-sm toolbar-input-container row">
       <q-input
         v-model="search"
         dense
         outlined
         square
-        placeholder="Search"
+        placeholder="Поиск"
         class="bg-white col toolbar-input"
         icon="search"
       />
