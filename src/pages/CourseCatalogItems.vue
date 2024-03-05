@@ -39,13 +39,20 @@
 
           <div class="list">
             <ul>
-              <li style="list-style-type: none">
+              <li
+                style="list-style-type: none"
+              >
                 <div class="row justify-between">
                   <div>
                     <p
                       class="text-body1 text-primary text-weight-bold underline-text"
                     >
-                      Основы лизинга
+                      <a
+                        href="#"
+                        style="text-decoration: none;"
+                      >
+                        Основы лизинга
+                      </a>
                     </p>
                   </div>
                   <div>
@@ -56,7 +63,7 @@
                       color="purple"
                       class="q-ml-lg"
                       label="Описание"
-                      :to="{ path: '#' }"
+                      :to="{ path: 'course' }"
                     />
                   </div>
                 </div>
