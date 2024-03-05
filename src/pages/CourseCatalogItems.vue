@@ -71,6 +71,39 @@
                 />
               </div>
             </div>
+            <div class="q-mb-md">
+              <q-banner
+                class="bg-grey-4"
+                rounded
+              >
+                <p class="courses-purpose text-secondary text-h6 q-mb-sm text-uppercase text-bold">
+                  Цель курса?
+                </p>
+                <p
+                  class="courses-purpose-description text-primary q-mb-md text-lowercase"
+                  style="max-width: 700px;"
+                >
+                  сформиРовать практические занания о понятии лизинга, его преимуществах
+                  по сравнению с другими способами приобретения ТС и преимуществах работы с ВТБ Лизинг
+                </p>
+                <p class="courses-time text-secondary text-h6 q-mb-sm text-uppercase text-bold">
+                  Время прохождения
+                </p>
+                <p
+                  class="courses-time-item text-primary q-mb-sm text-lowercase"
+                  style="max-width: 700px;"
+                >
+                  60 минут
+                </p>
+                <template v-slot:action>
+                  <q-btn
+                    flat
+                    color="primary"
+                    label="Закрыть"
+                  />
+                </template>
+              </q-banner>
+            </div>
           </li>
           <li style="list-style-type: none">
             <div class="row justify-between">
