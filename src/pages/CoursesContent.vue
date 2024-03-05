@@ -26,15 +26,34 @@
     </div>
   </div>
 
-  <div class="row justify-between">
+  <div class="column justify-between">
     <div class="q-ml-lg q-pl-lg row text-h3 text-weight-bold text-capitalize">
       <p class="text-primary ">
-        Содержание
+        Каталог электронных курсов
       </p>
+    </div>
+
+    <div class="q-ml-xl toolbar-input-container row">
+      <q-input
+        v-model="search"
+        dense
+        outlined
+        square
+        placeholder="Search"
+        class="bg-white col toolbar-input"
+        icon="search"
+      />
+      <q-btn
+        class="toolbar-input-btn"
+        color="grey-3"
+        text-color="grey-8"
+        icon="search"
+        unelevated
+      />
     </div>
   </div>
 
-  <div class="q-pa-md row items-start q-gutter-md row justify-evenly wrap content-center">
+  <div class="card-container q-pa-md row items-start q-gutter-md row justify-evenly wrap content-center">
     <q-card
       class="my-card shadow-4 q-mb-lg"
       bordered
@@ -167,10 +186,25 @@
 </script>
 
 <style lang="sass" scoped>
+.toolbar-input-container
+  min-width: 300px
+  width: 55%
+.toolbar-input-btn
+  border-bottom-right-radius: 10px
+  border-top-right-radius: 10px
+  border-style: solid
+  border-width: 1px 1px 1px 0
+  border-color: accent
+  max-width: 60px
+  width: 100%
+.toolbar-input
+  border-style: solid
+  border-width: 1px 1px 1px 1px
+  border-color: accent
 .my-card
   width: 100%
   height: 100%
-  max-height: 250px
+  max-height: 300px
   min-height: 200px
   min-width: 300px
   max-width: 500px
@@ -178,4 +212,6 @@
   border-radius: 50%
   height: 170px
   width: 170px
+.card-container
+  gap: 10px
 </style>
