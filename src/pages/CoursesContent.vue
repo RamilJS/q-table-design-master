@@ -9,10 +9,6 @@
       />
       <q-breadcrumbs-el
         label="Каталог курсов"
-        :to="{ path: 'catalog' }"
-      />
-      <q-breadcrumbs-el
-        label="Содержание"
       />
     </q-breadcrumbs>
 
@@ -27,7 +23,7 @@
   </div>
 
   <div class="column justify-between q-mb-md">
-    <div class="q-ml-lg q-pl-lg row text-h3 text-weight-bold text-capitalize">
+    <div class="q-ml-lg q-pl-lg row text-h3 text-weight-bold">
       <p class="text-primary ">
         Каталог электронных курсов
       </p>

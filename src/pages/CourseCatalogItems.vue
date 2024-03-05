@@ -9,10 +9,6 @@
       />
       <q-breadcrumbs-el
         label="Каталог курсов"
-        :to="{ path: 'catalog' }"
-      />
-      <q-breadcrumbs-el
-        label="Содержание"
         :to="{ path: 'content' }"
       />
       <q-breadcrumbs-el
@@ -73,7 +69,7 @@
             </div>
             <div class="q-mb-md">
               <q-banner
-                class="bg-grey-4"
+                class="bg-grey-4 banner"
                 rounded
               >
                 <p class="courses-purpose text-secondary text-h6 q-mb-sm text-uppercase text-bold">
@@ -84,10 +80,10 @@
                   />
                 </p>
                 <p
-                  class="courses-purpose-description text-primary q-mb-md text-lowercase"
+                  class="courses-purpose-description text-primary q-mb-md ellipsis-2-lines"
                   style="max-width: 700px;"
                 >
-                  сформиРовать практические занания о понятии лизинга, его преимуществах
+                  сформировать практические занания о понятии лизинга, его преимуществах
                   по сравнению с другими способами приобретения ТС и преимуществах работы с ВТБ Лизинг
                 </p>
                 <p class="courses-time text-secondary text-h6 q-mb-sm text-uppercase text-bold">
@@ -378,5 +374,8 @@
 .list {
   width: 100%;
   min-width: 550px;
+}
+.banner {
+  border: 1px solid #002882;
 }
 </style>
