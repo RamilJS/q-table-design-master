@@ -64,7 +64,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-lg"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -86,7 +86,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -106,7 +106,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -126,7 +126,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -146,7 +146,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -166,7 +166,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -186,7 +186,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -206,7 +206,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -226,7 +226,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -246,7 +246,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -266,7 +266,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -286,7 +286,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
@@ -306,7 +306,7 @@
                   glossy
                   style="border-radius: 15px; width: 110px;"
                   size="10px"
-                  color="secondary"
+                  color="purple"
                   class="q-ml-xl"
                   label="Описание"
                   :to="{ path: '#' }"
