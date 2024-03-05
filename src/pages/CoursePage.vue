@@ -41,16 +41,35 @@
             />
           </div>
 
-          <div class="content-container">
+          <div class="purpose-container q-mt-lg row">
+            <div class="purpose-trophy">
+              <q-icon
+                name="mdi-trophy-variant"
+                size="80px"
+                color="primary"
+              />
+            </div>
+            <div class="main-purpose q-ml-md">
+              <p class="main-purpose-title text-secondary text-h6 q-mb-sm text-uppercase text-bold">
+                Основная цель
+              </p>
+              <p
+                class="main-purpose-description text-primary q-mb-md ellipsis-2-lines"
+                style="max-width: 700px;"
+              >
+                сформировать практические занания о понятии лизинга, его преимуществах
+                по сравнению с другими способами приобретения ТС и преимуществах работы с ВТБ Лизинг
+              </p>
+            </div>
+          </div>
+
+          <div class="main-themes">
+            <p class="main-purpose-title text-secondary text-h6 q-mt-md text-uppercase text-bold">
+              Основные темы курса:
+            </p>
           </div>
         </div>
       </div>
-    </div>
-
-    <div
-      class="img-container"
-      style="width: 100%; max-width: 330px; height: 100%; max-height: 1200px;"
-    >
     </div>
   </div>
 </template>
