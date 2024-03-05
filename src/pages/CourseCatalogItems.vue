@@ -34,7 +34,7 @@
     <div class="column items-start q-pl-sm q-ml-xl q-mt-sm">
       <div class="header-container">
         <p
-          class="text-3 text-weight-regular text-uppercase text-secondary text-weight-bold"
+          class="text-3 text-weight-regular text-uppercase text-primary text-weight-bold"
           style="font-size: 25px;"
         >
           Профессиональные навыки
