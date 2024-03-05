@@ -194,13 +194,13 @@
   border-top-right-radius: 10px
   border-style: solid
   border-width: 1px 1px 1px 0
-  border-color: accent
+  border-color: grey
   max-width: 60px
   width: 100%
 .toolbar-input
   border-style: solid
   border-width: 1px 1px 1px 1px
-  border-color: accent
+  border-color: grey
 .my-card
   width: 100%
   height: 100%
