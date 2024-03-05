@@ -64,9 +64,18 @@
           </div>
 
           <div class="main-themes">
-            <p class="main-purpose-title text-secondary text-h6 q-mt-md text-uppercase text-bold">
-              Основные темы курса:
-            </p>
+            <div class="main-themes-title">
+              <p class="text-secondary text-h6 q-mt-md text-uppercase text-bold">
+                Основные темы курса:
+              </p>
+            </div>
+            <div class="themes-arrow">
+              <q-icon
+                name="mdi-arrow-right"
+                size="xl"
+                color="primary"
+              />
+            </div>
           </div>
         </div>
       </div>
