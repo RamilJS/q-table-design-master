@@ -51,97 +51,271 @@
       <div class="list">
         <ul>
           <li style="list-style-type: none">
-            <p
-              class="text-body1 text-primary text-weight-bold underline-text"
-            >
-              Основы лизинга
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p
+                  class="text-body1 text-primary text-weight-bold underline-text"
+                >
+                  Основы лизинга
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-lg"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Продукты Автолизинга
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p
+                  class="text-body1 text-primary text-weight-bold underline-text"
+                >
+                  Продукты Автолизинга
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li class="list-item">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Параметры сделки
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Параметры сделки
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Этапы сделки
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Этапы сделки
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              CRM. Знакомство
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  CRM. Знакомство
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Работа в CRM (инструкции)
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Работа в CRM (инструкции)
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Основы делового письма
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Основы делового письма
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Создание письма в Outlook
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Создание письма в Outlook
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Работа в Outlook
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Работа в Outlook
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Видеокурс Microsoft Excel 2010
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Видеокурс Microsoft Excel 2010
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Microsoft Excel 2013 "2-й уровень-продвинутый пользователь"
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Microsoft Excel 2013 "2-й уровень-продвинутый пользователь"
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Microsoft Excel 2013 "3-й уровень-опытный пользователь"
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Microsoft Excel 2013 "3-й уровень-опытный пользователь"
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
           <li style="list-style-type: none">
-            <p class="text-body1 text-primary text-weight-bold underline-text">
-              Microsoft Excel 2013 "4-й уровень-эксперт"
-            </p>
+            <div class="row justify-between">
+              <div>
+                <p class="text-body1 text-primary text-weight-bold underline-text">
+                  Microsoft Excel 2013 "4-й уровень-эксперт"
+                </p>
+              </div>
+              <div>
+                <q-btn
+                  glossy
+                  style="border-radius: 15px; width: 100px;"
+                  size="10px"
+                  color="secondary"
+                  class="q-ml-xl"
+                  label="Описание"
+                  :to="{ path: '#' }"
+                />
+              </div>
+            </div>
           </li>
         </ul>
       </div>
-    </div>
-
-    <div
-      class="carousel-element q-mt-md"
-      style="width: 100%; min-width: 200px; max-width: 500px; height: 100%; min-height: 400px; max-height: 800px;"
-    >
-      <q-carousel
-        v-model="slide"
-        animated
-        navigation
-        infinite
-        :autoplay="autoplay"
-        arrows
-        transition-prev="slide-right"
-        transition-next="slide-left"
-        @mouseenter="autoplay = false"
-        @mouseleave="autoplay = true"
-      >
-        <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg" />
-        <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
-        <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
-        <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
-      </q-carousel>
     </div>
   </div>
 </template>
@@ -161,10 +335,17 @@ export default {
 
 <style scoped>
 .underline-text {
-  text-decoration: underline;
   font-size: 20px;
 }
 .list-item {
   list-style-type: none
+}
+.container {
+  width: 100%;
+  min-width: 610px;
+}
+.list {
+  width: 100%;
+  min-width: 550px;
 }
 </style>
