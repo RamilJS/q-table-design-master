@@ -65,16 +65,117 @@
 
           <div class="main-themes">
             <div class="main-themes-title">
-              <p class="text-secondary text-h6 q-mt-md text-uppercase text-bold">
+              <p class="text-secondary text-h6 q-mt-sm text-uppercase text-bold">
                 Основные темы курса:
               </p>
             </div>
-            <div class="themes-arrow">
-              <q-icon
-                name="mdi-arrow-right"
-                size="xl"
-                color="primary"
-              />
+
+            <div class="themes-arrow row justify-start">
+              <ul>
+                <li class="list-item">
+                  <div class="themes-arrow-items row">
+                    <q-icon
+                      name="mdi-arrow-right"
+                      size="xl"
+                      color="primary"
+                    />
+                    <div
+                      class="q-ml-md"
+                      style="margin-top: 12px;"
+                    >
+                      <p
+                        class="main-themes-description text-primary q-mb-md ellipsis-lines"
+                      >
+                        Понятие лизинга, его виды, субъекты и предметы
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="themes-arrow-items row">
+                    <q-icon
+                      name="mdi-arrow-right"
+                      size="xl"
+                      color="primary"
+                    />
+                    <div
+                      class="q-ml-md"
+                      style="margin-top: 12px;"
+                    >
+                      <p
+                        class="main-themes-description text-primary q-mb-md ellipsis-lines"
+                      >
+                        Схема лизинговой сделки
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="themes-arrow-items row">
+                    <q-icon
+                      name="mdi-arrow-right"
+                      size="xl"
+                      color="primary"
+                    />
+                    <div
+                      class="q-ml-md"
+                      style="margin-top: 12px;"
+                    >
+                      <p
+                        class="main-themes-description text-primary q-mb-md ellipsis-lines"
+                      >
+                        Финансовые и нефинансовые преимущества лизинга по сравнению с другими способами
+                        финансирования
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-item">
+                  <div class="themes-arrow-items row">
+                    <q-icon
+                      name="mdi-arrow-right"
+                      size="xl"
+                      color="primary"
+                    />
+                    <div
+                      class="q-ml-md"
+                      style="margin-top: 12px;"
+                    >
+                      <p
+                        class="main-themes-description text-primary q-mb-md ellipsis-lines"
+                      >
+                        Преимущества ВТБ Лизинг
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row justify-between">
+            <div class="competency q-mr-xl">
+              <div class="competency-content">
+                <p class="main-purpose-title text-secondary text-h6 q-mb-sm text-uppercase text-bold">
+                  Развиваем компетенцию
+                </p>
+              </div>
+              <div class="competency-content-item">
+                <p class="text-secondary text-h6 q-mb-sm text-bold">
+                  Отвечаем за результат
+                  <q-icon
+                    name="mdi-check"
+                    style="margin-bottom: 3px;"
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="time q-ml-xl">
+              <div class="time-content">
+                <p class="main-purpose-title text-secondary text-h6 q-mb-sm text-uppercase text-bold">
+                  Время прохождения
+                </p>
+              </div>
             </div>
           </div>
         </div>

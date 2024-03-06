@@ -48,7 +48,7 @@
                       class="text-body1 text-primary text-weight-bold underline-text"
                     >
                       <a
-                        href="#"
+                        to="#"
                         style="text-decoration: none;"
                       >
                         Основы лизинга
