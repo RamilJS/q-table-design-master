@@ -160,15 +160,6 @@
                   Развиваем компетенцию
                 </p>
               </div>
-              <div class="competency-content-item">
-                <p class="text-secondary text-h6 q-mb-sm text-bold">
-                  Отвечаем за результат
-                  <q-icon
-                    name="mdi-check"
-                    style="margin-bottom: 3px;"
-                  />
-                </p>
-              </div>
             </div>
             <div class="time q-ml-xl">
               <div class="time-content">
@@ -178,9 +169,35 @@
               </div>
             </div>
           </div>
+
+          <div class="row justify-between">
+            <div class="competency q-mr-xl">
+              <p class="competency-title text-primary">
+                <q-icon
+                  name="mdi-check"
+                  size="35px"
+                  style="margin-bottom: 3px;"
+                  color="secondary"
+                />
+                Отвечаем за результат
+              </p>
+            </div>
+            <div class="time q-ml-xl">
+              <p class="competency-title text-primary">
+                <q-icon
+                  name="mdi-clock-outline"
+                  size="35px"
+                  style="margin-bottom: 3px;"
+                  color="secondary"
+                />
+                60 минут
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
