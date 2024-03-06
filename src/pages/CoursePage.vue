@@ -206,6 +206,18 @@
               style="border-radius: 10px; width: 8em;"
             />
           </div>
+
+          <div class="review q-mt-lg q-mb-xl">
+            <p class="competency-title text-primary">
+              <q-icon
+                name="mdi-lead-pencil"
+                size="15px"
+                style="margin-bottom: 3px;"
+                color="secondary"
+              />
+              Оставить отзыв
+            </p>
+          </div>
         </div>
       </div>
     </div>
