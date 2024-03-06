@@ -3,6 +3,11 @@
     padding
     class="flex flex-center"
   >
+    <q-btn
+      color="secondary"
+      label="Каталог курсов"
+      :to="{ path: 'content' }"
+    />
     <UserTable
       v-model:selected="selected"
       :users="users"

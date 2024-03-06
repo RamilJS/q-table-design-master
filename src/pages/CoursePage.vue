@@ -194,6 +194,18 @@
               </p>
             </div>
           </div>
+
+          <div class="start-btn q-mt-sm">
+            <q-btn
+              color="secondary"
+              label="НАЧАТЬ"
+              size="22px"
+              glossy
+              icon="mdi-school"
+              :to="{ path: '#' }"
+              style="border-radius: 10px; width: 8em;"
+            />
+          </div>
         </div>
       </div>
     </div>
