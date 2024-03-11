@@ -1,7 +1,7 @@
 <template>
   <div class="main-container row justify-between">
     <div class="content-container">
-      <div class="q-ml-xl q-mt-sm q-gutter-sm row justify-between">
+      <div class="body-container q-ml-xl q-mt-sm q-gutter-sm row justify-between">
         <q-breadcrumbs
           class="q-mt-lg g-ml-lg text-primary"
         >
@@ -219,7 +219,15 @@
       </div>
     </div>
 
-    <div class="sidebar-container">
+    <div
+      class="sidebar-container"
+      style="width: 100%; max-width: 330px; height: 100%; max-height: 1200px; transform: scale(1);"
+    >
+      <q-img
+        class="rounded-borders card-image"
+        src="/public/images/blue-bg.jpg"
+        alt="Люди в офисе"
+      />
     </div>
   </div>
 </template>

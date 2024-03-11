@@ -99,7 +99,9 @@
                     >
                       60 минут
                     </p>
-                    <template v-slot:action>
+                    <template
+                      v-slot:action
+                    >
                       <q-btn
                         flat
                         color="primary"
