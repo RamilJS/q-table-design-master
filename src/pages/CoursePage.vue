@@ -154,44 +154,41 @@
           </div>
 
           <div class="row justify-between">
-            <div class="competency q-mr-xl">
+            <div class="competency q-mr-xl column">
               <div class="competency-content">
                 <p class="main-purpose-title text-secondary text-h6 q-mb-sm text-uppercase text-bold">
                   Развиваем компетенцию
                 </p>
               </div>
+              <div class="competency">
+                <p class="competency-title text-primary">
+                  <q-icon
+                    name="mdi-check"
+                    size="35px"
+                    style="margin-bottom: 3px;"
+                    color="secondary"
+                  />
+                  Отвечаем за результат
+                </p>
+              </div>
             </div>
-            <div class="time q-ml-xl">
+            <div class="time q-ml-xl column">
               <div class="time-content">
                 <p class="main-purpose-title text-secondary text-h6 q-mb-sm text-uppercase text-bold">
                   Время прохождения
                 </p>
               </div>
-            </div>
-          </div>
-
-          <div class="row justify-between">
-            <div class="competency q-mr-xl">
-              <p class="competency-title text-primary">
-                <q-icon
-                  name="mdi-check"
-                  size="35px"
-                  style="margin-bottom: 3px;"
-                  color="secondary"
-                />
-                Отвечаем за результат
-              </p>
-            </div>
-            <div class="time q-ml-xl">
-              <p class="competency-title text-primary">
-                <q-icon
-                  name="mdi-clock-outline"
-                  size="35px"
-                  style="margin-bottom: 3px;"
-                  color="secondary"
-                />
-                60 минут
-              </p>
+              <div class="time">
+                <p class="competency-title text-primary">
+                  <q-icon
+                    name="mdi-clock-outline"
+                    size="35px"
+                    style="margin-bottom: 3px;"
+                    color="secondary"
+                  />
+                  60 минут
+                </p>
+              </div>
             </div>
           </div>
 
@@ -220,6 +217,9 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="sidebar-container">
     </div>
   </div>
 </template>
