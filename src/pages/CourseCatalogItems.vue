@@ -38,7 +38,7 @@
           </div>
 
           <div class="list">
-            <ul>
+            <ul class="categories-list">
               <li
                 style="list-style-type: none"
               >
@@ -410,5 +410,8 @@
   height: 100%;
   flex: 1 0 auto;
   object-fit: cover;
+}
+.categories-list {
+  padding-left: 1px;
 }
 </style>
