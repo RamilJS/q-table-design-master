@@ -364,7 +364,7 @@
     >
       <q-img
         class="rounded-borders card-image"
-        src="/public/images/briefing.jpg"
+        src="/public/images/people_in_work.jpg"
         alt="Люди в офисе"
       />
     </div>
@@ -392,13 +392,15 @@
 .banner {
   border: 1px solid #002882;
 }
+.content-container {
+  flex: 1;
+}
 .main-container {
   height: 100%;
 }
 .sidebar-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 100%;
   max-width: 330px;
   min-height: 100vh;
