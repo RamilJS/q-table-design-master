@@ -360,12 +360,12 @@
     </div>
 
     <div
-      class="img-container"
-      style="width: 100%; max-width: 330px; height: 100%; max-height: 1200px;"
+      class="sidebar-container"
+      style="width: 100%; max-width: 330px; min-height: 100vh;"
     >
       <q-img
         class="rounded-borders card-image"
-        src="/public/images/people_in_work.jpg"
+        src="/public/images/briefing.jpg"
         alt="Люди в офисе"
       />
     </div>
@@ -392,5 +392,15 @@
 }
 .banner {
   border: 1px solid #002882;
+}
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card-image {
+  width: 100%;
+  flex: 1 0 auto;
+  object-fit: cover;
 }
 </style>

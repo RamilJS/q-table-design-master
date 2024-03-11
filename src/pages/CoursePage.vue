@@ -221,7 +221,7 @@
 
     <div
       class="sidebar-container"
-      style="width: 100%; max-width: 330px; height: 100%; max-height: 1200px; transform: scale(1);"
+      style="width: 100%; max-width: 330px; min-height: 100vh;"
     >
       <q-img
         class="rounded-borders card-image"
@@ -255,5 +255,15 @@
 }
 .courses-themes-list {
   padding-left: 1px;
+}
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card-image {
+  width: 100%;
+  flex: 1 0 auto;
+  object-fit: cover;
 }
 </style>
