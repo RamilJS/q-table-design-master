@@ -30,7 +30,7 @@
             class="rounded-borders"
             src="/public/icons/logo-vtb-d.png"
             alt="Логотип компании"
-            style="height: 60px; width: 270px"
+            style="height: 60px; width: 270px; transform: scale(0.75);"
           />
         </q-btn>
 
