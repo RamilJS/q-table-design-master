@@ -65,13 +65,13 @@
 
           <div class="main-themes">
             <div class="main-themes-title">
-              <p class="text-secondary text-h6 q-mt-sm text-uppercase text-bold">
+              <p class="text-secondary text-h6 q-mt-sm q-mb-sm text-uppercase text-bold">
                 Основные темы курса:
               </p>
             </div>
 
             <div class="themes-arrow row justify-start">
-              <ul>
+              <ul class="courses-themes-list">
                 <li class="list-item">
                   <div class="themes-arrow-items row">
                     <q-icon
@@ -244,5 +244,8 @@
 }
 .banner {
   border: 1px solid #002882;
+}
+.courses-themes-list {
+  padding-left: 1px;
 }
 </style>
