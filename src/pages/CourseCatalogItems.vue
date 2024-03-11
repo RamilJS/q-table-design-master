@@ -40,7 +40,7 @@
           <div class="list">
             <ul class="categories-list">
               <li
-                style="list-style-type: none"
+                class="list-item"
               >
                 <div class="row justify-between">
                   <div>
@@ -60,7 +60,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-lg"
                       label="Описание"
                       :to="{ path: 'course' }"
@@ -111,7 +111,7 @@
                   </q-banner>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p
@@ -125,7 +125,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -145,7 +145,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -153,7 +153,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -165,7 +165,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -173,7 +173,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -185,7 +185,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -193,7 +193,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -205,7 +205,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -213,7 +213,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -225,7 +225,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -233,7 +233,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -245,7 +245,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -253,7 +253,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -265,7 +265,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -273,7 +273,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -285,7 +285,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -293,7 +293,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -305,7 +305,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -313,7 +313,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -325,7 +325,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"
@@ -333,7 +333,7 @@
                   </div>
                 </div>
               </li>
-              <li style="list-style-type: none">
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p class="text-body1 text-primary text-weight-bold underline-text">
@@ -345,7 +345,7 @@
                       glossy
                       style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="purple"
+                      color="secondary"
                       class="q-ml-xl"
                       label="Описание"
                       :to="{ path: '#' }"

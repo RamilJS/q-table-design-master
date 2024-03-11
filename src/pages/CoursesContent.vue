@@ -66,7 +66,7 @@
               glossy
               style="border-radius: 15px; width: 120px;"
               size="13px"
-              color="purple"
+              color="secondary"
               class="q-pr-xl q-py-xs q-mr-xl"
               label="Открыть"
               :to="{ path: '/content-items' }"
@@ -97,7 +97,7 @@
               glossy
               style="border-radius: 15px; width: 120px;"
               size="13px"
-              color="purple"
+              color="secondary"
               class="q-pr-xl q-py-xs q-mr-xl"
               label="Открыть"
             />
@@ -128,7 +128,7 @@
               glossy
               style="border-radius: 15px; width: 120px;"
               size="13px"
-              color="purple"
+              color="secondary"
               class="q-pr-xl q-py-xs q-mr-xl"
               label="Открыть"
             />
@@ -159,7 +159,7 @@
               glossy
               style="border-radius: 15px; width: 120px;"
               size="13px"
-              color="purple"
+              color="secondary"
               class="q-pr-xl q-py-xs q-mr-xl"
               label="Открыть"
             />
