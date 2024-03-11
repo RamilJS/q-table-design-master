@@ -361,7 +361,6 @@
 
     <div
       class="sidebar-container"
-      style="width: 100%; max-width: 330px; min-height: 100vh;"
     >
       <q-img
         class="rounded-borders card-image"
@@ -393,13 +392,20 @@
 .banner {
   border: 1px solid #002882;
 }
+.main-container {
+  height: 100%;
+}
 .sidebar-container {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+  max-width: 330px;
+  min-height: 100vh;
 }
 .card-image {
   width: 100%;
+  height: 100%;
   flex: 1 0 auto;
   object-fit: cover;
 }
