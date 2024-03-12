@@ -1,5 +1,5 @@
 <template>
-  <div class="q-mb-md">
+  <div class="q-mb-md course-banner">
     <q-banner
       class="bg-grey-4 banner"
       rounded
@@ -45,6 +45,13 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'CourseBanner',
+  props: {
+  }
+})
 </script>
 
 <style></style>
