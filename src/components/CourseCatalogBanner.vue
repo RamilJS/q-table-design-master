@@ -31,9 +31,7 @@
       >
         60 минут
       </p>
-      <div
-        class="close-banner-btn"
-      >
+      <div class="close-banner-btn">
         <q-btn
           flat
           color="primary"

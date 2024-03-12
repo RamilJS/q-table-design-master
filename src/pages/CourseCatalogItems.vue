@@ -1,7 +1,7 @@
 <template>
   <div class="main-container row justify-between">
     <div class="content-container">
-      <div class="q-ml-xl q-mt-sm q-gutter-sm row justify-between">
+      <div class="breadcrumbs q-ml-xl q-mt-sm q-gutter-sm row justify-between">
         <q-breadcrumbs
           class="q-mt-lg g-ml-lg text-primary"
         >
