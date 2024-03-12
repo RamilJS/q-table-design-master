@@ -194,7 +194,7 @@
 
           <div class="start-btn q-mt-sm">
             <q-btn
-              class="start-btn text-white"
+              class="start-btn text-white text-bold"
               label="НАЧАТЬ"
               size="22px"
               glossy

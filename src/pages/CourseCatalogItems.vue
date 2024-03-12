@@ -42,10 +42,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-lg"
+                      class="q-ml-xl text-white gradient-btn text-bold"
                       label="Описание"
                       :to="{ path: 'course' }"
                     />
@@ -65,10 +63,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -85,10 +81,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -105,10 +99,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -125,10 +117,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -145,10 +135,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -165,10 +153,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -185,10 +171,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -205,10 +189,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -225,10 +207,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -245,10 +225,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -265,10 +243,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -285,10 +261,8 @@
                   <div>
                     <q-btn
                       glossy
-                      style="border-radius: 15px; width: 110px;"
                       size="10px"
-                      color="secondary"
-                      class="q-ml-xl"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: '#' }"
                     />
@@ -364,5 +338,10 @@ export default {
 }
 .categories-list {
   padding-left: 1px;
+}
+.gradient-btn {
+  background: linear-gradient(to right, #7a31f5, #578bf8) !important;
+  border-radius: 15px;
+  width: 110px;
 }
 </style>
