@@ -1,149 +1,148 @@
 <template>
-  <div class="q-ml-xl q-mt-sm q-gutter-sm row justify-between">
-    <q-breadcrumbs
-      class="q-mt-lg g-ml-lg text-primary"
-    >
-      <q-breadcrumbs-el
-        label="Учебный центр"
-        :to="{ path: '/' }"
-      />
-      <q-breadcrumbs-el
-        label="Каталог курсов"
-      />
-    </q-breadcrumbs>
+  <div class="main-container">
+    <div class="q-ml-xl q-mt-sm q-gutter-sm row justify-between">
+      <q-breadcrumbs
+        class="q-mt-lg g-ml-lg text-primary"
+      >
+        <q-breadcrumbs-el
+          label="Учебный центр"
+          :to="{ path: '/' }"
+        />
+        <q-breadcrumbs-el
+          label="Каталог курсов"
+        />
+      </q-breadcrumbs>
 
-    <div class="q-mt-lg q-mr-lg q-pr-lg row">
-      <q-img
-        class="rounded-borders"
-        src="/public/icons/logo-vtb-d.png"
-        alt="Логотип компании"
-        style="height: 60px; width: 270px; transform: scale(0.75);"
-      />
-    </div>
-  </div>
-
-  <div class="column justify-between q-mb-md">
-    <div class="q-ml-lg q-pl-lg row text-h3 text-weight-bold">
-      <p class="text-primary ">
-        Каталог электронных курсов
-      </p>
+      <div class="q-mt-lg q-mr-lg q-pr-lg row">
+        <q-img
+          class="rounded-borders"
+          src="/public/icons/logo-vtb-d.png"
+          alt="Логотип компании"
+          style="height: 60px; width: 270px; transform: scale(0.75);"
+        />
+      </div>
     </div>
 
-    <div class="q-ml-xl q-mt-sm toolbar-input-container row">
-      <q-input
-        v-model="search"
-        dense
-        outlined
-        square
-        placeholder="Поиск"
-        class="bg-white col toolbar-input"
-        icon="search"
-      />
-      <q-btn
-        class="toolbar-input-btn"
-        color="grey-3"
-        text-color="grey-8"
-        icon="search"
-        unelevated
-      />
+    <div class="column justify-between q-mb-md">
+      <div class="q-ml-lg q-pl-lg row text-h3 text-weight-bold">
+        <p class="text-primary ">
+          Каталог электронных курсов
+        </p>
+      </div>
+
+      <div class="q-ml-xl q-mt-sm toolbar-input-container row">
+        <q-input
+          v-model="search"
+          dense
+          outlined
+          square
+          placeholder="Поиск"
+          class="bg-white col toolbar-input"
+          icon="search"
+        />
+        <q-btn
+          class="toolbar-input-btn"
+          color="grey-3"
+          text-color="grey-8"
+          icon="search"
+          unelevated
+        />
+      </div>
     </div>
-  </div>
 
-  <div class="card-container q-pa-md row items-start q-gutter-md row justify-evenly wrap content-center">
-    <CardCourse />
+    <div class="card-container q-pa-md row items-start q-gutter-md row justify-evenly wrap content-center">
+      <CardCourse />
 
-    <q-card
-      class="my-card shadow-4"
-      bordered
-    >
-      <q-card-section horizontal>
-        <q-card-section class="q-pt-lg">
-          <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
-            Вводные курсы (инструктажи)
-          </div>
-          <q-card-actions>
-            <q-btn
-              glossy
-              style="border-radius: 15px; width: 120px;"
-              size="13px"
-              color="secondary"
-              class="q-pr-xl q-py-xs q-mr-xl"
-              label="Открыть"
+      <q-card
+        class="my-card"
+      >
+        <q-card-section horizontal>
+          <q-card-section class="q-pt-lg">
+            <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
+              Вводные курсы (инструктажи)
+            </div>
+            <q-card-actions>
+              <q-btn
+                glossy
+                style="border-radius: 15px; width: 120px;"
+                size="13px"
+                color="secondary"
+                class="q-pr-xl q-py-xs q-mr-xl"
+                label="Открыть"
+              />
+            </q-card-actions>
+          </q-card-section>
+
+          <q-card-section class="col-5 flex flex-center">
+            <q-img
+              class="rounded-borders card-image"
+              src="/public/images/briefing.jpg"
+              alt="Люди в офисе"
             />
-          </q-card-actions>
+          </q-card-section>
         </q-card-section>
+      </q-card>
 
-        <q-card-section class="col-5 flex flex-center">
-          <q-img
-            class="rounded-borders card-image"
-            src="/public/images/briefing.jpg"
-            alt="Люди в офисе"
-          />
-        </q-card-section>
-      </q-card-section>
-    </q-card>
+      <q-card
+        class="my-card"
+      >
+        <q-card-section horizontal>
+          <q-card-section class="q-pt-lg">
+            <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
+              Личная эффективность и развитие
+            </div>
+            <q-card-actions>
+              <q-btn
+                glossy
+                style="border-radius: 15px; width: 120px;"
+                size="13px"
+                color="secondary"
+                class="q-pr-xl q-py-xs q-mr-xl"
+                label="Открыть"
+              />
+            </q-card-actions>
+          </q-card-section>
 
-    <q-card
-      class="my-card shadow-4"
-      bordered
-    >
-      <q-card-section horizontal>
-        <q-card-section class="q-pt-lg">
-          <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
-            Личная эффективность и развитие
-          </div>
-          <q-card-actions>
-            <q-btn
-              glossy
-              style="border-radius: 15px; width: 120px;"
-              size="13px"
-              color="secondary"
-              class="q-pr-xl q-py-xs q-mr-xl"
-              label="Открыть"
+          <q-card-section class="col-5 flex flex-center">
+            <q-img
+              class="rounded-borders card-image"
+              src="/public/images/personal_efficiency.jpg"
+              alt="Люди в офисе"
             />
-          </q-card-actions>
+          </q-card-section>
         </q-card-section>
+      </q-card>
 
-        <q-card-section class="col-5 flex flex-center">
-          <q-img
-            class="rounded-borders card-image"
-            src="/public/images/personal_efficiency.jpg"
-            alt="Люди в офисе"
-          />
-        </q-card-section>
-      </q-card-section>
-    </q-card>
+      <q-card
+        class="my-card"
+      >
+        <q-card-section horizontal>
+          <q-card-section class="q-pt-lg">
+            <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
+              Управление эффективности деятельности (УЭД)
+            </div>
+            <q-card-actions>
+              <q-btn
+                glossy
+                style="border-radius: 15px; width: 120px;"
+                size="13px"
+                color="secondary"
+                class="q-pr-xl q-py-xs q-mr-xl"
+                label="Открыть"
+              />
+            </q-card-actions>
+          </q-card-section>
 
-    <q-card
-      class="my-card shadow-4"
-      bordered
-    >
-      <q-card-section horizontal>
-        <q-card-section class="q-pt-lg">
-          <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
-            Управление эффективности деятельности (УЭД)
-          </div>
-          <q-card-actions>
-            <q-btn
-              glossy
-              style="border-radius: 15px; width: 120px;"
-              size="13px"
-              color="secondary"
-              class="q-pr-xl q-py-xs q-mr-xl"
-              label="Открыть"
+          <q-card-section class="col-5 flex flex-center">
+            <q-img
+              class="rounded-borders card-image"
+              src="/public/images/efficiency_management.jpg"
+              alt="Люди в офисе"
             />
-          </q-card-actions>
+          </q-card-section>
         </q-card-section>
-
-        <q-card-section class="col-5 flex flex-center">
-          <q-img
-            class="rounded-borders card-image"
-            src="/public/images/efficiency_management.jpg"
-            alt="Люди в офисе"
-          />
-        </q-card-section>
-      </q-card-section>
-    </q-card>
+      </q-card>
+    </div>
   </div>
 </template>
 

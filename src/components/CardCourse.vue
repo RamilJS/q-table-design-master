@@ -1,7 +1,6 @@
 <template>
   <q-card
-    class="my-card shadow-4 q-mb-lg"
-    bordered
+    class="my-card q-mb-lg"
   >
     <q-card-section horizontal>
       <q-card-section class="q-pt-lg">
