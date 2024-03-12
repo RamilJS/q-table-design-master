@@ -194,13 +194,12 @@
 
           <div class="start-btn q-mt-sm">
             <q-btn
-              color="secondary"
+              class="start-btn text-white"
               label="НАЧАТЬ"
               size="22px"
               glossy
               icon="mdi-school"
               :to="{ path: '#' }"
-              style="border-radius: 10px; width: 8em;"
             />
           </div>
 
@@ -273,5 +272,10 @@
   height: 100%;
   flex: 1 0 auto;
   object-fit: cover;
+}
+.start-btn {
+  background: linear-gradient(to right, #7a31f5, #578bf8) !important;
+  border-radius: 10px;
+  width: 8em;
 }
 </style>
