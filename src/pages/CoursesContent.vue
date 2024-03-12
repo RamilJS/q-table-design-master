@@ -50,11 +50,14 @@
       </div>
     </div>
 
-    <div class="card-container q-pa-md row items-start q-gutter-md row justify-evenly wrap content-center">
+    <div
+      class="card-container q-py-md center row q-gutter-md wrap"
+      style="margin-left: 32px;"
+    >
       <CardCourse />
 
       <q-card
-        class="my-card"
+        class="my-card col-3"
       >
         <q-card-section horizontal>
           <q-card-section class="q-pt-lg">
@@ -84,7 +87,7 @@
       </q-card>
 
       <q-card
-        class="my-card"
+        class="my-card col-3"
       >
         <q-card-section horizontal>
           <q-card-section class="q-pt-lg">
@@ -114,7 +117,7 @@
       </q-card>
 
       <q-card
-        class="my-card"
+        class="my-card col-3"
       >
         <q-card-section horizontal>
           <q-card-section class="q-pt-lg">

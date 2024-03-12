@@ -1,6 +1,6 @@
 <template>
   <q-card
-    class="my-card q-mb-lg"
+    class="my-card col-3"
   >
     <q-card-section horizontal>
       <q-card-section class="q-pt-lg">
