@@ -39,9 +39,7 @@
 
           <div class="list">
             <ul class="categories-list">
-              <li
-                class="list-item"
-              >
+              <li class="list-item">
                 <div class="row justify-between">
                   <div>
                     <p
