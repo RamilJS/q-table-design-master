@@ -12,10 +12,8 @@
         <q-card-actions>
           <q-btn
             glossy
-            style="border-radius: 15px; width: 120px;"
             size="13px"
-            color="secondary"
-            class="q-pr-xl q-py-xs q-mr-xl"
+            class="q-pr-xl q-py-xs q-mr-xl text-white gradient-btn"
             label="Открыть"
             :to="{ path: '/content-items' }"
           />
@@ -56,5 +54,10 @@ export default defineComponent({
 }
 .card-container {
   gap: 10px;
+}
+.gradient-btn {
+  background: linear-gradient(to right, #7a31f5, #578bf8) !important;
+  border-radius: 15px;
+  width: 120px;
 }
 </style>
