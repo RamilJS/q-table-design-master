@@ -44,9 +44,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'CourseCatalogBanner',
-  props: {
-  }
+  name: 'CourseCatalogBanner'
 })
 </script>
 

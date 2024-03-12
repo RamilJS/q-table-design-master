@@ -328,13 +328,13 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import CourseCatalogBanner from 'src/components/CourseCatalogBanner.vue'
 
-export default defineComponent({
-  name: 'CourseCatalogBanner',
-  props: {
+export default {
+  components: {
+    CourseCatalogBanner
   }
-})
+}
 </script>
 
 <style scoped>
