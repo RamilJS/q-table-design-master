@@ -31,15 +31,11 @@
       >
         60 минут
       </p>
-      <template
-        v-slot:action
-      >
-        <q-btn
-          flat
-          color="primary"
-          label="Закрыть"
-        />
-      </template>
+      <q-btn
+        flat
+        color="primary"
+        label="Закрыть"
+      />
     </q-banner>
   </div>
 </template>
