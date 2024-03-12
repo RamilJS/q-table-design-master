@@ -2,21 +2,7 @@
   <div class="main-container row justify-between">
     <div class="content-container">
       <div class="breadcrumbs q-ml-xl q-mt-sm q-gutter-sm row justify-between">
-        <q-breadcrumbs
-          class="q-mt-lg g-ml-lg text-primary"
-        >
-          <q-breadcrumbs-el
-            label="Учебный центр"
-            :to="{ path: '/' }"
-          />
-          <q-breadcrumbs-el
-            label="Каталог курсов"
-            :to="{ path: 'content' }"
-          />
-          <q-breadcrumbs-el
-            label="Профессиональные навыки"
-          />
-        </q-breadcrumbs>
+        <BreadCrumbs />
       </div>
 
       <div class="container row">
@@ -328,11 +314,13 @@
 </template>
 
 <script>
+import BreadCrumbs from 'src/components/BreadCrumbs.vue'
 import CourseCatalogBanner from 'src/components/CourseCatalogBanner.vue'
 
 export default {
   components: {
-    CourseCatalogBanner
+    CourseCatalogBanner,
+    BreadCrumbs
   }
 }
 </script>
