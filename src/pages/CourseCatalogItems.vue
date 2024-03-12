@@ -65,7 +65,7 @@
                     />
                   </div>
                 </div>
-                <CourseBanner />
+                <CourseCatalogBanner />
               </li>
               <li class="list-item">
                 <div class="row justify-between">
@@ -328,10 +328,10 @@
 </template>
 
 <script>
-import CourseBanner from 'src/components/CourseBanner.vue'
+import CourseCatalogBanner from 'src/components/CourseBanner.vue'
 export default {
   components: {
-    CourseBanner
+    CourseCatalogBanner
   }
 }
 </script>
