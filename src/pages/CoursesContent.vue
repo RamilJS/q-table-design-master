@@ -51,7 +51,7 @@
     </div>
 
     <div
-      class="card-container q-py-md center row q-gutter-md wrap"
+      class="card-container q-py-md row q-gutter-md wrap"
       style="margin-left: 32px;"
     >
       <CardCourse />
