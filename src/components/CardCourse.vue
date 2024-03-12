@@ -1,14 +1,26 @@
 <template>
   <q-card
-    class="my-card"
-    flat
+    class="my-card shadow-4 q-mb-lg"
     bordered
   >
     <q-card-section horizontal>
       <q-card-section class="q-pt-lg">
-        <div class="text-h5 q-mt-sm q-mb-xs text-primary">
+        <div
+          class="text-h5 q-mt-sm q-mb-xs text-primary"
+        >
           Профессиональные навыки
         </div>
+        <q-card-actions>
+          <q-btn
+            glossy
+            style="border-radius: 15px; width: 120px;"
+            size="13px"
+            color="secondary"
+            class="q-pr-xl q-py-xs q-mr-xl"
+            label="Открыть"
+            :to="{ path: '/content-items' }"
+          />
+        </q-card-actions>
       </q-card-section>
       <q-card-section class="col-5 flex flex-center">
         <q-img
@@ -18,17 +30,6 @@
         />
       </q-card-section>
     </q-card-section>
-
-    <q-card-actions>
-      <q-btn
-        glossy
-        style="border-radius: 15px; width: 120px;"
-        size="13px"
-        color="secondary"
-        class="q-px-xl q-py-xs q-ml-lg q-mb-md"
-        label="Открыть"
-      />
-    </q-card-actions>
   </q-card>
 </template>
 
@@ -40,14 +41,21 @@ export default defineComponent({
 })
 </script>
 
-<style lang="sass" scoped>
-.my-card
-  width: 100%
-  height: 100%
-  max-height: 250px
-  max-width: 500px
-.card-image
-  border-radius: 50%
-  height: 150px
-  width: 150px
+<style scoped>
+.my-card {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  min-height: 200px;
+  min-width: 300px;
+  max-width: 500px;
+}
+.card-image {
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+}
+.card-container {
+  gap: 10px;
+}
 </style>
