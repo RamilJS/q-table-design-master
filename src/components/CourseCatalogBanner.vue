@@ -31,11 +31,16 @@
       >
         60 минут
       </p>
-      <q-btn
-        flat
-        color="primary"
-        label="Закрыть"
-      />
+      <div
+        class="close-banner-btn"
+      >
+        <q-btn
+          flat
+          color="primary"
+          label="Закрыть"
+          style="transform: translateX(690px);"
+        />
+      </div>
     </q-banner>
   </div>
 </template>
