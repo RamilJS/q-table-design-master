@@ -54,4 +54,11 @@ export default defineComponent({
 })
 </script>
 
-<style></style>
+<style scoped>
+.banner {
+  border: 1px solid #002882;
+}
+.content-container {
+  flex: 1;
+}
+</style>
