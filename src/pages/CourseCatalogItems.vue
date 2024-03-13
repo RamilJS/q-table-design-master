@@ -26,6 +26,8 @@
           <div class="list">
             <ul class="categories-list">
               <li
+                v-for="(category, index) in categories"
+                :key="index"
                 class="list-item"
                 @mouseover="showBanner"
                 @mouseout="hideBanner"
@@ -36,10 +38,10 @@
                       class="text-body1 text-primary text-weight-bold underline-text"
                     >
                       <a
-                        to="#"
+                        :to="category.to"
                         style="text-decoration: none;"
                       >
-                        Основы лизинга
+                        {{ category.title }}
                       </a>
                     </p>
                   </div>
@@ -54,224 +56,6 @@
                   </div>
                 </div>
                 <CourseCatalogBanner v-show="isBannerVisible" />
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p
-                      class="text-body1 text-primary text-weight-bold underline-text"
-                    >
-                      Продукты Автолизинга
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Параметры сделки
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Этапы сделки
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      CRM. Знакомство
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Работа в CRM (инструкции)
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Основы делового письма
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Создание письма в Outlook
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Работа в Outlook
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Видеокурс Microsoft Excel 2010
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Microsoft Excel 2013 "2-й уровень-продвинутый пользователь"
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Microsoft Excel 2013 "3-й уровень-опытный пользователь"
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="row justify-between">
-                  <div>
-                    <p class="text-body1 text-primary text-weight-bold underline-text">
-                      Microsoft Excel 2013 "4-й уровень-эксперт"
-                    </p>
-                  </div>
-                  <div>
-                    <q-btn
-                      glossy
-                      size="10px"
-                      class="q-ml-xl text-white gradient-btn"
-                      label="Описание"
-                      :to="{ path: '#' }"
-                    />
-                  </div>
-                </div>
               </li>
             </ul>
           </div>
@@ -302,7 +86,21 @@ export default {
   },
   data () {
     return {
-      isBannerVisible: false
+      isBannerVisible: false,
+      categories: [
+        { title: 'Основы лизинга', to: '#', path: { path: 'course' } },
+        { title: 'Продукты Автолизинга', to: '#', path: '#' },
+        { title: 'Параметры сделки', to: '#', path: '#' },
+        { title: 'Этапы сделки', to: '#', path: '#' },
+        { title: 'CRM. Знакомство', to: '#', path: '#' },
+        { title: 'Основы делового письма', to: '#', path: '#' },
+        { title: 'Создание письма в Outlook', to: '#', path: '#' },
+        { title: 'Работа в Outlook', to: '#', path: '#' },
+        { title: 'Видеокурс Microsoft Excel 2010', to: '#', path: '#' },
+        { title: 'Microsoft Excel 2013 "2-й уровень-продвинутый пользователь"', to: '#', path: '#' },
+        { title: 'Microsoft Excel 2013 "3-й уровень-опытный пользователь"', to: '#', path: '#' },
+        { title: 'Microsoft Excel 2013 "4-й уровень-эксперт"', to: '#', path: '#' }
+      ]
     }
   },
   methods: {
