@@ -25,7 +25,11 @@
 
           <div class="list">
             <ul class="categories-list">
-              <li class="list-item">
+              <li
+                class="list-item"
+                @mouseover="showBanner"
+                @mouseout="hideBanner"
+              >
                 <div class="row justify-between">
                   <div class="active-hover">
                     <p
@@ -49,7 +53,7 @@
                     />
                   </div>
                 </div>
-                <CourseCatalogBanner />
+                <CourseCatalogBanner v-show="isBannerVisible" />
               </li>
               <li class="list-item">
                 <div class="row justify-between">
@@ -295,6 +299,19 @@ export default {
   components: {
     CourseCatalogBanner,
     BreadCrumbs
+  },
+  data () {
+    return {
+      isBannerVisible: false
+    }
+  },
+  methods: {
+    showBanner () {
+      this.isBannerVisible = true
+    },
+    hideBanner () {
+      this.isBannerVisible = false
+    }
   }
 }
 </script>

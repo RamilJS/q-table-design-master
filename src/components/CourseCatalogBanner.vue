@@ -58,7 +58,4 @@ export default defineComponent({
 .content-container {
   flex: 1;
 }
-.course-catalog-banner-active {
-  visibility: hidden;
-}
 </style>
