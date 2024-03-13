@@ -29,8 +29,8 @@
                 v-for="(category, index) in categories"
                 :key="index"
                 class="list-item"
-                @mouseover="showBanner"
-                @mouseout="hideBanner"
+                @mouseover="showBanner(index)"
+                @mouseout="hideBanner(index)"
               >
                 <div class="row justify-between">
                   <div class="active-hover">
@@ -55,7 +55,7 @@
                     />
                   </div>
                 </div>
-                <CourseCatalogBanner v-show="isBannerVisible" />
+                <CourseCatalogBanner v-show="currentCategoryIndex === index && isBannerVisible" />
               </li>
             </ul>
           </div>
@@ -87,6 +87,7 @@ export default {
   data () {
     return {
       isBannerVisible: false,
+      currentCategoryIndex: -1,
       categories: [
         { title: 'Основы лизинга', to: '#', path: { path: 'course' } },
         { title: 'Продукты Автолизинга', to: '#', path: '#' },
@@ -104,11 +105,13 @@ export default {
     }
   },
   methods: {
-    showBanner () {
+    showBanner (index) {
       this.isBannerVisible = true
+      this.currentCategoryIndex = index
     },
-    hideBanner () {
+    hideBanner (index) {
       this.isBannerVisible = false
+      this.currentCategoryIndex = -1
     }
   }
 }
