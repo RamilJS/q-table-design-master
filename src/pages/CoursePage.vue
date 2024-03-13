@@ -194,7 +194,7 @@
 
           <div class="start-btn q-mt-sm">
             <q-btn
-              class="start-btn text-white text-bold"
+              class="start-btn text-white"
               label="НАЧАТЬ"
               size="22px"
               glossy
@@ -277,5 +277,8 @@
   background: linear-gradient(to right, #7a31f5, #578bf8) !important;
   border-radius: 10px;
   width: 8em;
+}
+.trophy-icon {
+  background: linear-gradient(to right, #7a31f5, #578bf8) !important;
 }
 </style>

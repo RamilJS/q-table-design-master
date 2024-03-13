@@ -27,7 +27,7 @@
             <ul class="categories-list">
               <li class="list-item">
                 <div class="row justify-between">
-                  <div>
+                  <div class="active-hover">
                     <p
                       class="text-body1 text-primary text-weight-bold underline-text"
                     >
@@ -43,7 +43,7 @@
                     <q-btn
                       glossy
                       size="10px"
-                      class="q-ml-xl text-white gradient-btn text-bold"
+                      class="q-ml-xl text-white gradient-btn"
                       label="Описание"
                       :to="{ path: 'course' }"
                     />

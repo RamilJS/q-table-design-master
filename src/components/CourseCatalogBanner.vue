@@ -1,5 +1,5 @@
 <template>
-  <div class="q-mb-md course-catalog-banner">
+  <div class="q-mb-md course-catalog-banner-active">
     <q-banner
       class="bg-grey-4 banner"
       rounded
@@ -57,5 +57,8 @@ export default defineComponent({
 }
 .content-container {
   flex: 1;
+}
+.course-catalog-banner-active {
+  visibility: hidden;
 }
 </style>
