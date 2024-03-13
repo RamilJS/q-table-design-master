@@ -132,9 +132,6 @@ export default {
   width: 100%;
   min-width: 550px;
 }
-.banner {
-  border: 1px solid #002882;
-}
 .content-container {
   flex: 1;
 }
@@ -151,7 +148,9 @@ export default {
 .card-image {
   width: 100%;
   height: 100%;
-  flex: 1 0 auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
   object-fit: cover;
 }
 .categories-list {
