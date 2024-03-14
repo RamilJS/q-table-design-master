@@ -51,7 +51,7 @@
                       size="10px"
                       class="q-ml-xl text-white gradient-btn"
                       label="Описание"
-                      :to="{ path: 'course' }"
+                      :to="category.path"
                     />
                   </div>
                 </div>
