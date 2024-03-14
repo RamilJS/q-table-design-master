@@ -61,7 +61,7 @@
       >
         <q-card-section horizontal>
           <q-card-section class="q-pt-lg">
-            <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
+            <div class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary ">
               Вводные курсы (инструктажи)
             </div>
             <q-card-actions>
@@ -89,7 +89,7 @@
       >
         <q-card-section horizontal>
           <q-card-section class="q-pt-lg">
-            <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
+            <div class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary ">
               Личная эффективность и развитие
             </div>
             <q-card-actions>
@@ -117,7 +117,7 @@
       >
         <q-card-section horizontal>
           <q-card-section class="q-pt-lg">
-            <div class="text-h5 q-mt-sm q-mb-xs text-primary ">
+            <div class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary ">
               Управление эффективности деятельности (УЭД)
             </div>
             <q-card-actions>

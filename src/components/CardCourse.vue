@@ -5,7 +5,7 @@
     <q-card-section horizontal>
       <q-card-section class="q-pt-lg">
         <div
-          class="text-h5 q-mt-sm q-mb-xs text-primary"
+          class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary"
         >
           Профессиональные навыки
         </div>
