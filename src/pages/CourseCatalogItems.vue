@@ -70,6 +70,7 @@
         class="rounded-borders card-image"
         src="/public/images/people_in_work.jpg"
         alt="Люди в офисе"
+        fit="cover"
       />
     </div>
   </div>
@@ -151,7 +152,6 @@ export default {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
-  object-fit: cover;
 }
 .categories-list {
   padding-left: 1px;

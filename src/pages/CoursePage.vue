@@ -225,6 +225,7 @@
         class="rounded-borders card-image"
         src="/public/images/blue-bg.jpg"
         alt="Люди в офисе"
+        fit="cover"
       />
     </div>
   </div>
