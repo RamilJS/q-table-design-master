@@ -29,13 +29,11 @@
                 v-for="(category, index) in categories"
                 :key="index"
                 class="list-item"
-                @mouseover="showBanner(index)"
-                @mouseout="hideBanner(index)"
               >
                 <div class="row justify-between">
-                  <div class="active-hover">
+                  <div class="active-hover row">
                     <p
-                      class="text-body1 text-primary text-weight-bold underline-text"
+                      class="text-body1 text-primary text-weight-bold q-mr-sm underline-text"
                     >
                       <a
                         :to="category.to"
@@ -44,6 +42,17 @@
                         {{ category.title }}
                       </a>
                     </p>
+                    <div class="description-btn">
+                      <q-btn
+                        flat
+                        round
+                        color="primary"
+                        padding="none"
+                        size="md"
+                        icon="mdi-chevron-down"
+                        :click="isBannerVisible ? hideBanner(index) : showBanner(index)"
+                      />
+                    </div>
                   </div>
                   <div>
                     <q-btn
