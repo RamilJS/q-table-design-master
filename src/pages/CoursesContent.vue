@@ -21,26 +21,31 @@
         </p>
       </div>
 
-      <div class="q-ml-xl q-mt-sm toolbar-input-container row">
-        <q-input
-          v-model="search"
-          dense
-          rounded
-          outlined
-          placeholder="Поиск"
-          color="purple"
-          class="bg-white col toolbar-input"
-          icon="search"
-        />
-        <q-btn
+      <div class="q-ml-xl q-mt-sm toolbar-input-container row justify-start">
+        <div class="toolbar-input">
+          <q-input
+            v-model="search"
+            dense
+            rounded
+            outlined
+            placeholder="Поиск"
+            color="purple"
+            class="bg-white col"
+            icon="search"
+          />
+        </div>
+        <div
           class="toolbar-input-btn"
-          color="grey-3"
-          text-color="grey-8"
-          icon="search"
-          unelevated
-          round
-          q-pl-xl
-        />
+          q-ml-xl
+        >
+          <q-btn
+            color="grey-3"
+            text-color="grey-8"
+            icon="search"
+            unelevated
+            round
+          />
+        </div>
       </div>
     </div>
 
@@ -149,8 +154,15 @@ export default {
 
 <style scoped>
 .toolbar-input-container {
-  min-width: 300px;
-  width: 55%;
+  min-width: 500px;
+  width: 60%;
+  gap: 10px;
+}
+.toolbar-input {
+  width: 70%;
+}
+.toolbar-input-btn {
+  max-width: 60px;
 }
 .my-card {
   width: 100%;
