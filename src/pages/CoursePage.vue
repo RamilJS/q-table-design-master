@@ -265,7 +265,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 365px;
+  max-width: 355px;
   min-height: 100vh;
 }
 .card-image {
