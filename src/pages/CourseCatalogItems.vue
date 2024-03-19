@@ -66,7 +66,7 @@
                     />
                   </div>
                 </div>
-                <CourseCatalogBanner v-show="currentCategoryIndex === index && isBannerVisible" />
+                <CourseCatalogBanner v-if="currentCategoryIndex === index && isBannerVisible" />
               </li>
             </ul>
           </div>
