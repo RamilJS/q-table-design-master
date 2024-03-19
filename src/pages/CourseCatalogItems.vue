@@ -161,7 +161,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 330px;
+  max-width: 365px;
   min-height: 100vh;
 }
 .card-image {
