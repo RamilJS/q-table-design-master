@@ -12,19 +12,10 @@
           label="Каталог курсов"
         />
       </q-breadcrumbs>
-
-      <div class="q-mt-lg q-mr-lg q-pr-lg row">
-        <q-img
-          class="rounded-borders"
-          src="/public/icons/logo-vtb-d.png"
-          alt="Логотип компании"
-          style="height: 60px; width: 270px; transform: scale(0.75);"
-        />
-      </div>
     </div>
 
     <div class="column justify-between q-mb-md">
-      <div class="q-ml-lg q-pl-lg row text-h3 text-weight-bold">
+      <div class="q-ml-lg q-mt-md q-pl-lg row text-h3 text-weight-bold">
         <p class="text-primary ">
           Каталог электронных курсов
         </p>
