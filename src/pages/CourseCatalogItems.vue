@@ -43,7 +43,6 @@
                       </a>
                     </p>
                     <div
-                      class="description-btn"
                       :class="transformButton()"
                     >
                       <q-btn
@@ -127,12 +126,10 @@ export default {
       this.currentCategoryIndex = -1
     },
     transformButton () {
-      if (this.index && this.currentCategoryIndex) {
+      if (this.isBannerVisible && this.currentCategoryIndex) {
         return 'transform-btn'
-        // console.log('Working')
       } else {
         return 'description-btn'
-        // console.log('Not Working')
       }
     }
   }
