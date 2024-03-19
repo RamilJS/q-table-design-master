@@ -44,7 +44,7 @@
                     </p>
                     <div
                       class="description-btn"
-                      :class="transform-btn"
+                      :style="isBannerVisible == transform-btn"
                     >
                       <q-btn
                         flat
@@ -53,8 +53,7 @@
                         padding="none"
                         size="md"
                         icon="mdi-chevron-down"
-                        @click="showBanner(index)"
-                        @mouseout="hideBanner(index)"
+                        @click="currentCategoryIndex === index && isBannerVisible ? hideBanner(index) : showBanner(index)"
                       />
                     </div>
                   </div>
