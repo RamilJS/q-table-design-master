@@ -30,7 +30,7 @@
             outlined
             placeholder="Поиск"
             color="purple"
-            class="bg-white col"
+            class="col"
             icon="search"
           />
         </div>
