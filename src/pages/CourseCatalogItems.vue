@@ -42,7 +42,10 @@
                         {{ category.title }}
                       </a>
                     </p>
-                    <div class="description-btn">
+                    <div
+                      class="description-btn"
+                      :class="transform-btn"
+                    >
                       <q-btn
                         flat
                         round
@@ -50,7 +53,8 @@
                         padding="none"
                         size="md"
                         icon="mdi-chevron-down"
-                        :click="isBannerVisible ? hideBanner(index) : showBanner(index)"
+                        @click="showBanner(index)"
+                        @mouseout="hideBanner(index)"
                       />
                     </div>
                   </div>
@@ -169,5 +173,9 @@ export default {
   background: linear-gradient(to right, #7a31f5, #578bf8) !important;
   border-radius: 15px;
   width: 110px;
+}
+.transform-btn {
+  transform: rotate(-90deg);
+  margin-bottom: 13px !important;
 }
 </style>
