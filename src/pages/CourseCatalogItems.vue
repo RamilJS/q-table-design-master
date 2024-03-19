@@ -126,7 +126,7 @@ export default {
       this.currentCategoryIndex = -1
     },
     transformButton () {
-      if (this.isBannerVisible && this.currentCategoryIndex) {
+      if (this.isBannerVisible) {
         return 'transform-btn'
       } else {
         return 'description-btn'
