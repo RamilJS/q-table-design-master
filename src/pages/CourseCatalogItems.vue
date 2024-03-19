@@ -52,7 +52,7 @@
                         padding="none"
                         size="md"
                         icon="mdi-chevron-down"
-                        @click="currentCategoryIndex === index && isBannerVisible ? hideBanner(index) : showBanner(index)"
+                        @click="currentCategoryIndex === index && isBannerVisible ? hideBanner() : showBanner(index)"
                       />
                     </div>
                   </div>
