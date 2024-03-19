@@ -121,7 +121,7 @@ export default {
       this.isBannerVisible = true
       this.currentCategoryIndex = index
     },
-    hideBanner (index) {
+    hideBanner () {
       this.isBannerVisible = false
       this.currentCategoryIndex = -1
     },
