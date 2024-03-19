@@ -44,7 +44,7 @@
                     </p>
                     <div
                       class="description-btn"
-                      :style="isBannerVisible == transform-btn"
+                      :class="transformButton"
                     >
                       <q-btn
                         flat
@@ -125,6 +125,15 @@ export default {
     hideBanner (index) {
       this.isBannerVisible = false
       this.currentCategoryIndex = -1
+    },
+    transformButton () {
+      if (this.currentCategoryIndex === this.index && this.isBannerVisible) {
+        return 'transform-btn'
+        // console.log('Working')
+      } else {
+        return 'description-btn'
+        // console.log('Not Working')
+      }
     }
   }
 }
