@@ -25,9 +25,10 @@
         <q-input
           v-model="search"
           dense
+          rounded
           outlined
-          square
           placeholder="Поиск"
+          color="purple"
           class="bg-white col toolbar-input"
           icon="search"
         />
@@ -37,6 +38,8 @@
           text-color="grey-8"
           icon="search"
           unelevated
+          round
+          q-pl-xl
         />
       </div>
     </div>
@@ -148,20 +151,6 @@ export default {
 .toolbar-input-container {
   min-width: 300px;
   width: 55%;
-}
-.toolbar-input-btn {
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  border-style: solid;
-  border-width: 1px 1px 1px 0;
-  border-color: grey;
-  max-width: 60px;
-  width: 100%;
-}
-.toolbar-input {
-  border-style: solid;
-  border-width: 1px 1px 1px 1px;
-  border-color: grey;
 }
 .my-card {
   width: 100%;
