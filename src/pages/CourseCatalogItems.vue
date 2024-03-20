@@ -42,9 +42,7 @@
                         {{ category.title }}
                       </a>
                     </p>
-                    <div
-                      :class="transformButton()"
-                    >
+                    <div :class="transformButton()">
                       <q-btn
                         flat
                         round
