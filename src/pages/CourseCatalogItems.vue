@@ -42,7 +42,10 @@
                         {{ category.title }}
                       </a>
                     </p>
-                    <div :class="transformButton()">
+                    <div
+                      class="down-button"
+                      :class="transformButton()"
+                    >
                       <q-btn
                         flat
                         round
@@ -54,11 +57,11 @@
                       />
                     </div>
                   </div>
-                  <div>
+                  <div class="description-button">
                     <q-btn
                       glossy
                       size="10px"
-                      class="q-ml-xl text-white gradient-btn"
+                      class="q-ml-xl text-white gradient-button"
                       label="Описание"
                       :to="category.path"
                     />
@@ -125,9 +128,9 @@ export default {
     },
     transformButton () {
       if (this.isBannerVisible) {
-        return 'transform-btn'
+        return 'transform-button'
       } else {
-        return 'description-btn'
+        return 'down-button'
       }
     }
   }
@@ -172,12 +175,12 @@ export default {
 .categories-list {
   padding-left: 1px;
 }
-.gradient-btn {
+.gradient-button {
   background: linear-gradient(to right, #7a31f5, #578bf8) !important;
   border-radius: 15px;
   width: 110px;
 }
-.transform-btn {
+.transform-button {
   transform: rotate(-90deg);
   margin-bottom: 13px !important;
 }
