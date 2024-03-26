@@ -72,7 +72,11 @@
 
             <div class="themes-arrow row justify-start">
               <ul class="courses-themes-list">
-                <li class="list-item">
+                <li
+                  v-for="(course, index) in courses"
+                  :key="index"
+                  class="list-item"
+                >
                   <div class="themes-arrow-items row">
                     <q-icon
                       name="mdi-arrow-right"
@@ -86,65 +90,7 @@
                       <p
                         class="main-themes-description text-primary q-mb-md ellipsis-lines"
                       >
-                        Понятие лизинга, его виды, субъекты и предметы
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-item">
-                  <div class="themes-arrow-items row">
-                    <q-icon
-                      name="mdi-arrow-right"
-                      size="xl"
-                      color="primary"
-                    />
-                    <div
-                      class="q-ml-md"
-                      style="margin-top: 12px;"
-                    >
-                      <p
-                        class="main-themes-description text-primary q-mb-md ellipsis-lines"
-                      >
-                        Схема лизинговой сделки
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-item">
-                  <div class="themes-arrow-items row">
-                    <q-icon
-                      name="mdi-arrow-right"
-                      size="xl"
-                      color="primary"
-                    />
-                    <div
-                      class="q-ml-md"
-                      style="margin-top: 12px;"
-                    >
-                      <p
-                        class="main-themes-description text-primary q-mb-md ellipsis-lines"
-                      >
-                        Финансовые и нефинансовые преимущества лизинга по сравнению с другими способами
-                        финансирования
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-item">
-                  <div class="themes-arrow-items row">
-                    <q-icon
-                      name="mdi-arrow-right"
-                      size="xl"
-                      color="primary"
-                    />
-                    <div
-                      class="q-ml-md"
-                      style="margin-top: 12px;"
-                    >
-                      <p
-                        class="main-themes-description text-primary q-mb-md ellipsis-lines"
-                      >
-                        Преимущества ВТБ Лизинг
+                        {{ course.name }}
                       </p>
                     </div>
                   </div>
@@ -232,6 +178,26 @@
 </template>
 
 <script>
+export default {
+  data () {
+    return {
+      courses: [
+        {
+          name: 'Понятие лизинга, его виды, субъекты и предметы'
+        },
+        {
+          name: 'Схема лизинговой сделки'
+        },
+        {
+          name: 'Финансовые и нефинансовые преимущества лизинга по сравнению с другими способами финансирования'
+        },
+        {
+          name: 'Преимущества ВТБ Лизинг'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style scoped>
