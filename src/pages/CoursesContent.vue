@@ -101,7 +101,7 @@
             </q-card-actions>
           </q-card-section>
 
-          <q-card-section class="col-5 flex flex-center">
+          <q-card-section class="card-section col-5 flex flex-center">
             <q-img
               class="rounded-borders card-image"
               src="/public/images/personal_efficiency.jpg"
@@ -129,7 +129,7 @@
             </q-card-actions>
           </q-card-section>
 
-          <q-card-section class="col-5 flex flex-center">
+          <q-card-section class="card-section col-5 flex flex-center">
             <q-img
               class="rounded-borders card-image"
               src="/public/images/efficiency_management.jpg"
@@ -172,14 +172,19 @@ export default {
   min-width: 300px;
   max-width: 500px;
 }
+.card-section {
+  display: inline-block;
+  overflow: hidden;
+}
 .card-image {
   border-radius: 50%;
   height: 170px;
   width: 170px;
+  display: block;
+  transition: 1s;
 }
 .card-image:hover {
   overflow: hidden;
-  transition: 1s;
   transform: scale(1.1);
 }
 .card-container {
