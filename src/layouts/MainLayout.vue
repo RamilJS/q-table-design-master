@@ -38,14 +38,45 @@
           flat
           no-caps
           wrap
-          size-lg
+          size="lg"
+          padding="xs"
           class="q-ml-xs"
-          label="Учебный центр"
-        />
+        >
+          Учебный<br>центр
+        </q-btn>
 
-        <q-space />
-        <q-space />
-        <q-space />
+        <q-btn
+          flat
+          no-caps
+          wrap
+          size="lg"
+          padding="xs"
+          class="q-ml-xs"
+        >
+          База<br>знаний
+        </q-btn>
+
+        <q-btn
+          flat
+          no-caps
+          wrap
+          size="lg"
+          padding="xs"
+          class="q-ml-xs"
+        >
+          F.A.Q.
+        </q-btn>
+
+        <q-btn
+          flat
+          no-caps
+          wrap
+          size="lg"
+          padding="xs"
+          class="q-ml-xs"
+        >
+          Бронирование<br>рабочего<br>места
+        </q-btn>
         <q-space />
         <q-space />
         <q-space />
