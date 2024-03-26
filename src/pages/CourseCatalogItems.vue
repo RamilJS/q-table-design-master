@@ -67,7 +67,42 @@
                     />
                   </div>
                 </div>
-                <CourseCatalogBanner v-if="currentCategoryIndex === index && isBannerVisible" />
+                <div
+                  v-if="currentCategoryIndex === index && isBannerVisible"
+                  class="q-mb-md course-catalog-banner-active"
+                >
+                  <q-banner
+                    class="bg-grey-4 banner"
+                    rounded
+                  >
+                    <p class="courses-purpose text-secondary text-h6 q-mb-sm text-uppercase text-bold">
+                      Цель курса?
+                      <q-icon
+                        name="adjust"
+                        style="margin-bottom: 3px;"
+                      />
+                    </p>
+                    <p
+                      class="courses-purpose-description text-primary q-mb-md ellipsis-2-lines"
+                      style="max-width: 700px;"
+                    >
+                      {{ category.bannerPurpose }}
+                    </p>
+                    <p class="courses-time text-secondary text-h6 q-mb-sm text-uppercase text-bold">
+                      Время прохождения
+                      <q-icon
+                        name="schedule"
+                        style="margin-bottom: 3px;"
+                      />
+                    </p>
+                    <p
+                      class="courses-time-item text-primary q-mb-sm text-lowercase"
+                      style="max-width: 700px;"
+                    >
+                      {{ category.bannerTime }} минут
+                    </p>
+                  </q-banner>
+                </div>
               </li>
             </ul>
           </div>
@@ -90,11 +125,10 @@
 
 <script>
 import BreadCrumbs from 'src/components/BreadCrumbs.vue'
-import CourseCatalogBanner from 'src/components/CourseCatalogBanner.vue'
+// import CourseCatalogBanner from 'src/components/CourseCatalogBanner.vue'
 
 export default {
   components: {
-    CourseCatalogBanner,
     BreadCrumbs
   },
   data () {
@@ -102,18 +136,100 @@ export default {
       isBannerVisible: false,
       currentCategoryIndex: -1,
       categories: [
-        { title: 'Основы лизинга', to: '#', path: { path: 'course' } },
-        { title: 'Продукты Автолизинга', to: '#', path: '#' },
-        { title: 'Параметры сделки', to: '#', path: '#' },
-        { title: 'Этапы сделки', to: '#', path: '#' },
-        { title: 'CRM. Знакомство', to: '#', path: '#' },
-        { title: 'Основы делового письма', to: '#', path: '#' },
-        { title: 'Создание письма в Outlook', to: '#', path: '#' },
-        { title: 'Работа в Outlook', to: '#', path: '#' },
-        { title: 'Видеокурс Microsoft Excel 2010', to: '#', path: '#' },
-        { title: 'Microsoft Excel 2013 "2-й уровень-продвинутый пользователь"', to: '#', path: '#' },
-        { title: 'Microsoft Excel 2013 "3-й уровень-опытный пользователь"', to: '#', path: '#' },
-        { title: 'Microsoft Excel 2013 "4-й уровень-эксперт"', to: '#', path: '#' }
+        {
+          title: 'Основы лизинга',
+          to: '#',
+          path: { path: 'course' },
+          bannerPurpose: `сформировать практические занания о понятии лизинга, его преимуществах
+          по сравнению с другими способами приобретения ТС и преимуществах работы с ВТБ Лизинг`,
+          bannerTime: '60'
+        },
+        {
+          title: 'Продукты Автолизинга',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'сформировать теоретические знания о продуктах Автолизинга, принципах их формирования и параметрах',
+          bannerTime: '60'
+        },
+        {
+          title: 'Параметры сделки',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'сформировать теоретические знания о финансовых условиях лизинговой сделки',
+          bannerTime: '60'
+        },
+        {
+          title: 'Этапы сделки',
+          to: '#',
+          path: '#',
+          bannerPurpose: `сформировать теоретические знания о каждом этапе сделки Автолизинга
+          и роли подразделений, участвующих в них`,
+          bannerTime: '120'
+        },
+        {
+          title: 'CRM. Знакомство',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'сформировать теоретические знания об интерфейсе CRM и основных карточках в работе ДППА',
+          bannerTime: '60'
+        },
+        {
+          title: 'Работа в CRM (Инструкции)',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'сформировать теоретические знания об основном функционале менеджеров ДППА в CRM',
+          bannerTime: '60'
+        },
+        {
+          title: 'Основы делового письма',
+          to: '#',
+          path: '#',
+          bannerPurpose: `познакомить сотрудников с правилами и стандартами
+          оформления писем при общении с внутренними и внешними клиентами`,
+          bannerTime: '60'
+        },
+        {
+          title: 'Создание письма в Outlook',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'сформировать умение создавать подпись в почте в соответствии со стандартами принятыми в Компании',
+          bannerTime: '60'
+        },
+        {
+          title: 'Работа в Outlook',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'сформировать знания о работе основных полезных функций Outlook',
+          bannerTime: '60'
+        },
+        {
+          title: 'Видеокурс Microsoft Excel 2010',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'сформировать умение работать с основными функциями Microsoft Excel на начальном уровне',
+          bannerTime: '60'
+        },
+        {
+          title: 'Microsoft Excel 2013 "2-й уровень-продвинутый пользователь"',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'расширить умения по работе с основными функциями Microsoft Excel 2013 на продвинутом уровне',
+          bannerTime: '60'
+        },
+        {
+          title: 'Microsoft Excel 2013 "3-й уровень-опытный пользователь"',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'расширить умения по работе с основными функциями Microsoft Excel 2013 на уровне опытного пользователя',
+          bannerTime: '60'
+        },
+        {
+          title: 'Microsoft Excel 2013 "4-й уровень-эксперт"',
+          to: '#',
+          path: '#',
+          bannerPurpose: 'расширить умения по работе с основными функциями Microsoft Excel 2013 на уровне эксперта',
+          bannerTime: '60'
+        }
       ]
     }
   },
@@ -174,6 +290,12 @@ export default {
 }
 .categories-list {
   padding-left: 1px;
+}
+.banner {
+  border: 1px solid #002882;
+}
+.content-container {
+  flex: 1;
 }
 .gradient-button {
   background: linear-gradient(to right, #7a31f5, #578bf8) !important;
