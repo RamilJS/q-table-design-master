@@ -34,7 +34,15 @@
           />
         </q-btn>
 
-        <q-space />
+        <q-btn
+          flat
+          no-caps
+          wrap
+          size-lg
+          class="q-ml-xs"
+          label="Учебный центр"
+        />
+
         <q-space />
         <q-space />
         <q-space />
