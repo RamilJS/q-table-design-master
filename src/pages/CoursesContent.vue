@@ -73,7 +73,7 @@
             </q-card-actions>
           </q-card-section>
 
-          <q-card-section class="col-5 flex flex-center">
+          <q-card-section class="card-section col-5 flex flex-center">
             <q-img
               class="rounded-borders card-image"
               src="/public/images/briefing.jpg"
@@ -176,6 +176,11 @@ export default {
   border-radius: 50%;
   height: 170px;
   width: 170px;
+}
+.card-image:hover {
+  overflow: hidden;
+  transition: 1s;
+  transform: scale(1.1);
 }
 .card-container {
   gap: 10px;

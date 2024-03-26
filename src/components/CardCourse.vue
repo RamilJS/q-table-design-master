@@ -52,6 +52,11 @@ export default defineComponent({
   height: 170px;
   width: 170px;
 }
+.card-image:hover {
+  overflow: hidden;
+  transition: 1s;
+  transform: scale(1.1);
+}
 .card-container {
   gap: 10px;
 }
