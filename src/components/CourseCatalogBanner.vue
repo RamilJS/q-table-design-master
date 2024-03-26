@@ -7,7 +7,7 @@
       <p class="courses-purpose text-secondary text-h6 q-mb-sm text-uppercase text-bold">
         Цель курса?
         <q-icon
-          name="adjust"
+          name="mdi-bullseye-arrow"
           style="margin-bottom: 3px;"
         />
       </p>
