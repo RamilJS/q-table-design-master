@@ -46,6 +46,7 @@
             size="md"
             padding="xs"
             class="q-ml-xs"
+            :to="{ path: '/content' }"
           >
             Учебный<br>центр
           </q-btn>
