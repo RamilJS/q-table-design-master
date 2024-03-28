@@ -34,50 +34,78 @@
           />
         </q-btn>
 
-        <q-btn
-          flat
-          no-caps
-          wrap
-          size="lg"
-          padding="xs"
-          class="q-ml-xs"
+        <div
+          row
+          justify-around
+          class="button-group"
         >
-          Учебный<br>центр
-        </q-btn>
+          <q-btn
+            flat
+            no-caps
+            wrap
+            size="md"
+            padding="xs"
+            class="q-ml-xs"
+          >
+            Учебный<br>центр
+          </q-btn>
 
-        <q-btn
-          flat
-          no-caps
-          wrap
-          size="lg"
-          padding="xs"
-          class="q-ml-xs"
-        >
-          База<br>знаний
-        </q-btn>
+          <q-btn
+            flat
+            no-caps
+            wrap
+            size="md"
+            padding="xs"
+            class="q-ml-xs"
+          >
+            База<br>знаний
+          </q-btn>
 
-        <q-btn
-          flat
-          no-caps
-          wrap
-          size="lg"
-          padding="xs"
-          class="q-ml-xs"
-        >
-          F.A.Q.
-        </q-btn>
+          <q-btn
+            flat
+            no-caps
+            wrap
+            size="md"
+            padding="xs"
+            class="q-ml-xs"
+          >
+            F.A.Q.
+          </q-btn>
 
-        <q-btn
-          flat
-          no-caps
-          wrap
-          size="lg"
-          padding="xs"
-          class="q-ml-xs"
-        >
-          Бронирование<br>рабочего<br>места
-        </q-btn>
-        <q-space />
+          <q-btn
+            flat
+            no-caps
+            wrap
+            size="md"
+            padding="xs"
+            class="q-ml-xs"
+          >
+            Бронирование<br>рабочего места
+          </q-btn>
+
+          <q-btn
+            flat
+            no-caps
+            wrap
+            size="md"
+            padding="xs"
+            class="q-ml-xs"
+          >
+            Стратегические<br>инициативы
+          </q-btn>
+
+          <q-btn
+            flat
+            no-caps
+            wrap
+            size="md"
+            padding="xs"
+            class="q-ml-xs"
+          >
+            Корпоративный<br>портал
+          </q-btn>
+        </div>
+
         <q-space />
         <q-space />
         <q-space />
@@ -90,7 +118,7 @@
             dense
             outlined
             square
-            placeholder="Search"
+            placeholder="Поиск"
             class="bg-white col"
           />
           <q-btn
