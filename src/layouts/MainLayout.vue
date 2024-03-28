@@ -23,14 +23,13 @@
           flat
           no-caps
           no-wrap
-          class="q-ml-xs"
+          class="button-logo q-ml-xs"
           :to="{ path: '/' }"
         >
           <q-img
-            class="rounded-borders"
+            class="vtbl-logo rounded-borders"
             src="/public/icons/logo-vtb-d.png"
             alt="Логотип компании"
-            style="height: 60px; width: 270px; transform: scale(0.75);"
           />
         </q-btn>
 
@@ -326,4 +325,9 @@ export default {
 
     &:hover
       color: #000
+
+.vtbl-logo
+  height: 60px
+  width: 270px
+  transform: scale(0.75)
 </style>
