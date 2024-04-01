@@ -44,7 +44,7 @@
                     </p>
                     <div
                       class="down-button"
-                      :class="transformButton()"
+                      :class="transformButton(index)"
                     >
                       <q-btn
                         flat
@@ -242,8 +242,8 @@ export default {
       this.isBannerVisible = false
       this.currentCategoryIndex = -1
     },
-    transformButton () {
-      if (this.isBannerVisible) {
+    transformButton (index) {
+      if (this.isBannerVisible && this.currentCategoryIndex === index) {
         return 'transform-button'
       } else {
         return 'down-button'
