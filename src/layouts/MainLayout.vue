@@ -148,6 +148,16 @@
 
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn
+            v-if="$q.screen.gt.sm"
+            round
+            dense
+            flat
+            color="grey-8"
+            icon="message"
+          >
+            <q-tooltip>Messages</q-tooltip>
+          </q-btn>
+          <q-btn
             round
             dense
             flat
@@ -190,6 +200,7 @@
             :key="link.text"
             v-ripple
             clickable
+            :to="link.path"
           >
             <q-item-section avatar>
               <q-icon
@@ -251,9 +262,9 @@ export default {
       toggleLeftDrawer,
 
       links1: [
-        { icon: 'home', text: 'На главную' },
-        { icon: 'mdi-desktop-classic', text: 'Корпоративный портал' },
-        { icon: 'mdi-account-box', text: 'Личный кабинет' }
+        { icon: 'home', text: 'На главную', path: '/' },
+        { icon: 'mdi-desktop-classic', text: 'Корпоративный портал', path: '#' },
+        { icon: 'mdi-account-box', text: 'Личный кабинет', path: '#' }
       ],
       links2: [
         { icon: 'mdi-school', text: 'Мое обучение' },
