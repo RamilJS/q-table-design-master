@@ -303,7 +303,7 @@ export default {
   width: 110px;
 }
 .transform-button {
-  transform: rotate(-90deg);
+  transform: rotate(-180deg);
   margin-bottom: 13px !important;
 }
 </style>
