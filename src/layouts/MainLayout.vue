@@ -148,26 +148,6 @@
 
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn
-            v-if="$q.screen.gt.sm"
-            round
-            dense
-            flat
-            color="grey-8"
-            icon="apps"
-          >
-            <q-tooltip>Apps</q-tooltip>
-          </q-btn>
-          <q-btn
-            v-if="$q.screen.gt.sm"
-            round
-            dense
-            flat
-            color="grey-8"
-            icon="message"
-          >
-            <q-tooltip>Messages</q-tooltip>
-          </q-btn>
-          <q-btn
             round
             dense
             flat
@@ -223,7 +203,6 @@
           </q-item>
 
           <q-separator class="q-my-md" />
-
           <q-item
             v-for="link in links2"
             :key="link.text"
@@ -273,14 +252,14 @@ export default {
 
       links1: [
         { icon: 'home', text: 'На главную' },
-        { icon: 'whatshot', text: 'Корпоративный портал' },
-        { icon: 'subscriptions', text: 'Личный кабинет' }
+        { icon: 'mdi-desktop-classic', text: 'Корпоративный портал' },
+        { icon: 'mdi-account-box', text: 'Личный кабинет' }
       ],
       links2: [
-        { icon: 'folder', text: 'Library' },
-        { icon: 'restore', text: 'History' },
-        { icon: 'watch_later', text: 'Watch later' },
-        { icon: 'thumb_up_alt', text: 'Liked videos' }
+        { icon: 'mdi-school', text: 'Мое обучение' },
+        { icon: 'mdi-file-document-multiple', text: 'Управление эффективностью деятельности' },
+        { icon: 'mdi-application-import', text: 'Заявки' },
+        { icon: 'watch_later', text: 'Бронирование рабочего места' }
       ],
       links3: [
         { icon: fabYoutube, text: 'YouTube Premium' },
