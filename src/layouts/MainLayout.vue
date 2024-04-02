@@ -36,7 +36,7 @@
         <div
           row
           justify-around
-          class="button-group"
+          class="navigation-group"
         >
           <ul class="navigation-list">
             <li class="navigation-list-item">
@@ -344,6 +344,7 @@ export default {
   flex-direction: row
   justify-content: flex-start
   align-content: center
+  padding-left: 1px
 .navigation-list:nth-child(3)
   align-self: center
 </style>
