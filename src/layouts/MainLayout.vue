@@ -314,7 +314,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style scoped lang="sass">
 .YL
 
   &__toolbar-input-container
@@ -342,8 +342,6 @@ export default {
   height: 60px
   width: 270px
   transform: scale(0.75)
-.navigation-list-item
-  list-style-type: none
 .navigation-list
   display: flex
   flex-direction: row
@@ -352,4 +350,6 @@ export default {
   padding-left: 1px
 .navigation-list:nth-child(3)
   align-self: center
+.navigation-list-item
+  list-style-type: none
 </style>
