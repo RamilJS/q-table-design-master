@@ -19,7 +19,7 @@
           <div class="separator-element">
             <q-separator
               color="secondary"
-              style="height: 15px; width: 65px; background-color: #00AAFF;"
+              class="separator"
             />
           </div>
 
@@ -309,5 +309,10 @@ export default {
 .transform-button {
   transform: rotate(0deg);
   margin-bottom: 13px !important;
+}
+.separator {
+  height: 15px;
+  width: 65px;
+  background-color: #00AAFF;
 }
 </style>
