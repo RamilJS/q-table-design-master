@@ -38,11 +38,7 @@
           justify-around
           class="navigation-group"
         >
-          <ul
-            v-for="navigation in navigations"
-            :key="navigation.index"
-            class="navigation-list"
-          >
+          <ul class="navigation-list">
             <li class="navigation-list-item">
               <q-btn
                 flat
@@ -51,9 +47,69 @@
                 size="md"
                 padding="xs"
                 class="q-ml-xs"
-                :to="navigation.path"
+                :to="{ path: '/content' }"
               >
-                {{ navigation.name }}
+                Учебный<br>центр
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                База<br>знаний
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                F.A.Q.
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                Бронирование<br>рабочего места
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                Стратегические<br>инициативы
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                Корпоративный<br>портал
               </q-btn>
             </li>
           </ul>
@@ -247,14 +303,6 @@ export default {
         { text: 'Privacy' },
         { text: 'Policy & Safety' },
         { text: 'Test new features' }
-      ],
-      navigations: [
-        { name: 'Учебный центр', path: '/content' },
-        { name: 'База знаний', path: '#' },
-        { name: 'F.A.Q.', path: '#' },
-        { name: 'Бронирование рабочего места', path: '#' },
-        { name: 'Стратегические инициативы', path: '#' },
-        { name: 'Корпоративный портал', path: '#' }
       ]
     }
   }
