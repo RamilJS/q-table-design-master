@@ -302,8 +302,12 @@ export default {
   border-radius: 15px;
   width: 110px;
 }
+.down-button {
+  transform: rotate(-90deg);
+  margin-bottom: 13px !important;
+}
 .transform-button {
-  transform: rotate(-180deg);
+  transform: rotate(0deg);
   margin-bottom: 13px !important;
 }
 </style>
