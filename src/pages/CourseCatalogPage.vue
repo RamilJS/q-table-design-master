@@ -144,7 +144,7 @@
               size="22px"
               glossy
               icon="mdi-school"
-              :to="{ path: '#' }"
+              :to="{ path: '#'}"
             />
           </div>
 
