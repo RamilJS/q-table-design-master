@@ -60,6 +60,7 @@
                 size="md"
                 padding="xs"
                 class="q-ml-xs"
+                :to="{ path: '#' }"
               >
                 База<br>знаний
               </q-btn>
@@ -72,6 +73,7 @@
                 size="md"
                 padding="xs"
                 class="q-ml-xs"
+                :to="{ path: '#' }"
               >
                 F.A.Q.
               </q-btn>
@@ -84,6 +86,7 @@
                 size="md"
                 padding="xs"
                 class="q-ml-xs"
+                :to="{ path: '#' }"
               >
                 Бронирование<br>рабочего места
               </q-btn>
@@ -96,6 +99,7 @@
                 size="md"
                 padding="xs"
                 class="q-ml-xs"
+                :to="{ path: '#' }"
               >
                 Стратегические<br>инициативы
               </q-btn>
@@ -108,6 +112,7 @@
                 size="md"
                 padding="xs"
                 class="q-ml-xs"
+                :to="{ path: '#' }"
               >
                 Корпоративный<br>портал
               </q-btn>
