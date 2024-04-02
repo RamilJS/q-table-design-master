@@ -38,72 +38,81 @@
           justify-around
           class="button-group"
         >
-          <q-btn
-            flat
-            no-caps
-            wrap
-            size="md"
-            padding="xs"
-            class="q-ml-xs"
-            :to="{ path: '/content' }"
-          >
-            Учебный<br>центр
-          </q-btn>
-
-          <q-btn
-            flat
-            no-caps
-            wrap
-            size="md"
-            padding="xs"
-            class="q-ml-xs"
-          >
-            База<br>знаний
-          </q-btn>
-
-          <q-btn
-            flat
-            no-caps
-            wrap
-            size="md"
-            padding="xs"
-            class="q-ml-xs"
-          >
-            F.A.Q.
-          </q-btn>
-
-          <q-btn
-            flat
-            no-caps
-            wrap
-            size="md"
-            padding="xs"
-            class="q-ml-xs"
-          >
-            Бронирование<br>рабочего места
-          </q-btn>
-
-          <q-btn
-            flat
-            no-caps
-            wrap
-            size="md"
-            padding="xs"
-            class="q-ml-xs"
-          >
-            Стратегические<br>инициативы
-          </q-btn>
-
-          <q-btn
-            flat
-            no-caps
-            wrap
-            size="md"
-            padding="xs"
-            class="q-ml-xs"
-          >
-            Корпоративный<br>портал
-          </q-btn>
+          <ul class="navigation-list">
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+                :to="{ path: '/content' }"
+              >
+                Учебный<br>центр
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                База<br>знаний
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                F.A.Q.
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                Бронирование<br>рабочего места
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                Стратегические<br>инициативы
+              </q-btn>
+            </li>
+            <li class="navigation-list-item">
+              <q-btn
+                flat
+                no-caps
+                wrap
+                size="md"
+                padding="xs"
+                class="q-ml-xs"
+              >
+                Корпоративный<br>портал
+              </q-btn>
+            </li>
+          </ul>
         </div>
 
         <q-space />
@@ -253,16 +262,14 @@ export default {
 
     return {
       fabYoutube,
-
       leftDrawerOpen,
       search,
-
       toggleLeftDrawer,
 
       links1: [
         { icon: 'home', text: 'На главную' },
         { icon: 'whatshot', text: 'Корпоративный портал' },
-        { icon: 'subscriptions', text: 'Subscriptions' }
+        { icon: 'subscriptions', text: 'Личный кабинет' }
       ],
       links2: [
         { icon: 'folder', text: 'Library' },
@@ -330,4 +337,13 @@ export default {
   height: 60px
   width: 270px
   transform: scale(0.75)
+.navigation-list-item
+  list-style-type: none
+.navigation-list
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-content: center
+.navigation-list:nth-child(3)
+  align-self: center
 </style>
