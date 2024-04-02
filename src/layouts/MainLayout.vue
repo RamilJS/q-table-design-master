@@ -23,7 +23,7 @@
           flat
           no-caps
           no-wrap
-          class="button-logo q-ml-xs"
+          class="button-logo q-pa-xs"
           :to="{ path: '/' }"
         >
           <q-img
