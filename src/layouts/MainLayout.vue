@@ -209,7 +209,11 @@
               />
             </q-item-section>
             <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
+              <q-item-label
+                text-black
+              >
+                {{ link.text }}
+              </q-item-label>
             </q-item-section>
           </q-item>
 
@@ -335,6 +339,7 @@ export default {
 .navigation-list
   display: flex
   flex-direction: row
+  gap: 10px
   justify-content: flex-start
   align-content: center
   padding-left: 1px
