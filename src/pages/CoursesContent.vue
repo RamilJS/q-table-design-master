@@ -53,7 +53,35 @@
       class="card-container q-py-md row q-gutter-md wrap"
       style="margin-left: 32px;"
     >
-      <CardCourse />
+      <q-card
+        class="my-card col-3"
+      >
+        <q-card-section horizontal>
+          <q-card-section class="q-pt-lg">
+            <div
+              class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary"
+            >
+              Профессиональные навыки
+            </div>
+            <q-card-actions>
+              <q-btn
+                glossy
+                size="13px"
+                class="q-pr-xl q-py-xs q-mr-xl text-white gradient-btn"
+                label="Открыть"
+                :to="{ path: '/content-items' }"
+              />
+            </q-card-actions>
+          </q-card-section>
+          <q-card-section class="card-section col-5 flex flex-center">
+            <q-img
+              class="rounded-borders card-image"
+              src="/public/images/people_in_work.jpg"
+              alt="Люди в офисе"
+            />
+          </q-card-section>
+        </q-card-section>
+      </q-card>
 
       <q-card
         class="my-card col-3"
@@ -143,12 +171,7 @@
 </template>
 
 <script>
-import CardCourse from 'src/components/CardCourse.vue'
-
 export default {
-  components: {
-    CardCourse
-  }
 }
 </script>
 
