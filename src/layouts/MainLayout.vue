@@ -65,7 +65,9 @@
                 База<br>знаний
               </q-btn>
             </li>
-            <li class="navigation-list-item">
+            <li
+              class="navigation-list-item"
+            >
               <q-btn
                 flat
                 no-caps
