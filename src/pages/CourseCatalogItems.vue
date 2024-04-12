@@ -35,12 +35,12 @@
                     <p
                       class="text-body1 text-primary text-weight-bold q-mr-sm underline-text"
                     >
-                      <a
-                        :to="category.to"
+                      <router-link
+                        :to="category.path"
                         style="text-decoration: none;"
                       >
                         {{ category.title }}
-                      </a>
+                      </router-link>
                     </p>
                     <div
                       class="down-button"
