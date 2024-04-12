@@ -149,15 +149,56 @@
           </div>
 
           <div class="review q-mt-lg q-mb-xl">
-            <p class="competency-title text-primary">
-              <q-icon
-                name="mdi-lead-pencil"
-                size="15px"
-                style="margin-bottom: 3px;"
-                color="secondary"
-              />
-              Оставить отзыв
-            </p>
+            <div class="">
+              <q-btn
+                v-for="filter in backdropFilterList"
+                :key="filter.label"
+                flat
+                :label="`Оставить отзыв`"
+                no-caps
+                class="q-mt-sm"
+                @click="filter.onClick"
+              >
+                <q-icon
+                  name="mdi-lead-pencil"
+                  size="15px"
+                  style="margin-bottom: 3px;"
+                  color="secondary"
+                  class="q-ml-sm"
+                />
+              </q-btn>
+
+              <q-dialog
+                v-model="dialog"
+                :backdrop-filter="backdropFilter"
+              >
+                <q-card
+                  style="width: 600px; max-width: 80vw;"
+                  full-height
+                >
+                  <q-card-section class="row items-center q-pb-none text-h6">
+                    Оставьте отзыв о прохождении курса
+                  </q-card-section>
+
+                  <q-card-section>
+                    <q-input
+                      dense
+                      autofocus
+                      @keyup.enter="prompt = false"
+                    />
+                  </q-card-section>
+
+                  <q-card-actions align="right">
+                    <q-btn
+                      v-close-popup
+                      flat
+                      label="Close"
+                      color="primary"
+                    />
+                  </q-card-actions>
+                </q-card>
+              </q-dialog>
+            </div>
           </div>
         </div>
       </div>
@@ -196,7 +237,14 @@
 
           <q-item-section>
             <q-item-label>Single line item</q-item-label>
-            <q-item-label caption>
+            <q-item-label
+              caption
+            >
+              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
+              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
+              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
+              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
+              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
               Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
             </q-item-label>
           </q-item-section>
@@ -315,6 +363,30 @@
 import { ref } from 'vue'
 
 export default {
+  setup () {
+    /**
+     * Values for backdrop-filter are the same as in the CSS specs.
+     * The following list is not an exhaustive one.
+     */
+    const list = [
+      'blur(4px) saturate(150%)'
+    ]
+
+    const dialog = ref(false)
+    const backdropFilter = ref(null)
+
+    return {
+      dialog,
+      backdropFilter,
+      backdropFilterList: list.map(filter => ({
+        label: filter,
+        onClick: () => {
+          backdropFilter.value = filter
+          dialog.value = true
+        }
+      }))
+    }
+  },
   data () {
     return {
       categories: [
