@@ -173,10 +173,147 @@
         fit="cover"
       />
     </div>
+
+    <div
+      class="review-list q-pa-md"
+      style="max-width: 750px"
+    >
+      <q-list padding>
+        <q-item-label header>
+          Отзывы о курсе
+        </q-item-label>
+
+        <q-item>
+          <q-item-section
+            side
+            top
+            avatar
+          >
+            <q-avatar>
+              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+            </q-avatar>
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>Single line item</q-item-label>
+            <q-item-label caption>
+              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
+            </q-item-label>
+          </q-item-section>
+
+          <q-item-section
+            side
+            top
+          >
+            <q-item-label caption>
+              2 min ago
+            </q-item-label>
+            <div class="text-orange">
+              <q-rating
+                v-model="ratingModel"
+                size="1.5em"
+                color="yellow-8"
+                icon="star_border"
+                icon-selected="star"
+              />
+            </div>
+          </q-item-section>
+        </q-item>
+
+        <q-separator
+          spaced
+          inset
+        />
+
+        <q-item>
+          <q-item-section
+            top
+            avatar
+          >
+            <q-avatar>
+              <img src="https://cdn.quasar.dev/img/avatar4.jpg">
+            </q-avatar>
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>Single line item</q-item-label>
+            <q-item-label caption>
+              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
+            </q-item-label>
+          </q-item-section>
+
+          <q-item-section
+            side
+            top
+          >
+            <q-item-label caption>
+              2 min ago
+            </q-item-label>
+            <div class="text-orange">
+              <q-rating
+                v-model="ratingModel"
+                size="1.5em"
+                color="yellow-8"
+                icon="star_border"
+                icon-selected="star"
+              />
+            </div>
+          </q-item-section>
+        </q-item>
+
+        <q-separator
+          spaced
+          inset
+        />
+
+        <q-item>
+          <q-item-section
+            top
+            avatar
+          >
+            <q-avatar>
+              <img src="https://cdn.quasar.dev/img/avatar2.jpg">
+            </q-avatar>
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>Single line item</q-item-label>
+            <q-item-label caption>
+              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
+            </q-item-label>
+          </q-item-section>
+
+          <q-item-section
+            side
+            top
+          >
+            <q-item-label caption>
+              2 min ago
+            </q-item-label>
+            <div class="text-orange">
+              <q-rating
+                v-model="ratingModel"
+                size="1.5em"
+                color="yellow-8"
+                icon="star_border"
+                icon-selected="star"
+              />
+            </div>
+          </q-item-section>
+        </q-item>
+
+        <q-separator
+          spaced
+          inset
+        />
+      </q-list>
+    </div>
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
   data () {
     return {
@@ -478,7 +615,8 @@ export default {
           time: '60',
           competency: 'Отвечаем за результат'
         }
-      ]
+      ],
+      ratingModel: ref(4)
     }
   }
 }
