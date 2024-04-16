@@ -180,20 +180,26 @@
                     Оставьте отзыв о прохождении курса
                   </q-card-section>
 
-                  <q-card-section>
-                    <q-input
-                      dense
-                      autofocus
-                      @keyup.enter="prompt = false"
+                  <div class="q-pa-md q-gutter-sm">
+                    <q-editor
+                      v-model="editor"
+                      :definitions="{
+                        bold: {label: 'Bold', icon: null, tip: 'My bold tooltip'}
+                      }"
                     />
-                  </q-card-section>
+                  </div>
 
-                  <q-card-actions align="right">
+                  <q-card-actions align="between">
+                    <q-btn
+                      fixed-left
+                      icon-right="send"
+                      label="Отправить"
+                      color="secondary"
+                    />
                     <q-btn
                       v-close-popup
+                      label="Закрыть"
                       flat
-                      label="Close"
-                      color="primary"
                     />
                   </q-card-actions>
                 </q-card>
