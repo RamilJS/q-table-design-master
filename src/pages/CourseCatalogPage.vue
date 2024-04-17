@@ -149,15 +149,12 @@
           </div>
 
           <div class="review q-mt-lg q-mb-xl">
-            <div class="">
+            <div class="review-button">
               <q-btn
-                v-for="filter in backdropFilterList"
-                :key="filter.label"
                 flat
                 :label="`Оставить отзыв`"
                 no-caps
                 class="q-mt-sm"
-                @click="filter.onClick"
               >
                 <q-icon
                   name="mdi-lead-pencil"
@@ -167,232 +164,16 @@
                   class="q-ml-sm"
                 />
               </q-btn>
-
-              <q-dialog
-                v-model="dialog"
-                :backdrop-filter="backdropFilter"
-              >
-                <q-card
-                  style="width: 600px; max-width: 80vw;"
-                  full-height
-                >
-                  <q-card-section class="row items-center q-pb-none text-h6">
-                    Оставьте отзыв о прохождении курса
-                  </q-card-section>
-
-                  <div class="q-pa-md q-gutter-sm">
-                    <q-editor
-                      v-model="editor"
-                      :definitions="{
-                        bold: {label: 'Bold', icon: null, tip: 'My bold tooltip'}
-                      }"
-                    />
-                  </div>
-
-                  <q-card-actions align="between">
-                    <q-btn
-                      fixed-left
-                      icon-right="send"
-                      label="Отправить"
-                      color="secondary"
-                    />
-                    <q-btn
-                      v-close-popup
-                      label="Закрыть"
-                      flat
-                    />
-                  </q-card-actions>
-                </q-card>
-              </q-dialog>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div
-      class="sidebar-container"
-    >
-      <q-img
-        class="rounded-borders card-image"
-        src="/public/images/blue-bg.jpg"
-        alt="Синий фон ВТБЛ"
-        fit="cover"
-      />
-    </div>
-
-    <div
-      class="review-list q-pa-md"
-      style="max-width: 750px"
-    >
-      <q-list padding>
-        <q-item-label header>
-          Отзывы о курсе
-        </q-item-label>
-
-        <q-item>
-          <q-item-section
-            side
-            top
-            avatar
-          >
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-            </q-avatar>
-          </q-item-section>
-
-          <q-item-section>
-            <q-item-label>Single line item</q-item-label>
-            <q-item-label
-              caption
-            >
-              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
-              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
-              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
-              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
-              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
-              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
-            </q-item-label>
-          </q-item-section>
-
-          <q-item-section
-            side
-            top
-          >
-            <q-item-label caption>
-              2 min ago
-            </q-item-label>
-            <div class="text-orange">
-              <q-rating
-                v-model="ratingModel"
-                size="1.5em"
-                color="yellow-8"
-                icon="star_border"
-                icon-selected="star"
-              />
-            </div>
-          </q-item-section>
-        </q-item>
-
-        <q-separator
-          spaced
-          inset
-        />
-
-        <q-item>
-          <q-item-section
-            top
-            avatar
-          >
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/img/avatar4.jpg">
-            </q-avatar>
-          </q-item-section>
-
-          <q-item-section>
-            <q-item-label>Single line item</q-item-label>
-            <q-item-label caption>
-              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
-            </q-item-label>
-          </q-item-section>
-
-          <q-item-section
-            side
-            top
-          >
-            <q-item-label caption>
-              2 min ago
-            </q-item-label>
-            <div class="text-orange">
-              <q-rating
-                v-model="ratingModel"
-                size="1.5em"
-                color="yellow-8"
-                icon="star_border"
-                icon-selected="star"
-              />
-            </div>
-          </q-item-section>
-        </q-item>
-
-        <q-separator
-          spaced
-          inset
-        />
-
-        <q-item>
-          <q-item-section
-            top
-            avatar
-          >
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/img/avatar2.jpg">
-            </q-avatar>
-          </q-item-section>
-
-          <q-item-section>
-            <q-item-label>Single line item</q-item-label>
-            <q-item-label caption>
-              Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.
-            </q-item-label>
-          </q-item-section>
-
-          <q-item-section
-            side
-            top
-          >
-            <q-item-label caption>
-              2 min ago
-            </q-item-label>
-            <div class="text-orange">
-              <q-rating
-                v-model="ratingModel"
-                size="1.5em"
-                color="yellow-8"
-                icon="star_border"
-                icon-selected="star"
-              />
-            </div>
-          </q-item-section>
-        </q-item>
-
-        <q-separator
-          spaced
-          inset
-        />
-      </q-list>
-    </div>
   </div>
 </template>
 
 <script>
-import { ref } from 'vue'
-
 export default {
-  setup () {
-    /**
-     * Values for backdrop-filter are the same as in the CSS specs.
-     * The following list is not an exhaustive one.
-     */
-    const list = [
-      'blur(4px) saturate(150%)'
-    ]
-
-    const dialog = ref(false)
-    const backdropFilter = ref(null)
-
-    return {
-      dialog,
-      backdropFilter,
-      backdropFilterList: list.map(filter => ({
-        label: filter,
-        onClick: () => {
-          backdropFilter.value = filter
-          dialog.value = true
-        }
-      }))
-    }
-  },
   data () {
     return {
       categories: [
@@ -693,8 +474,7 @@ export default {
           time: '60',
           competency: 'Отвечаем за результат'
         }
-      ],
-      ratingModel: ref(4)
+      ]
     }
   }
 }

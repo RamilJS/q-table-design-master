@@ -109,17 +109,6 @@
         </div>
       </div>
     </div>
-
-    <div
-      class="sidebar-container"
-    >
-      <q-img
-        class="rounded-borders card-image"
-        src="/public/images/people_in_work.jpg"
-        alt="Люди в офисе"
-        fit="cover"
-      />
-    </div>
   </div>
 </template>
 
