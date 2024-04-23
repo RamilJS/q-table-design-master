@@ -16,11 +16,34 @@
             </p>
           </div>
 
-          <div class="separator-element">
-            <q-separator
-              color="secondary"
-              class="separator"
-            />
+          <div
+            class="tab-panel q-gutter-y-md"
+            style="max-width: 800px"
+          >
+            <q-tabs
+              v-model="tab"
+              class="text-primary q-mb-sm"
+              active-color="secondary"
+              align="justify"
+              narrow-indicator
+            >
+              <q-tab
+                name="skills"
+                label="Профессиональные навыки"
+              />
+              <q-tab
+                name="briefings"
+                label="Вводные курсы"
+              />
+              <q-tab
+                name="efficiency"
+                label="Личная эффективность"
+              />
+              <q-tab
+                name="ued"
+                label="УЭД"
+              />
+            </q-tabs>
           </div>
 
           <div class="list">
@@ -106,6 +129,64 @@
               </li>
             </ul>
           </div>
+
+          <div class="list-card">
+            <ul class="categories-list">
+              <li
+                v-for="(category, index) in categories"
+                :key="index"
+                class="card-item"
+              >
+                <div
+                  class="card-container q-py-md row q-gutter-md row wrap"
+                  style="margin-left: 1px;"
+                >
+                  <router-link
+                    :to="category.path"
+                    style="text-decoration: none;"
+                  >
+                    <q-card
+                      class="my-card col-3 shadow-3"
+                      bordered
+                    >
+                      <q-card-section horizontal>
+                        <q-card-section class="q-pt-xs">
+                          <div
+                            class="text-h5 q-mt-sm q-mb-xs text-weight-bold"
+                            style="font-size: medium;"
+                          >
+                            {{ category.title }}
+                          </div>
+                          <div
+                            class="text-subtitle1 q-mt-sm q-mb-xs"
+                            style="font-size: small; font-weight: 500"
+                          >
+                            Цель курса?
+                          </div>
+                          <div class="text-caption text-grey ellipsis-4-lines">
+                            {{ category.bannerPurpose }}
+                          </div>
+                        </q-card-section>
+                      </q-card-section>
+
+                      <q-separator />
+
+                      <q-card-actions>
+                        <q-btn
+                          flat
+                          round
+                          icon="schedule"
+                        />
+                        <div flat>
+                          {{ category.bannerTime }} мин
+                        </div>
+                      </q-card-actions>
+                    </q-card>
+                  </router-link>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -115,10 +196,16 @@
 <script>
 import BreadCrumbs from 'src/components/BreadCrumbs.vue'
 // import CourseCatalogBanner from 'src/components/CourseCatalogBanner.vue'
+import { ref } from 'vue'
 
 export default {
   components: {
     BreadCrumbs
+  },
+  setup () {
+    return {
+      tab: ref('skills')
+    }
   },
   data () {
     return {
@@ -236,6 +323,9 @@ export default {
 .list-item {
   list-style-type: none
 }
+.card-item {
+  list-style-type: none
+}
 .container {
   width: 100%;
   min-width: 610px;
@@ -243,6 +333,10 @@ export default {
 .list {
   width: 100%;
   min-width: 550px;
+}
+.list-card {
+  width: 100%;
+  min-width: 350px;
 }
 .content-container {
   flex: 1;
@@ -290,5 +384,13 @@ export default {
   height: 15px;
   width: 65px;
   background-color: #00AAFF;
+}
+.my-card {
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  min-height: 100px;
+  min-width: 200px;
+  max-width: 350px;
 }
 </style>
