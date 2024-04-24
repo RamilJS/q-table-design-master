@@ -323,9 +323,6 @@ export default {
 .list-item {
   list-style-type: none
 }
-.card-item {
-  list-style-type: none
-}
 .container {
   width: 100%;
   min-width: 610px;
@@ -379,6 +376,10 @@ export default {
   background-color: #00AAFF;
 }
 .my-card {
+  width: 100%;
+}
+.card-item {
+  list-style-type: none;
   width: calc(33.33% - 20px);
   margin-bottom: 20px;
 }
