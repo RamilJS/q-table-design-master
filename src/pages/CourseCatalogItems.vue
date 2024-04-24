@@ -344,13 +344,6 @@ export default {
 .main-container {
   height: 100%;
 }
-.sidebar-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 355px;
-  min-height: 100vh;
-}
 .card-image {
   width: 100%;
   height: 100%;
@@ -386,12 +379,8 @@ export default {
   background-color: #00AAFF;
 }
 .my-card {
-  width: 100%;
-  height: 100%;
-  max-height: 250px;
-  min-height: 100px;
-  min-width: 200px;
-  max-width: 350px;
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
 }
 .card-conteiner {
   display: flex;
