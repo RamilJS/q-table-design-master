@@ -393,4 +393,9 @@ export default {
   min-width: 200px;
   max-width: 350px;
 }
+.card-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 </style>
