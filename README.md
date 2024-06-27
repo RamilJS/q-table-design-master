@@ -1,61 +1,414 @@
-# Quasar App (q-table-design)
+<template>
 
-A Quasar Project
+  <div class="main-container">
 
-## Install the dependencies
-```bash
-yarn
-# or
-npm install
-```
+    <div class="q-ml-xl q-mt-sm q-gutter-sm row justify-between">
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+      <q-breadcrumbs class="q-mt-lg g-ml-lg text-primary">
 
+        <q-breadcrumbs-el label="Учебный центр" :to="{ path: '/' }" />
 
-### Lint the files
-```bash
-yarn lint
-# or
-npm run lint
-```
+        <q-breadcrumbs-el label="Каталог курсов" />
 
+      </q-breadcrumbs>
 
+    </div>
 
-### Build the app for production
-```bash
-quasar build
-```
+ 
 
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+    <div class="column justify-between q-mb-md">
 
-<div class="list-card">
-  <div class="card-container">
-    <router-link v-for="(category, index) in categories" :key="index" :to="category.path" style="text-decoration: none;">
-      <q-card class="my-card col-3 shadow-3" bordered>
+      <div class="q-ml-lg q-mt-md q-pl-lg row text-h3 text-weight-bold">
+
+        <p class="text-primary">Каталог электронных курсов</p>
+
+      </div>
+
+ 
+
+      <div class="q-ml-xl q-mt-sm toolbar-input-container row justify-start">
+
+        <div class="toolbar-input">
+
+          <q-input
+
+            v-model="search"
+
+            dense
+
+            rounded
+
+            outlined
+
+            placeholder="Поиск"
+
+            color="purple"
+
+            class="col"
+
+            icon="search"
+
+          />
+
+        </div>
+
+        <div class="toolbar-input-btn" q-ml-xl>
+
+          <q-btn
+
+            color="grey-3"
+
+            text-color="grey-8"
+
+            icon="search"
+
+            unelevated
+
+            round
+
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+ 
+
+    <div
+
+      class="card-container q-py-md row q-gutter-md wrap"
+
+      style="margin-left: 32px"
+
+    >
+
+      <q-card class="my-card col-3">
+
         <q-card-section horizontal>
-          <q-card-section class="q-pt-xs">
-            <div class="text-h5 q-mt-sm q-mb-xs text-weight-bold" style="font-size: medium;">
-              {{ category.title }}
+
+          <q-card-section class="q-pt-lg">
+
+            <div class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary">
+
+              Профессиональные навыки
+
             </div>
-            <div class="text-subtitle1 q-mt-sm q-mb-xs" style="font-size: small; font-weight: 500">
-              Цель курса?
-            </div>
-            <div class="text-caption text-grey ellipsis-4-lines">
-              {{ category.bannerPurpose }}
-            </div>
+
+            <q-card-actions>
+
+              <q-btn
+
+                glossy
+
+                size="13px"
+
+                class="q-pr-xl q-py-xs q-mr-xl text-white gradient-btn"
+
+                label="Открыть"
+
+                :to="{ path: '/content-items' }"
+
+              />
+
+            </q-card-actions>
+
           </q-card-section>
+
+          <q-card-section class="card-section col-5 flex flex-center">
+
+            <q-img
+
+              class="rounded-borders card-image"
+
+              src="/images/people_in_work.jpg"
+
+              alt="Люди в офисе"
+
+            />
+
+          </q-card-section>
+
         </q-card-section>
-        <q-separator />
-        <q-card-actions>
-          <q-btn flat round icon="schedule" />
-          <div flat>{{ category.bannerTime }} мин</div>
-        </q-card-actions>
+
       </q-card>
-    </router-link>
+
+ 
+
+      <q-card class="my-card col-3">
+
+        <q-card-section horizontal>
+
+          <q-card-section class="q-pt-lg">
+
+            <div class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary">
+
+              Вводные курсы (инструктажи)
+
+            </div>
+
+            <q-card-actions>
+
+              <q-btn
+
+                glossy
+
+                size="13px"
+
+                class="q-pr-xl q-py-xs q-mr-xl text-white gradient-btn"
+
+                label="Открыть"
+
+                :to="{ path: '/briefings' }"
+
+              />
+
+            </q-card-actions>
+
+          </q-card-section>
+
+ 
+
+          <q-card-section class="card-section col-5 flex flex-center">
+
+            <q-img
+
+              class="rounded-borders card-image"
+
+              src="/images/briefing.jpg"
+
+              alt="Люди в офисе"
+
+            />
+
+          </q-card-section>
+
+        </q-card-section>
+
+      </q-card>
+
+ 
+
+      <q-card class="my-card col-3">
+
+        <q-card-section horizontal>
+
+          <q-card-section class="q-pt-lg">
+
+            <div class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary">
+
+              Личная эффективность и развитие
+
+            </div>
+
+            <q-card-actions>
+
+              <q-btn
+
+                glossy
+
+                size="13px"
+
+                class="q-pr-xl q-py-xs q-mr-xl text-white gradient-btn"
+
+                label="Открыть"
+
+                :to="{ path: '/efficiency' }"
+
+              />
+
+            </q-card-actions>
+
+          </q-card-section>
+
+ 
+
+          <q-card-section class="card-section col-5 flex flex-center">
+
+            <q-img
+
+              class="rounded-borders card-image"
+
+              src="/images/personal_efficiency.jpg"
+
+              alt="Люди в офисе"
+
+            />
+
+          </q-card-section>
+
+        </q-card-section>
+
+      </q-card>
+
+ 
+
+      <q-card class="my-card col-3">
+
+        <q-card-section horizontal>
+
+          <q-card-section class="q-pt-lg">
+
+            <div class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary">
+
+              Управление эффективности деятельности (УЭД)
+
+            </div>
+
+            <q-card-actions>
+
+              <q-btn
+
+                glossy
+
+                size="13px"
+
+                class="q-pr-xl q-py-xs q-mr-xl text-white gradient-btn"
+
+                label="Открыть"
+
+                :to="{ path: '/ued' }"
+
+              />
+
+            </q-card-actions>
+
+          </q-card-section>
+
+ 
+
+          <q-card-section class="card-section col-5 flex flex-center">
+
+            <q-img
+
+              class="rounded-borders card-image"
+
+              src="/images/efficiency_management.jpg"
+
+              alt="Люди в офисе"
+
+            />
+
+          </q-card-section>
+
+        </q-card-section>
+
+      </q-card>
+
+    </div>
+
   </div>
-</div>
+
+</template>
+
+ 
+
+<script>
+
+export default {};
+
+</script>
+
+ 
+
+<style scoped>
+
+.main-container {
+
+  width: 1200px;
+
+  margin: 0 auto;
+
+}
+
+.toolbar-input-container {
+
+  min-width: 500px;
+
+  width: 60%;
+
+  gap: 10px;
+
+}
+
+.toolbar-input {
+
+  width: 70%;
+
+}
+
+.toolbar-input-btn {
+
+  max-width: 60px;
+
+}
+
+.my-card {
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 200px;
+
+  max-height: 300px;
+
+  min-width: 300px;
+
+  max-width: 500px;
+
+}
+
+.card-section {
+
+  display: inline-block;
+
+  overflow: hidden;
+
+}
+
+.card-image {
+
+  border-radius: 50%;
+
+  height: 170px;
+
+  width: 170px;
+
+  display: block;
+
+  transition: 1s;
+
+}
+
+.card-image:hover {
+
+  overflow: hidden;
+
+  transform: scale(1.1);
+
+}
+
+.card-container {
+
+  gap: 10px;
+
+}
+
+.gradient-btn {
+
+  background: linear-gradient(to right, #7a31f5, #578bf8) !important;
+
+  border-radius: 15px;
+
+  width: 120px;
+
+}
+
+</style>
+
+ 
+
+ 
 
