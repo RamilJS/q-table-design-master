@@ -1,145 +1,431 @@
 
 <template>
 
-  <div class="main-container">
+  <div class="main-container row justify-between">
 
-    <div class="q-ml-xl q-mt-sm q-gutter-sm row justify-between">
+    <div class="content-container">
 
-      <q-breadcrumbs class="q-mt-lg g-ml-lg text-primary">
+      <div class="breadcrumbs q-ml-xl q-mt-sm q-gutter-sm row justify-between">
 
-        <q-breadcrumbs-el label="Учебный центр" :to="{ path: '/' }" />
+        <q-breadcrumbs class="q-mt-lg g-ml-lg text-primary">
 
-        <q-breadcrumbs-el label="Каталог курсов" />
+          <q-breadcrumbs-el label="Учебный центр" :to="{ path: '/' }" />
 
-      </q-breadcrumbs>
+          <q-breadcrumbs-el label="Каталог курсов" :to="{ path: 'content' }" />
 
-    </div>
+          <q-breadcrumbs-el :label="skills.category" />
 
- 
-
-    <div class="column justify-between q-mb-md">
-
-      <div class="q-ml-lg q-mt-md q-pl-lg row text-h3 text-weight-bold">
-
-        <p class="text-primary">Каталог электронных курсов</p>
+        </q-breadcrumbs>
 
       </div>
 
  
 
-      <div class="q-ml-xl q-mt-sm toolbar-input-container row justify-start">
+      <div class="container row">
 
-        <div class="toolbar-input">
+        <div class="column items-start q-pl-sm q-ml-xl q-mt-sm">
 
-          <q-input
+          <div class="header-container">
 
-            v-model="search"
+            <p
 
-            dense
+              class="text-3 text-weight-regular text-uppercase text-primary text-weight-bold"
 
-            rounded
+              style="font-size: 25px"
 
-            outlined
+            >
 
-            placeholder="Поиск"
+              <!-- Тут пока работать не будет -->
 
-            color="purple"
+              {{ skills.category }}
 
-            class="col"
+            </p>
 
-            icon="search"
-
-            @input="onSearchInputCatalogChange"
-
-            @keydown.enter="onSearchCatalogEnter"
-
-          />
-
-        </div>
-
-        <div class="toolbar-input-btn" q-ml-xl>
-
-          <q-btn
-
-            color="grey-3"
-
-            text-color="grey-8"
-
-            icon="search"
-
-            unelevated
-
-            round
-
-            @click="onSearchCatalogButtonClick"
-
-          />
-
-        </div>
-
-      </div>
-
-    </div>
+          </div>
 
  
 
-    <div
+          <div class="tab-panel q-gutter-y-md" style="width: 100%">
 
-      class="card-container q-py-md row q-gutter-md wrap"
+            <div class="tabs row">
 
-      style="margin-left: 32px"
+              <q-tabs
 
-    >
+                v-model="tab"
 
-      <q-card v-for="(card, index) in cardsData" :key="index" class="my-card col-3">
+                class="text-primary q-mb-sm"
 
-        <q-card-section horizontal>
+                active-color="secondary"
 
-          <q-card-section class="q-pt-lg">
+                align="justify"
 
-            <div class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary">
+                narrow-indicator
 
-              {{ card.title }}
+                @change="changeTab"
 
-            </div>
+              >
 
-            <q-card-actions>
+                <q-route-tab
 
-              <q-btn
+                  name="skills"
 
-                glossy
+                  label="Профессиональные навыки"
 
-                size="13px"
+                  to="{ path: 'content-items' }"
 
-                class="q-pr-xl q-py-xs q-mr-xl text-white gradient-btn"
+                />
 
-                label="Открыть"
+                <q-route-tab
 
-                :to="{ path: card.path }"
+                  name="briefings"
+
+                  label="Вводные курсы"
+
+                  to="{ path: 'content-items' }"
+
+                />
+
+                <q-route-tab
+
+                  name="efficiency"
+
+                  label="Личная эффективность"
+
+                  to="{ path: 'content-items' }"
+
+                />
+
+                <q-route-tab
+
+                  name="ued"
+
+                  label="УЭД"
+
+                  to="{ path: 'content-items' }"
+
+                />
+
+              </q-tabs>
+
+              <q-btn-toggle
+
+                v-model="isListView"
+
+                class="my-custom-toggle q-ml-lg"
+
+                rounded
+
+                flat
+
+                toggle-color="primary"
+
+                color="white"
+
+                text-color="primary"
+
+                size="md"
+
+                :options="[
+
+                  { icon: 'mdi-format-list-bulleted', value: true },
+
+                  { icon: 'mdi-apps', value: false },
+
+                ]"
 
               />
 
-            </q-card-actions>
+            </div>
 
-          </q-card-section>
+          </div>
 
-          <q-card-section class="card-section col-5 flex flex-center">
+ 
 
-            <q-img
+          <div v-if="isListView" class="list">
 
-              class="rounded-borders card-image"
+            <ul class="categories-list">
 
-              :src="card.image"
+              <li
 
-              :alt="card.alt"
+                v-for="(category, index) in skills"
 
-            />
+                :key="index"
 
-          </q-card-section>
+                class="list-item"
 
-        </q-card-section>
+              >
 
-      </q-card>
+                <div class="row justify-between">
+
+                  <div class="active-hover row">
+
+                    <p
+
+                      class="text-body1 text-primary text-weight-bold q-mr-sm underline-text"
+
+                    >
+
+                      <router-link
+
+                        :to="category.path"
+
+                        style="text-decoration: none"
+
+                      >
+
+                        {{ category.title }}
+
+                      </router-link>
+
+                    </p>
+
+                    <div class="down-button" :class="transformButton(index)">
+
+                      <q-btn
+
+                        flat
+
+                        round
+
+                        color="primary"
+
+                        padding="none"
+
+                        size="md"
+
+                        icon="mdi-chevron-down"
+
+                        @click="
+
+                          currentCategoryIndex === index && isBannerVisible
+
+                            ? hideBanner()
+
+                            : showBanner(index)
+
+                        "
+
+                      />
+
+                    </div>
+
+                  </div>
+
+                  <div class="description-button">
+
+                    <q-btn
+
+                      glossy
+
+                      size="10px"
+
+                      class="q-ml-xl text-white gradient-button"
+
+                      label="Описание"
+
+                      :to="category.path"
+
+                    />
+
+                  </div>
+
+                </div>
+
+                <div
+
+                  v-if="currentCategoryIndex === index && isBannerVisible"
+
+                  class="q-mb-md course-catalog-banner-active"
+
+                >
+
+                  <q-banner class="bg-grey-4 banner" rounded>
+
+                    <p
+
+                      class="courses-purpose text-secondary text-h6 q-mb-sm text-uppercase text-bold"
+
+                    >
+
+                      Цель курса?
+
+                      <q-icon
+
+                        name="mdi-bullseye-arrow"
+
+                        style="margin-bottom: 3px"
+
+                      />
+
+                    </p>
+
+                    <p
+
+                      class="courses-purpose-description text-primary q-mb-md ellipsis-2-lines"
+
+                      style="max-width: 700px"
+
+                    >
+
+                      {{ category.bannerPurpose }}
+
+                    </p>
+
+                    <p
+
+                      class="courses-time text-secondary text-h6 q-mb-sm text-uppercase text-bold"
+
+                    >
+
+                      Время прохождения
+
+                      <q-icon name="schedule" style="margin-bottom: 3px" />
+
+                    </p>
+
+                    <p
+
+                      class="courses-time-item text-primary q-mb-sm text-lowercase"
+
+                      style="max-width: 700px"
+
+                    >
+
+                      {{ category.bannerTime }} минут
+
+                    </p>
+
+                  </q-banner>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+ 
+
+          <div v-else class="list-card">
+
+            <ul class="categories-list row wrap">
+
+              <li
+
+                v-for="(category, index) in skills"
+
+                :key="index"
+
+                class="card-item"
+
+              >
+
+                <div
+
+                  class="card-container q-py-md row q-gutter-md row wrap"
+
+                  style="margin-left: 1px"
+
+                >
+
+                  <router-link
+
+                    :to="category.path"
+
+                    style="text-decoration: none"
+
+                  >
+
+                    <q-card
+
+                      class="my-card col-3 shadow-3 position-relative"
+
+                      bordered
+
+                    >
+
+                      <q-card-section horizontal>
+
+                        <q-card-section class="q-pt-xs">
+
+                          <div
+
+                            class="text-h5 q-mt-sm q-mb-xs text-weight-bold ellipsis-1-lines"
+
+                            style="font-size: medium"
+
+                          >
+
+                            {{ category.title }}
+
+                          </div>
+
+                          <div
+
+                            class="text-subtitle1 q-mt-sm q-mb-xs"
+
+                            style="font-size: small; font-weight: 500"
+
+                          >
+
+                            Цель курса?
+
+                          </div>
+
+                          <div class="text-caption text-grey ellipsis-2-lines">
+
+                            {{ category.bannerPurpose }}
+
+                          </div>
+
+                        </q-card-section>
+
+                      </q-card-section>
+
+ 
+
+                      <div class="course-time">
+
+                        <q-icon
+
+                          flat
+
+                          size="large"
+
+                          name="schedule"
+
+                          color="secondary"
+
+                          style="margin-top: 1px"
+
+                          class="time-icon"
+
+                        />
+
+                        <div flat class="q-ml-sm card-time">
+
+                          {{ category.bannerTime }} мин
+
+                        </div>
+
+                      </div>
+
+                    </q-card>
+
+                  </router-link>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -151,185 +437,215 @@
 
 <script>
 
+import BreadCrumbs from "src/components/BreadCrumbs.vue";
+
+import { ref } from "vue";
+
 import axios from 'axios';
 
  
 
 export default {
 
+  setup() {
+
+    return {
+
+      tab: ref("skills"),
+
+    };
+
+  },
+
   data() {
 
     return {
 
-      search: "",
+      isBannerVisible: false,
 
-      category: "",
+      currentCategoryIndex: -1,
 
-      cardsData: [],
+      isListView: true,
 
-      /* Пример данных для категорий курсов
+      skills: [],
 
-      cardsData: [
+      briefings: [], // данные для других вкладок
+
+      efficiency: [],
+
+      ued: [],
+
+ 
+
+      /* Пример данных для skills
+
+      skills: [
 
         {
 
-          title: "Профессиональные навыки",
+          title: "Основы лизинга",
 
-          path: "/content-items",
+          category: "Профессиональные навыки",
 
-          image: "images/people_in_work.jpg",
+          bannerPurpose: `сформировать практические занания о понятии лизинга, его преимуществах
 
-          alt: "Люди в офисе"
+          по сравнению с другими способами приобретения ТС и преимуществах работы с ВТБ Лизинг`,
+
+          bannerTime: "60",
 
         },
 
         {
 
-          title: "Вводные курсы (инструктажи)",
+          title: "Продукты Автолизинга",
 
-          path: "/briefings",
+          category: "Профессиональные навыки",
 
-          image: "/images/briefing.jpg",
+          bannerPurpose:
 
-          alt: "Работники сидят на инструктаже"
+            "сформировать теоретические знания о продуктах Автолизинга, принципах их формирования и параметрах",
 
-        },
-
-        {
-
-          title: "Личная эффективность и развитие",
-
-          path: "/efficiency",
-
-          image: "images/personal_efficiency.jpg",
-
-          alt: "Работники за столом переговоров"
+          bannerTime: "60",
 
         },
 
         {
 
-          title: "Управление эффективности деятельности (УЭД)",
+          title: "Параметры сделки",
 
-          path: "/ued",
+          category: "Профессиональные навыки",
 
-          image: "images/efficiency_management.jpg",
+          bannerPurpose:
 
-          alt: "Работники слушают руководителя"
+            "сформировать теоретические знания о финансовых условиях лизинговой сделки",
+
+          bannerTime: "60",
 
         },
 
-      ]*/
+        {
 
-    }
+          title: 'Microsoft Excel 2013 "4-й уровень-эксперт"',
+
+          category: "Профессиональные навыки",
+
+          bannerPurpose:
+
+            "расширить умения по работе с основными функциями Microsoft Excel 2013 на уровне эксперта",
+
+          bannerTime: "60",
+
+        },
+
+      ],*/
+
+    };
 
   },
 
   methods: {
 
-    async fetchCardsData() {
+    showBanner(index) {
 
-      try {
+      this.isBannerVisible = true;
 
-        const response = await axios.get('https://api.example.com/courses-content', {
-
-          params: {
-
-            search: this.search,
-
-            category: this.category
-
-          }
-
-        });
-
-        this.cards = response.data;
-
-      } catch (error) {
-
-        console.error('Error fetching catalog data:', error);
-
-      }
+      this.currentCategoryIndex = index;
 
     },
 
- 
+    hideBanner() {
 
-    // Функция для выполнения запроса поиска
+      this.isBannerVisible = false;
 
-    async fetchSearchCatalogResults () {
-
-      try {
-
-        const response = await axios.get(`${BACKEND_URL}?search=${search.value}`);
-
- 
-
-        // this.searchResults = response.data;
-
-        console.log(response.data); // Вывод в консоль массива ответов
-
-      } catch (error) {
-
-        console.error('Ошибка запроса поиска в каталоге', error);
-
-      }
+      this.currentCategoryIndex = -1;
 
     },
 
- 
+    transformButton(index) {
 
-    // Вызывается при изменении значения в поле поиска
+      if (this.isBannerVisible && this.currentCategoryIndex === index) {
 
-    onSearchInputCatalogChange () {
-
-      // Поиск от 1 символа
-
-      if (search.value.length > 0) {
-
-        fetchSearchCatalogResults();
+        return "transform-button";
 
       } else {
 
-        // Сброс результатов при пустом поле
-
-         this.searchResults = [];
-
-        console.log("Поле поиска пустое");
+        return "down-button";
 
       }
 
     },
 
- 
+    toggleListView() {
 
-    onSearchCatalogButtonClick () {
-
-      fetchSearchCatalogResults();
+      this.isListView = !this.isListView;
 
     },
 
- 
+    changeTab(tab) {
 
-    // Обработчик Enter в поле поиска
+      this.isListView = true;
 
-    onSearchCatalogEnter (event) {
+      switch (tab) {
 
-      if (event.key === 'Enter') {
+        case "briefings":
 
-        fetchSearchCatalogResults();
+          this.fetchCatalogItemsData('briefings');
+
+          break;
+
+        case "efficiency":
+
+          this.fetchCatalogItemsData('efficiency');
+
+          break;
+
+        case "ued":
+
+          this.fetchCatalogItemsData('ued');
+
+          break;
+
+        default:
+
+          this.fetchCatalogItemsData('skills');
 
       }
 
     },
+
+    fetchCatalogItemsData(type) {
+
+    const params = {
+
+      type,
+
+      additionalParam: 'value' //дополнительные параметры
+
+    };
+
+    axios.get('https://example.com/api/skills', { params })
+
+      .then(response => {
+
+        this.skills = response.data;
+
+      })
+
+      .catch(error => {
+
+        console.error('Ошибка при получении данных:', error);
+
+      });
 
   },
 
-  created() {
+  mounted() {
 
-    this.fetchCardsData();
+    this.fetchCatalogItemsData('skills'); // запросить данные при загрузке компонента
 
   }
+
+  },
 
 };
 
