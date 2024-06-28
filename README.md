@@ -49,6 +49,10 @@
 
             icon="search"
 
+            @input="onSearchInputCatalogChange"
+
+            @keydown.enter="onSearchCatalogEnter"
+
           />
 
         </div>
@@ -66,6 +70,8 @@
             unelevated
 
             round
+
+            @click="onSearchCatalogButtonClick"
 
           />
 
@@ -225,7 +231,7 @@ export default {
 
       try {
 
-        const response = await axios.get('https://api.example.com/cardsData', {
+        const response = await axios.get('https://api.example.com/courses-content', {
 
           params: {
 
@@ -241,11 +247,81 @@ export default {
 
       } catch (error) {
 
-        console.error('Error fetching cards data:', error);
+        console.error('Error fetching catalog data:', error);
 
       }
 
-    }
+    },
+
+ 
+
+    // Функция для выполнения запроса поиска
+
+    async fetchSearchCatalogResults () {
+
+      try {
+
+        const response = await axios.get(`${BACKEND_URL}?search=${search.value}`);
+
+ 
+
+        // this.searchResults = response.data;
+
+        console.log(response.data); // Вывод в консоль массива ответов
+
+      } catch (error) {
+
+        console.error('Ошибка запроса поиска в каталоге', error);
+
+      }
+
+    },
+
+ 
+
+    // Вызывается при изменении значения в поле поиска
+
+    onSearchInputCatalogChange () {
+
+      // Поиск от 1 символа
+
+      if (search.value.length > 0) {
+
+        fetchSearchCatalogResults();
+
+      } else {
+
+        // Сброс результатов при пустом поле
+
+         this.searchResults = [];
+
+        console.log("Поле поиска пустое");
+
+      }
+
+    },
+
+ 
+
+    onSearchCatalogButtonClick () {
+
+      fetchSearchCatalogResults();
+
+    },
+
+ 
+
+    // Обработчик Enter в поле поиска
+
+    onSearchCatalogEnter (event) {
+
+      if (event.key === 'Enter') {
+
+        fetchSearchCatalogResults();
+
+      }
+
+    },
 
   },
 
