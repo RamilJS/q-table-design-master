@@ -5,7 +5,15 @@
 
     <div class="content-container">
 
-      <div class="breadcrumbs q-ml-xl q-mt-sm q-gutter-sm row justify-between">
+ 
+
+      <!-- Хлебные крошки -->
+
+      <div
+
+        class="breadcrumbs-container q-mt-sm q-gutter-sm row justify-between"
+
+      >
 
         <q-breadcrumbs class="q-mt-lg g-ml-lg text-primary">
 
@@ -13,7 +21,15 @@
 
           <q-breadcrumbs-el label="Каталог курсов" :to="{ path: 'content' }" />
 
-          <q-breadcrumbs-el :label="skills.category" />
+          <q-breadcrumbs-el
+
+            label="Профессиональные навыки"
+
+            :to="{ path: 'content-items' }"
+
+          />
+
+          <q-breadcrumbs-el label="Основы лизинга" />
 
         </q-breadcrumbs>
 
@@ -21,409 +37,409 @@
 
  
 
-      <div class="container row">
+      <!-- Карточка курса -->
 
-        <div class="column items-start q-pl-sm q-ml-xl q-mt-sm">
+      <div class="new-card q-mt-md">
 
-          <div class="header-container">
+        <q-card class="my-card">
 
-            <p
+          <q-img src="images/header-panel.png">
 
-              class="text-3 text-weight-regular text-uppercase text-primary text-weight-bold"
+            <div class="course-state" style="position: relative; left: 10px; top: 5px; width: 109px; height: 31px; background: none">
 
-              style="font-size: 25px"
-
-            >
-
-              <!-- Тут пока работать не будет -->
-
-              {{ skills.category }}
-
-            </p>
-
-          </div>
-
- 
-
-          <div class="tab-panel q-gutter-y-md" style="width: 100%">
-
-            <div class="tabs row">
-
-              <q-tabs
-
-                v-model="tab"
-
-                class="text-primary q-mb-sm"
-
-                active-color="secondary"
-
-                align="justify"
-
-                narrow-indicator
-
-                @change="changeTab"
-
-              >
-
-                <q-route-tab
-
-                  name="skills"
-
-                  label="Профессиональные навыки"
-
-                  to="{ path: 'content-items' }"
-
-                />
-
-                <q-route-tab
-
-                  name="briefings"
-
-                  label="Вводные курсы"
-
-                  to="{ path: 'content-items' }"
-
-                />
-
-                <q-route-tab
-
-                  name="efficiency"
-
-                  label="Личная эффективность"
-
-                  to="{ path: 'content-items' }"
-
-                />
-
-                <q-route-tab
-
-                  name="ued"
-
-                  label="УЭД"
-
-                  to="{ path: 'content-items' }"
-
-                />
-
-              </q-tabs>
-
-              <q-btn-toggle
-
-                v-model="isListView"
-
-                class="my-custom-toggle q-ml-lg"
-
-                rounded
-
-                flat
-
-                toggle-color="primary"
-
-                color="white"
-
-                text-color="primary"
-
-                size="md"
-
-                :options="[
-
-                  { icon: 'mdi-format-list-bulleted', value: true },
-
-                  { icon: 'mdi-apps', value: false },
-
-                ]"
-
-              />
+              <q-img src="icons/in-progress-state.svg" />
 
             </div>
 
-          </div>
+            <div
 
- 
+              class="row  items-center"
 
-          <div v-if="isListView" class="list">
+              style="background: none; padding-bottom: 0px;"
 
-            <ul class="categories-list">
+            >
 
-              <li
+              <div class="text-white col-7" style="background: none">
 
-                v-for="(category, index) in skills"
+                <p
 
-                :key="index"
+                  class="text-3 text-weight-regular text-uppercase text-white text-weight-bold"
 
-                class="list-item"
+                  style="font-size: 32px"
+
+                >
+
+                  {{ category.title }}
+
+                </p>
+
+                <p
+
+                  class="my-card-description"
+
+                  style="color: #aae3ff; font-family: Roboto; font-size: 16px"
+
+                >
+
+                  {{ category.cardDescription }}
+
+                </p>
+
+              </div>
+
+              <div
+
+                class="col-5"
+
+                style="background: none; position: relative; left: 100px; bottom: 10px;"
 
               >
 
-                <div class="row justify-between">
+                <q-img
 
-                  <div class="active-hover row">
+                  src="icons/card-header-image.svg"
 
-                    <p
+                  alt="Сотрудники напротив ноутбука"
 
-                      class="text-body1 text-primary text-weight-bold q-mr-sm underline-text"
+                />
 
-                    >
+              </div>
 
-                      <router-link
+            </div>
 
-                        :to="category.path"
+          </q-img>
 
-                        style="text-decoration: none"
+ 
 
-                      >
+          <q-card-section class="q-pt-none">
 
-                        {{ category.title }}
+            <div class="container row">
 
-                      </router-link>
+              <div class="column items-start q-pl-sm q-ml-xl q-mt-sm">
 
-                    </p>
+ 
 
-                    <div class="down-button" :class="transformButton(index)">
+                <!-- Основная цель курса -->
 
-                      <q-btn
+                <div class="purpose-container q-mt-lg row no-wrap">
 
-                        flat
+                  <div class="purpose-trophy">
 
-                        round
+                    <img
 
-                        color="primary"
+                      src="icons/purpose.svg"
 
-                        padding="none"
-
-                        size="md"
-
-                        icon="mdi-chevron-down"
-
-                        @click="
-
-                          currentCategoryIndex === index && isBannerVisible
-
-                            ? hideBanner()
-
-                            : showBanner(index)
-
-                        "
-
-                      />
-
-                    </div>
-
-                  </div>
-
-                  <div class="description-button">
-
-                    <q-btn
-
-                      glossy
-
-                      size="10px"
-
-                      class="q-ml-xl text-white gradient-button"
-
-                      label="Описание"
-
-                      :to="category.path"
+                      alt="Иконка цели обучения"
 
                     />
 
                   </div>
 
-                </div>
-
-                <div
-
-                  v-if="currentCategoryIndex === index && isBannerVisible"
-
-                  class="q-mb-md course-catalog-banner-active"
-
-                >
-
-                  <q-banner class="bg-grey-4 banner" rounded>
+                  <div class="main-purpose q-ml-md">
 
                     <p
 
-                      class="courses-purpose text-secondary text-h6 q-mb-sm text-uppercase text-bold"
+                      class="main-purpose-title text-secondary text-h6 text-black q-mb-sm text-bold"
 
                     >
 
-                      Цель курса?
-
-                      <q-icon
-
-                        name="mdi-bullseye-arrow"
-
-                        style="margin-bottom: 3px"
-
-                      />
+                      Основная цель
 
                     </p>
 
                     <p
 
-                      class="courses-purpose-description text-primary q-mb-md ellipsis-2-lines"
+                      class="main-purpose-description text-black q-mb-md ellipsis-2-lines"
 
                       style="max-width: 700px"
 
                     >
 
-                      {{ category.bannerPurpose }}
+                      {{ category.target }}
 
                     </p>
 
-                    <p
-
-                      class="courses-time text-secondary text-h6 q-mb-sm text-uppercase text-bold"
-
-                    >
-
-                      Время прохождения
-
-                      <q-icon name="schedule" style="margin-bottom: 3px" />
-
-                    </p>
-
-                    <p
-
-                      class="courses-time-item text-primary q-mb-sm text-lowercase"
-
-                      style="max-width: 700px"
-
-                    >
-
-                      {{ category.bannerTime }} минут
-
-                    </p>
-
-                  </q-banner>
+                  </div>
 
                 </div>
 
-              </li>
+ 
 
-            </ul>
+                <!-- Основные темы курса -->
 
-          </div>
+                <div class="main-themes row justify-start no-wrap q-mt-md">
+
+                  <div class="themes-icon q-mt-xs">
+
+                    <img
+
+                      class="courses-themes-icon"
+
+                      src="icons/checklist.svg"
+
+                      alt="Иконка тем курса"
+
+                    />
+
+                  </div>
 
  
 
-          <div v-else class="list-card">
+                  <div class="themes-container q-ml-md">
 
-            <ul class="categories-list row wrap">
+                    <p
 
-              <li
-
-                v-for="(category, index) in skills"
-
-                :key="index"
-
-                class="card-item"
-
-              >
-
-                <div
-
-                  class="card-container q-py-md row q-gutter-md row wrap"
-
-                  style="margin-left: 1px"
-
-                >
-
-                  <router-link
-
-                    :to="category.path"
-
-                    style="text-decoration: none"
-
-                  >
-
-                    <q-card
-
-                      class="my-card col-3 shadow-3 position-relative"
-
-                      bordered
+                      class="main-themes-title text-secondary text-h6 text-black text-bold q-mb-xs"
 
                     >
 
-                      <q-card-section horizontal>
+                      Основные темы курса
 
-                        <q-card-section class="q-pt-xs">
+                    </p>
 
-                          <div
+                    <ul class="courses-themes-list">
 
-                            class="text-h5 q-mt-sm q-mb-xs text-weight-bold ellipsis-1-lines"
+                      <li
 
-                            style="font-size: medium"
+                        v-for="(course, index) in category.courses"
 
-                          >
+                        :key="index"
 
-                            {{ category.title }}
+                        class="list-item"
 
-                          </div>
+                      >
 
-                          <div
+                        <div class="themes-arrow-items row">
 
-                            class="text-subtitle1 q-mt-sm q-mb-xs"
+                          <div class="q-ml-xs">
 
-                            style="font-size: small; font-weight: 500"
+                            <p
 
-                          >
+                              class="main-themes-description text-black q-mb-xs"
 
-                            Цель курса?
+                            >
 
-                          </div>
+                              {{ course.name }}
 
-                          <div class="text-caption text-grey ellipsis-2-lines">
-
-                            {{ category.bannerPurpose }}
+                            </p>
 
                           </div>
-
-                        </q-card-section>
-
-                      </q-card-section>
-
- 
-
-                      <div class="course-time">
-
-                        <q-icon
-
-                          flat
-
-                          size="large"
-
-                          name="schedule"
-
-                          color="secondary"
-
-                          style="margin-top: 1px"
-
-                          class="time-icon"
-
-                        />
-
-                        <div flat class="q-ml-sm card-time">
-
-                          {{ category.bannerTime }} мин
 
                         </div>
 
-                      </div>
+                      </li>
 
-                    </q-card>
+                    </ul>
 
-                  </router-link>
+                  </div>
 
                 </div>
 
-              </li>
+ 
 
-            </ul>
+                <!-- Блок с информацией о курсе, время, дата -->
 
-          </div>
+                <div class="row justify-between q-mt-md">
 
-        </div>
+                  <div class="competency q-mr-xl column">
+
+                    <div class="competency-content">
+
+                      <p
+
+                        class="main-purpose-title text-black q-mb-sm"
+
+                      >
+
+                        Развиваемая компетенция
+
+                      </p>
+
+                    </div>
+
+                    <div class="competency">
+
+                      <p class="competency-title text-grey">
+
+                        {{ category.competency }}
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <div class="time q-ml-xl column">
+
+                    <div class="time-content">
+
+                      <p
+
+                        class="main-purpose-title text-black q-mb-sm"
+
+                      >
+
+                        Время прохождения
+
+                      </p>
+
+                    </div>
+
+                    <div class="time">
+
+                      <p class="competency-title text-grey">
+
+                        {{ category.time }} минут
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <div class="date-start q-ml-xl column">
+
+                    <div class="date-start-content">
+
+                      <p
+
+                        class="main-date-start-title text-black q-mb-sm"
+
+                      >
+
+                        Курс назначен
+
+                      </p>
+
+                    </div>
+
+                    <div class="date-start-item">
+
+                      <p class="date-start-title text-grey">
+
+                        {{ category.dateStart }}
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <div class="date-finish q-ml-xl column">
+
+                    <div class="date-finish-content">
+
+                      <p
+
+                        class="main-date-finish-title text-black q-mb-sm"
+
+                      >
+
+                        Пройти курс до
+
+                      </p>
+
+                    </div>
+
+                    <div class="date-finish-item">
+
+                      <p class="date-finish-title text-grey">
+
+                        {{ category.dateFinish }}
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+ 
+
+                <!-- Блок с кнопками управления курсом-->
+
+                <div class="course-buttons q-mt-sm row justify-between" style="width: 640px;">
+
+                  <q-btn
+
+                    class="start-button text-white"
+
+                    label="Начать прохождение"
+
+                    size="15px"
+
+                    glossy
+
+                    icon="fa-solid fa-play"
+
+                    :to="category.startCourseLink"
+
+                  />
+
+                  <q-btn
+
+                    class="cancel-button text-white"
+
+                    label="Отменить назначение"
+
+                    size="15px"
+
+                    glossy
+
+                    icon="fa-solid fa-ban"
+
+                    :to="category.cancelCourseLink"
+
+                  />
+
+                </div>
+
+ 
+
+                <!-- Количество попыток прохождения курса -->
+
+                 <div class="attempts-count q-mt-lg q-mb-md column">
+
+                  <p class="attempts-title text-grey q-mb-xs">
+
+                        История прохождения
+
+                  </p>
+
+                  <a :href="category.attemptsLink"  class="attempts-link" style="color: #00AAFF">
+
+                    {{ category.courseAttempts }} попытки
+
+                  </a>
+
+                 </div>
+
+ 
+
+                <!-- Ссылка для оставления отзыва о курсе -->
+
+                <div class="review q-mt-lg q-mb-md">
+
+                  <div class="review-link-container">
+
+                    <a :href="category.reviewLink" class="review-link" style="color: #00AAFF">
+
+                       Оставить отзыв о курсе
+
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </q-card-section>
+
+        </q-card>
 
       </div>
 
@@ -437,213 +453,81 @@
 
 <script>
 
-import BreadCrumbs from "src/components/BreadCrumbs.vue";
-
-import { ref } from "vue";
-
-import axios from 'axios';
-
- 
-
 export default {
-
-  setup() {
-
-    return {
-
-      tab: ref("skills"),
-
-    };
-
-  },
 
   data() {
 
     return {
 
-      isBannerVisible: false,
-
-      currentCategoryIndex: -1,
-
-      isListView: true,
-
-      skills: [],
-
-      briefings: [], // данные для других вкладок
-
-      efficiency: [],
-
-      ued: [],
+      /*course: {},*/
 
  
 
-      /* Пример данных для skills
-
-      skills: [
+      category:
 
         {
 
           title: "Основы лизинга",
 
-          category: "Профессиональные навыки",
+          cardDescription: "Несоблюдение требований комплаенс может привести к серьезным последствиям для компании от административных штрафов до утечки конфиденциальной информации. Поэтому очень важно, чтобы каждый сотрудник осознавал свою роль в системе комплаенс и ответственность за те или иные нарушения",
 
-          bannerPurpose: `сформировать практические занания о понятии лизинга, его преимуществах
+          target:
 
-          по сравнению с другими способами приобретения ТС и преимуществах работы с ВТБ Лизинг`,
+            "сформировать практические занания о понятии лизинга, его преимуществах по сравнению с другими способами приобретения ТС и преимуществах работы с ВТБ Лизинг",
 
-          bannerTime: "60",
+          path: { path: "course" },
 
-        },
+          courses: [
 
-        {
+            {
 
-          title: "Продукты Автолизинга",
+              name: "Понятие лизинга, его виды, субъекты и предметы",
 
-          category: "Профессиональные навыки",
+            },
 
-          bannerPurpose:
+            {
 
-            "сформировать теоретические знания о продуктах Автолизинга, принципах их формирования и параметрах",
+              name: "Схема лизинговой сделки",
 
-          bannerTime: "60",
+            },
 
-        },
+            {
 
-        {
+              name: "Финансовые и нефинансовые преимущества лизинга по сравнению с другими способами финансирования",
 
-          title: "Параметры сделки",
+            },
 
-          category: "Профессиональные навыки",
+            {
 
-          bannerPurpose:
+              name: "Преимущества ВТБ Лизинг",
 
-            "сформировать теоретические знания о финансовых условиях лизинговой сделки",
+            },
 
-          bannerTime: "60",
+          ],
 
-        },
+          time: "60",
 
-        {
+          competency: "Отвечаем за результат",
 
-          title: 'Microsoft Excel 2013 "4-й уровень-эксперт"',
+          state: 'inProgress', // тут имею ввиду состояние курса начат он или нет
 
-          category: "Профессиональные навыки",
+          dateStart: "2024-06-21",
 
-          bannerPurpose:
+          dateFinish: "2024-06-26",
 
-            "расширить умения по работе с основными функциями Microsoft Excel 2013 на уровне эксперта",
+          startCourseLink: "#",
 
-          bannerTime: "60",
+          cancelCourseLink: "#",
 
-        },
+          courseAttempts: "2",
 
-      ],*/
+          attemptsLink: "#",
+
+          reviewLink: "#",
+
+        }
 
     };
-
-  },
-
-  methods: {
-
-    showBanner(index) {
-
-      this.isBannerVisible = true;
-
-      this.currentCategoryIndex = index;
-
-    },
-
-    hideBanner() {
-
-      this.isBannerVisible = false;
-
-      this.currentCategoryIndex = -1;
-
-    },
-
-    transformButton(index) {
-
-      if (this.isBannerVisible && this.currentCategoryIndex === index) {
-
-        return "transform-button";
-
-      } else {
-
-        return "down-button";
-
-      }
-
-    },
-
-    toggleListView() {
-
-      this.isListView = !this.isListView;
-
-    },
-
-    changeTab(tab) {
-
-      this.isListView = true;
-
-      switch (tab) {
-
-        case "briefings":
-
-          this.fetchCatalogItemsData('briefings');
-
-          break;
-
-        case "efficiency":
-
-          this.fetchCatalogItemsData('efficiency');
-
-          break;
-
-        case "ued":
-
-          this.fetchCatalogItemsData('ued');
-
-          break;
-
-        default:
-
-          this.fetchCatalogItemsData('skills');
-
-      }
-
-    },
-
-    fetchCatalogItemsData(type) {
-
-    const params = {
-
-      type,
-
-      additionalParam: 'value' //дополнительные параметры
-
-    };
-
-    axios.get('https://example.com/api/skills', { params })
-
-      .then(response => {
-
-        this.skills = response.data;
-
-      })
-
-      .catch(error => {
-
-        console.error('Ошибка при получении данных:', error);
-
-      });
-
-  },
-
-  mounted() {
-
-    this.fetchCatalogItemsData('skills'); // запросить данные при загрузке компонента
-
-  }
 
   },
 
