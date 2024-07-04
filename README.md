@@ -1,145 +1,173 @@
 
 <template>
 
-  <div class="main-container">
+  <div class="main-container row justify-between">
 
-    <div class="q-ml-xl q-mt-sm q-gutter-sm row justify-between">
-
-      <q-breadcrumbs class="q-mt-lg g-ml-lg text-primary">
-
-        <q-breadcrumbs-el label="Учебный центр" :to="{ path: '/' }" />
-
-        <q-breadcrumbs-el label="Каталог курсов" />
-
-      </q-breadcrumbs>
-
-    </div>
+    <div class="content-container">
 
  
 
-    <div class="column justify-between q-mb-md">
+      <!-- Хлебные крошки -->
 
-      <div class="q-ml-lg q-mt-md q-pl-lg row text-h3 text-weight-bold">
+      <div class="breadcrumbs q-ml-xl q-mt-sm q-gutter-sm row justify-between">
 
-        <p class="text-primary">Каталог электронных курсов</p>
+        <q-breadcrumbs class="q-mt-lg g-ml-lg text-primary">
+
+          <q-breadcrumbs-el label="Учебный центр" :to="{ path: '/' }" />
+
+          <q-breadcrumbs-el label="Каталог курсов" :to="{ path: 'content' }" />
+
+          <q-breadcrumbs-el label="Поиск по каталогу" />
+
+        </q-breadcrumbs>
 
       </div>
 
  
 
-      <div class="q-ml-xl q-mt-sm toolbar-input-container row justify-start">
+      <div class="container row" >
 
-        <div class="toolbar-input">
+        <div class="column items-start q-ml-xl q-mt-sm">
 
-          <q-input
+          <div class="header-container">
 
-            v-model="search"
+            <p
 
-            dense
+              class="search-title text-3 text-weight-regular text-uppercase text-primary text-weight-bold"
 
-            rounded
+            >
 
-            outlined
+              Поиск по каталогу курсов
 
-            placeholder="Поиск"
+            </p>
 
-            color="purple"
-
-            class="col"
-
-            icon="search"
-
-            @input="onSearchInputCatalogChange"
-
-            @keydown.enter="onSearchCatalogEnter"
-
-          />
-
-        </div>
-
-        <div class="toolbar-input-btn" q-ml-xl>
-
-          <q-btn
-
-            color="grey-3"
-
-            text-color="grey-8"
-
-            icon="search"
-
-            unelevated
-
-            round
-
-            @click="onSearchCatalogButtonClick"
-
-          />
-
-        </div>
-
-      </div>
-
-    </div>
+          </div>
 
  
 
-    <div
+        <div class="toolbar-input-container row justify-start">
 
-      class="card-container q-py-md row q-gutter-md wrap"
+          <div class="toolbar-input">
 
-      style="margin-left: 32px"
+            <q-input
 
-    >
+              v-model="search"
 
-      <q-card v-for="(card, index) in cardsData" :key="index" class="my-card col-3">
+              dense
 
-        <q-card-section horizontal>
+              rounded
 
-          <q-card-section class="q-pt-lg">
+              outlined
 
-            <div class="text-h5 q-mt-sm q-mb-xs q-pl-sm text-primary">
+              placeholder="Поиск"
 
-              {{ card.title }}
+              color="purple"
 
-            </div>
+              class="col"
 
-            <q-card-actions>
+              icon="search"
 
-              <q-btn
-
-                glossy
-
-                size="13px"
-
-                class="q-pr-xl q-py-xs q-mr-xl text-white gradient-btn"
-
-                label="Открыть"
-
-                :to="{ path: card.path }"
-
-              />
-
-            </q-card-actions>
-
-          </q-card-section>
-
-          <q-card-section class="card-section col-5 flex flex-center">
-
-            <q-img
-
-              class="rounded-borders card-image"
-
-              :src="card.image"
-
-              :alt="card.alt"
+ 
 
             />
 
-          </q-card-section>
+          </div>
 
-        </q-card-section>
+          <div class="toolbar-input-btn" q-ml-xl>
 
-      </q-card>
+            <q-btn
+
+              color="grey-3"
+
+              text-color="grey-8"
+
+              icon="search"
+
+              unelevated
+
+              round
+
+ 
+
+            />
+
+          </div>
+
+        </div>
+
+ 
+
+          <div v-if="searchData > 0" class="list">
+
+            <ul class="categories-list">
+
+              <li
+
+                v-for="(category, index) in searchData"
+
+                :key="index"
+
+                class="list-item"
+
+              >
+
+                  <router-link
+
+                    class="search-link"
+
+                    :to="category.path"
+
+ 
+
+                  >
+
+                  <p
+
+                  class="active-hover text-body1 text-primary text-weight-bold q-mr-sm underline-text"
+
+                >
+
+                    {{ category.title }}
+
+                  </p>
+
+                  </router-link>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+ 
+
+          <div v-else class="list-empty">
+
+            <ul class="categories-list row wrap">
+
+              <li class="list-item" style="width: 60vw;">
+
+                  <p
+
+                  class="active-hover text-body1 text-black q-mr-sm underline-text"
+
+                  style="text-align: center;"
+
+                >
+
+                    По вашему запросу ничего не найдено
+
+                  </p>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -155,181 +183,193 @@ import axios from 'axios';
 
  
 
-const BACKEND_URL = 'https://api.example.com/courses-content';
-
- 
-
 export default {
 
   data() {
 
     return {
 
-      searchCatalog: "",
+      searchData: [
 
-      categoryCatalog: "",
+      {
 
-      cardsData: [],
+          title: "Основы лизинга",
 
-      /* Пример данных для категорий курсов
+          catalogName: "Профессиональные навыки",
 
-      cardsData: [
+          bannerPurpose: `сформировать практические занания о понятии лизинга, его преимуществах
 
-        {
+          по сравнению с другими способами приобретения ТС и преимуществах работы с ВТБ Лизинг`,
 
-          title: "Профессиональные навыки",
-
-          path: "/content-items",
-
-          image: "images/people_in_work.jpg",
-
-          alt: "Люди в офисе"
+          bannerTime: "60",
 
         },
 
         {
 
-          title: "Вводные курсы (инструктажи)",
+          title: "Продукты Автолизинга",
 
-          path: "/content-items",
+          catalogName: "Профессиональные навыки",
 
-          image: "/images/briefing.jpg",
+          bannerPurpose:
 
-          alt: "Работники сидят на инструктаже"
+            "сформировать теоретические знания о продуктах Автолизинга, принципах их формирования и параметрах",
 
-        },
-
-        {
-
-          title: "Личная эффективность и развитие",
-
-          path: "/content-items",
-
-          image: "images/personal_efficiency.jpg",
-
-          alt: "Работники за столом переговоров"
+          bannerTime: "60",
 
         },
 
         {
 
-          title: "Управление эффективности деятельности (УЭД)",
+          title: "Параметры сделки",
 
-          path: "/content-items",
+          catalogName: "Профессиональные навыки",
 
-          image: "images/efficiency_management.jpg",
+          bannerPurpose:
 
-          alt: "Работники слушают руководителя"
+            "сформировать теоретические знания о финансовых условиях лизинговой сделки",
+
+          bannerTime: "60",
 
         },
 
-      ]*/
+        {
 
-    }
+          title: "Параметры сделки wefwfwfwfnwoiefwiofhowihfowhfwehf9wehf9wfh9we9hf",
+
+          catalogName: "Профессиональные навыки",
+
+          bannerPurpose:
+
+            "сформировать теоретические знания о финансовых условиях лизинговой сделки",
+
+          bannerTime: "60",
+
+        },
+
+        {
+
+          title: "Параметры сделки",
+
+          catalogName: "Профессиональные навыки",
+
+          bannerPurpose:
+
+            "сформировать теоретические знания о финансовых условиях лизинговой сделки",
+
+          bannerTime: "60",
+
+        },
+
+        {
+
+          title: "Параметры сделки",
+
+          catalogName: "Профессиональные навыки",
+
+          bannerPurpose:
+
+            "сформировать теоретические знания о финансовых условиях лизинговой сделки",
+
+          bannerTime: "60",
+
+        }
+
+        ,
+
+        {
+
+          title: "Параметры сделки",
+
+          catalogName: "Профессиональные навыки",
+
+          bannerPurpose:
+
+            "сформировать теоретические знания о финансовых условиях лизинговой сделки",
+
+          bannerTime: "60",
+
+        }
+
+        ,
+
+        {
+
+          title: "Параметры сделки",
+
+          catalogName: "Профессиональные навыки",
+
+          bannerPurpose:
+
+            "сформировать теоретические знания о финансовых условиях лизинговой сделки",
+
+          bannerTime: "60",
+
+        }
+
+        ,
+
+        {
+
+          title: "Параметры сделки уциащшуцщацщацуща8 цащшца9рц9арцрауашщцу цушашщцуашуоаоцуао ацуацацауцуаауцуца",
+
+          catalogName: "Профессиональные навыки",
+
+          bannerPurpose:
+
+            "сформировать теоретические знания о финансовых условиях лизинговой сделки",
+
+          bannerTime: "60",
+
+        }
+
+ 
+
+    ]
+
+    };
 
   },
 
   methods: {
 
-    async fetchCardsData() {
+ 
 
-      try {
+    fetchCatalogItemsData(type) {
 
-        const response = await axios.get(BACKEND_URL, {
+      const params = {
 
-          params: {
+        type,
 
-            search: this.searchCatalog,
+        additionalParam: 'value' // дополнительные параметры
 
-            category: this.categoryCatalog
+      };
 
-          }
+      console.log('Отправка запроса на сервер с параметрами:', params);
+
+      axios.get('https://example.com/api/skills', { params })
+
+        .then(response => {
+
+          console.log('Ответ сервера:', response.data);
+
+          this.skills = response.data;
+
+        })
+
+        .catch(error => {
+
+          console.error('Ошибка при получении данных:', error);
 
         });
 
-        this.cards = response.data;
-
-      } catch (error) {
-
-        console.error('Error fetching catalog data:', error);
-
-      }
-
-    },
-
- 
-
-    // Функция для выполнения запроса поиска
-
-    async fetchSearchCatalogResults() {
-
-      try {
-
-        const response = await axios.get(BACKEND_URL, {
-
-          params: { search: this.searchCatalog }
-
-        });
-
-        this.cardsData = response.data;
-
-        console.log(response.data);
-
-      } catch (error) {
-
-        console.error('Ошибка запроса поиска в каталоге', error);
-
-      }
-
-    },
-
- 
-
-    // Вызывается при изменении значения в поле поиска
-
-    onSearchInputCatalogChange() {
-
-      if (this.search.length > 0) {
-
-        this.fetchSearchCatalogResults();
-
-      } else {
-
-        this.cardsData = [];
-
-        console.log("Поле поиска пустое");
-
-      }
-
-    },
-
- 
-
-    onSearchCatalogButtonClick() {
-
-      this.fetchSearchCatalogResults();
-
-    },
-
- 
-
-    // Обработчик Enter в поле поиска
-
-    onSearchCatalogEnter(event) {
-
-      if (event.key === 'Enter') {
-
-        this.fetchSearchCatalogResults();
-
-      }
-
-    },
+    }
 
   },
 
-  created() {
+  mounted() {
 
-    this.fetchCardsData();
+    this.fetchCatalogItemsData('skills'); // запросить данные при загрузке компонента
 
   }
 
@@ -341,11 +381,19 @@ export default {
 
 <style scoped>
 
-.main-container {
+.search-title {
 
-  width: 1200px;
+  font-size: 25px;
 
-  margin: 0 auto;
+  padding-top: 10px;
+
+  padding-bottom: 10px;
+
+  padding-left: 0;
+
+  padding-right: 15px;
+
+  margin-bottom: 10px;
 
 }
 
@@ -356,6 +404,8 @@ export default {
   width: 60%;
 
   gap: 10px;
+
+  margin-bottom: 20px;
 
 }
 
@@ -371,111 +421,205 @@ export default {
 
 }
 
+.main-container {
+
+  width: 1200px;
+
+  margin: 0 auto;
+
+  height: 100%;
+
+}
+
  
 
-.layout-search-result-container {
+.underline-text {
 
-  max-width: 490px;
+  font-size: 20px;
 
-  margin-left: 10px;
+  margin: 0;
 
-  margin-top: 41px;
+}
 
-  z-index: 10;
+.list-item {
 
-  position: absolute;
+  list-style-type: none;
+
+  margin: 0;
+
+  border-radius: 4px;
+
+  padding: 15px;
+
+  margin-bottom: 5px;
+
+  background-color: #F3F3F4;
+
+}
+
+ 
+
+.search-link {
+
+  text-decoration: none;
+
+ 
+
+}
+
+.container {
+
+  width: 100%;
+
+  min-width: 610px;
+
+}
+
+.list {
+
+  width: 100%;
+
+  min-width: 550px;
+
+}
+
+.list-card {
+
+  width: 100%;
+
+  min-width: 350px;
+
+}
+
+.content-container {
+
+  flex: 1;
+
+}
+
+ 
+
+.card-image {
 
   width: 100%;
 
   height: 100%;
 
-  max-height: 230px;
+  flex-grow: 1;
 
-  padding: 8px 0 8px 4px;
+  flex-shrink: 0;
 
-  overflow-y: scroll;
-
-  list-style: none;
-
-  background: #ffffff;
-
-  border-radius: 8px;
-
-  box-shadow: 0 4px 16px rgba(56, 56, 117, 0.2);
+  flex-basis: auto;
 
 }
 
- 
+.categories-list {
 
-.search-result-item {
+  margin: 0;
 
-  padding: 15px 20px;
+  padding: 0;
 
-  color:#4B4B4B;
+  max-width: 1100px;
 
 }
 
- 
+.banner {
+
+  border: 1px solid #002882;
+
+}
+
+.separator {
+
+  height: 15px;
+
+  width: 65px;
+
+  background-color: #00aaff;
+
+}
 
 .my-card {
 
   width: 100%;
 
-  height: 100%;
-
-  min-height: 200px;
-
-  max-height: 300px;
-
-  min-width: 300px;
-
-  max-width: 500px;
+  height: 230px;
 
 }
 
-.card-section {
+.card-item {
 
-  display: inline-block;
+  list-style-type: none;
 
-  overflow: hidden;
+  width: calc(33.33% - 20px);
 
-}
-
-.card-image {
-
-  border-radius: 50%;
-
-  height: 170px;
-
-  width: 170px;
-
-  display: block;
-
-  transition: 1s;
-
-}
-
-.card-image:hover {
-
-  overflow: hidden;
-
-  transform: scale(1.1);
+  margin-bottom: 5px;
 
 }
 
 .card-container {
 
-  gap: 10px;
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
 
 }
 
-.gradient-btn {
+.position-relative {
 
-  background: linear-gradient(to right, #7a31f5, #578bf8) !important;
+  position: relative;
 
-  border-radius: 15px;
+}
 
-  width: 120px;
+@media (max-width: 1000px) {
+
+  .list-card .categories-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+
+  }
+
+  .list-card .card-item {
+
+    width: calc(50% - 20px);
+
+    margin-bottom: 5px;
+
+  }
+
+}
+
+@media (max-width: 920px) {
+
+  .content-container {
+
+    max-width: 920px;
+
+  }
+
+  .list-card .categories-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+
+  }
+
+  .list-card .card-item {
+
+    width: calc(50% - 20px);
+
+    margin-bottom: 5px;
+
+  }
 
 }
 
